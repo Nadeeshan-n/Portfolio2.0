@@ -1,0 +1,17 @@
+{
+  "degree": {
+    "period": "2024 — PRESENT",
+    "title": "Bachelor of Information and Communication Technology",
+    "institution": "University of Sri Jayewardenepura",
+    "location": "Sri Lanka",
+    "focus": ["Software Engineering", "DevOps", "Distributed Systems", "Modern Software Development"]
+  },
+  "certificates": [
+    {"id": "web-foundations", "title": "Programming Foundations with JavaScript, HTML and CSS", "institution": "Duke University", "year": 2024, "skills": ["JavaScript", "HTML", "CSS"], "images": []},
+    {"id": "python-foundations", "title": "Programming for Everybody (Getting Started with Python)", "institution": "University of Michigan", "year": 2026, "skills": ["Python", "Programming", "Problem Solving"], "images": []},
+    {"id": "python-data-structures", "title": "Python Data Structures", "institution": "University of Michigan", "year": 2026, "skills": ["Python", "Data Structures", "Problem Solving"], "images": []},
+    {"id": "python-web-data", "title": "Using Python to Access Web Data", "institution": "University of Michigan", "year": 2026, "skills": ["Python", "Web Data", "APIs"], "images": []},
+    {"id": "linear-algebra", "title": "Linear Algebra for Machine Learning and Data Science", "institution": "DeepLearning.AI", "year": 2026, "skills": ["Linear Algebra", "Machine Learning", "Data Science"], "images": []},
+    {"id": "linux-shell", "title": "Introduction to Linux and Shell Scripting", "institution": "Coursera", "year": 2026, "skills": ["Linux", "Shell", "Developer Tools"], "images": []}
+  ]
+}

@@ -1,0 +1,113 @@
+[
+  {
+    "slug": "javascript",
+    "name": "JavaScript",
+    "source": "https://github.com/voodootikigod/logo.js",
+    "asset_url": "https://raw.githubusercontent.com/voodootikigod/logo.js/master/js.svg",
+    "credit": "JavaScript community logo by Christopher Williams and Manu Sporny, MIT licensed.",
+    "original": "javascript.svg",
+    "sha256": "a70a3d8d36ea6b0e614a04ec30d5a4fb2bf36d515492cb84050ded2b84d14393"
+  },
+  {
+    "slug": "react",
+    "name": "React",
+    "source": "https://github.com/reactjs/react.dev/blob/main/public/images/brand/logo_dark.svg",
+    "asset_url": "https://raw.githubusercontent.com/reactjs/react.dev/main/public/images/brand/logo_dark.svg",
+    "credit": "React logo, Meta Platforms, Inc. and affiliates; React documentation asset.",
+    "original": "react.svg",
+    "sha256": "e5278257e728c9527af74185f73f0715ffde03d713512aded478d832665e8f24"
+  },
+  {
+    "slug": "python",
+    "name": "Python",
+    "source": "https://www.python.org/community/logos/",
+    "asset_url": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg",
+    "credit": "Python logo by Tim Parkin; Python Software Foundation trademark. Monochrome colors, unchanged two-snake contours.",
+    "viewBox": "-0.5 -0.5 112 113.2",
+    "original": "python.svg",
+    "sha256": "baec8662a1461c2cacc326b54d2727cb2f1ce07ba02d00f5b826d035104f649f"
+  },
+  {
+    "slug": "docker",
+    "name": "Docker",
+    "source": "https://www.docker.com/company/newsroom/media-resources/",
+    "asset_url": "https://www.docker.com/static/Docker-Logos-1.zip",
+    "credit": "Docker Inc. official ocean-blue symbol, served unmodified.",
+    "original": "docker.svg",
+    "sha256": "0fd7f9164de13672bb1708ac7cc401ed439eb938ffa7358d5cb278e107904687"
+  },
+  {
+    "slug": "git",
+    "name": "Git",
+    "source": "https://git-scm.com/community/logos",
+    "asset_url": "https://git-scm.com/images/logos/downloads/Git-Icon-Black.svg",
+    "credit": "Git Logo by Jason Long, CC BY 3.0. Original geometry; color changed to jade.",
+    "original": "git.svg",
+    "sha256": "0bf58ad2b4a330d0023d65ffbf056f5d93abee6b29eca81904951b014b3c9cd9"
+  },
+  {
+    "slug": "linux",
+    "name": "Linux",
+    "source": "https://github.com/devicons/devicon/blob/master/icons/linux/linux-plain.svg",
+    "asset_url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-plain.svg",
+    "credit": "Published monochrome Tux icon from Devicon (MIT); original Tux by Larry Ewing, made with GIMP.",
+    "original": "linux.svg",
+    "sha256": "f262932ac85eed81a79b47184b52210c83d6edb09408f50245ef285435f86f8b"
+  },
+  {
+    "slug": "c",
+    "name": "C",
+    "source": "https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg",
+    "asset_url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg",
+    "credit": "Published C language icon from Devicon, MIT. C has no universal official language logo.",
+    "original": "c.svg",
+    "sha256": "8cce48da91084256f15653e02bfd7046ccb34489d030cb1aa34dee766daad6b7"
+  },
+  {
+    "slug": "java",
+    "name": "Java",
+    "source": "https://github.com/openjdk/duke/blob/master/vector/Wave.svg",
+    "asset_url": "https://raw.githubusercontent.com/openjdk/duke/master/vector/Wave.svg",
+    "credit": "Duke, the Java mascot, OpenJDK Duke Project; Sun Microsystems / Oracle. Oracle recommends Duke for Java affinity; open-source BSD.",
+    "viewBox": "181.5 186 249 422",
+    "original": "java.svg",
+    "sha256": "7d095e8d29de6d72511484779d155b252dfeed01fdbddcb2550537f3a2075823"
+  },
+  {
+    "slug": "csharp",
+    "name": "C#",
+    "source": "https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-1/",
+    "asset_url": "https://learn.microsoft.com/en-us/training/achievements/get-started-c-sharp-part-1.svg",
+    "credit": "Microsoft current C# mark, exact contour and glyph paths from its official training SVG; badge surround excluded, flat jade fill.",
+    "viewBox": "27 24 126 142",
+    "original": "csharp.svg",
+    "sha256": "40bafe3a3da7e449f9da7e70502696425b648a610eef99b1499f7afe616759f6"
+  },
+  {
+    "slug": "sql",
+    "name": "SQL",
+    "source": "https://github.com/vscode-icons/vscode-icons/blob/master/icons/file_type_sql.svg",
+    "asset_url": "https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_sql.svg",
+    "credit": "Published SQL file-type icon from vscode-icons, MIT. SQL has no universal official language logo.",
+    "original": "sql.svg",
+    "sha256": "62b0eaabf2856133bf75e990f39cea16f502770e6058374e1edf2a75dde2d0db"
+  },
+  {
+    "slug": "html",
+    "name": "HTML",
+    "source": "https://www.w3.org/html/logo/",
+    "asset_url": "https://www.w3.org/html/logo/downloads/HTML5_Logo.svg",
+    "credit": "HTML5 Logo by W3C, CC BY 3.0. Original geometry; colors changed to jade and white.",
+    "original": "html.svg",
+    "sha256": "62dde6bb0cfcea107e69baa702f6af272253d2c59648c725765d4e4726510113"
+  },
+  {
+    "slug": "css",
+    "name": "CSS",
+    "source": "https://github.com/CSS-Next/logo.css",
+    "asset_url": "https://raw.githubusercontent.com/CSS-Next/logo.css/main/css.svg",
+    "credit": "Official CSS logo by Javi Aguilar and CSS-Next Community Group, CC0 1.0. Original geometry; colors changed to jade and white.",
+    "original": "css.svg",
+    "sha256": "28dceb38651b6d3d43119bae6f56dc6dd76415cfedd4a718afcd61fc7bec8ba3"
+  }
+]

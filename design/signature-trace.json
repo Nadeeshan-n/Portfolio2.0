@@ -1,0 +1,118 @@
+{
+  "reference": "design/nadeeshan-signature-reference.png",
+  "sha256": "4a8558bb80cdc35447856ad6c35badb47f12af9f73c976bd33bfd99b4f5426af",
+  "source_size": [
+    574,
+    261
+  ],
+  "viewBox": "26 24 526 194",
+  "trace_max_error_source_pixels": 0.1,
+  "writing_ms": 2600,
+  "hold_ms": 5000,
+  "erase_ms": 450,
+  "reset_ms": 100,
+  "strokes": [
+    {
+      "part": "n",
+      "name": "n-entry",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "part": "n",
+      "name": "n-rise",
+      "start_ms": 220,
+      "end_ms": 400
+    },
+    {
+      "part": "n",
+      "name": "n-downstroke",
+      "start_ms": 400,
+      "end_ms": 600
+    },
+    {
+      "part": "name",
+      "name": "a-first",
+      "start_ms": 600,
+      "end_ms": 650
+    },
+    {
+      "part": "name",
+      "name": "a-first-exit",
+      "start_ms": 650,
+      "end_ms": 695
+    },
+    {
+      "part": "name",
+      "name": "d-loop",
+      "start_ms": 695,
+      "end_ms": 800
+    },
+    {
+      "part": "name",
+      "name": "d-downstroke",
+      "start_ms": 800,
+      "end_ms": 875
+    },
+    {
+      "part": "name",
+      "name": "e-first",
+      "start_ms": 875,
+      "end_ms": 980
+    },
+    {
+      "part": "name",
+      "name": "e-second",
+      "start_ms": 980,
+      "end_ms": 1085
+    },
+    {
+      "part": "name",
+      "name": "s",
+      "start_ms": 1085,
+      "end_ms": 1200
+    },
+    {
+      "part": "name",
+      "name": "h-rise",
+      "start_ms": 1200,
+      "end_ms": 1290
+    },
+    {
+      "part": "name",
+      "name": "h-body",
+      "start_ms": 1290,
+      "end_ms": 1370
+    },
+    {
+      "part": "name",
+      "name": "a-last",
+      "start_ms": 1370,
+      "end_ms": 1405
+    },
+    {
+      "part": "name",
+      "name": "a-last-exit",
+      "start_ms": 1405,
+      "end_ms": 1430
+    },
+    {
+      "part": "name",
+      "name": "n-last",
+      "start_ms": 1430,
+      "end_ms": 1500
+    },
+    {
+      "part": "flourish",
+      "name": "flourish",
+      "start_ms": 1500,
+      "end_ms": 2100
+    },
+    {
+      "part": "underline",
+      "name": "underline",
+      "start_ms": 2100,
+      "end_ms": 2600
+    }
+  ]
+}

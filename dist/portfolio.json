@@ -1,0 +1,62 @@
+{
+  "name": "Nadeeshan",
+  "github": "https://github.com/Nadeeshan-n",
+  "linkedin": null,
+  "email": null,
+  "sampleEmail": "nadeeshan@example.com",
+  "statistics": {
+    "projects": 5,
+    "certificates": 6,
+    "experience": 1
+  },
+  "statisticsSource": "Project and certificate totals are derived from projects/projects.json and education/education.json. Experience remains the value supplied in the portfolio brief.",
+  "projects": [
+    {
+      "title": "Personal Task MCP",
+      "category": "AI / Automation",
+      "stack": [
+        "Python",
+        "MCP"
+      ],
+      "github": "https://github.com/Nadeeshan-n/Personal-Task-MCP-Server",
+      "illustrative": true,
+      "description": "A concept for managing personal tasks through an AI assistant and a Model Context Protocol server.",
+      "purpose": "Explore how a task tool can make everyday planning easier through a conversational interface."
+    },
+    {
+      "title": "Knowledge Assistant",
+      "category": "AI / Development",
+      "stack": [
+        "Python",
+        "AI"
+      ],
+      "github": null,
+      "illustrative": true,
+      "description": "A concept for finding, summarizing and understanding information from documents and notes.",
+      "purpose": "Explore grounded question answering with clear references back to the original document."
+    },
+    {
+      "title": "ServiceFlow",
+      "category": "Web Applications",
+      "stack": [
+        "React",
+        "Node.js"
+      ],
+      "github": null,
+      "illustrative": true,
+      "description": "A concept for organizing service requests, tracking progress and simplifying everyday workflows.",
+      "purpose": "Explore a clear request-to-completion workflow for practical service businesses."
+    },
+    {
+      "title": "Automation Toolkit",
+      "category": "Tools & Utilities",
+      "stack": [
+        "Python"
+      ],
+      "github": null,
+      "illustrative": true,
+      "description": "A concept for small scripts that reduce repetitive work and make everyday tasks easier.",
+      "purpose": "Explore reliable, understandable automation for repetitive file and data tasks."
+    }
+  ]
+}

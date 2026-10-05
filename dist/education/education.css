@@ -1,0 +1,166 @@
+/* Only loaded on /education/. Shared portfolio typography and controls stay intact. */
+.education-page{overflow-x:clip}
+.education-page :is(h1,h2,h3,p,figure){margin:0}
+.education-page a{color:inherit;text-decoration:none}
+.education-page button{font:inherit}
+.education-page [hidden]{display:none!important}
+.education-main{max-width:1344px;margin:0 auto;padding:0 var(--page-padding)}
+.education-hero{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:72px;align-items:center;padding:64px 0 68px}
+.education-hero .section-label{margin-bottom:20px}
+.education-hero h1{font-size:clamp(38px,4.4vw,62px);font-weight:700;line-height:1.12;letter-spacing:-2.4px;text-wrap:balance;max-width:790px}
+.jade-period{color:var(--jade-500)}
+.education-hero-lead{font-size:19px;line-height:1.65;max-width:620px;margin-top:23px!important}
+.education-hero-note{color:var(--color-text-secondary);font-size:13px;line-height:1.8;max-width:570px;margin-top:13px!important}
+.education-hero-sketch{width:100%;max-width:270px;fill:none;stroke:var(--charcoal-900);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.8}
+.sketch-jade{stroke:var(--jade-500)}
+.sketch-pale{fill:var(--jade-50);stroke:none}
+.sketch-fill{fill:var(--jade-500);stroke:var(--charcoal-900)}
+.sketch-muted{stroke:var(--gray-green-600);stroke-width:1.4}
+.academic-journey{padding:32px 0 84px;border-top:1px solid var(--color-border-default)}
+.journey-heading{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:36px}
+.journey-heading p{font-size:11px;color:var(--color-text-secondary)}
+.journey-map{position:relative;isolation:isolate;display:flex;flex-direction:column;gap:70px;padding-top:20px}
+.journey-route{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:-1;pointer-events:none;fill:none;stroke:var(--charcoal-900);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round;opacity:.4}
+.route-branches{stroke:var(--jade-500);stroke-width:1.15}
+.journey-stop{position:relative;min-width:0}
+.route-node{position:absolute;left:-49px;top:4px;width:11px;height:11px;border:1.4px solid var(--charcoal-900);border-radius:50%;background:var(--jade-500);outline:5px solid var(--color-bg-primary)}
+.route-node-degree{width:14px;height:14px;top:5px;left:-51px}
+.journey-annotation{font-size:10px;line-height:1.65;font-weight:500;color:var(--jade-700);letter-spacing:1.1px;text-transform:uppercase}
+.degree-milestone{margin-left:17%;max-width:760px;padding:0 0 8px}
+.degree-topline{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-right:96px}
+.degree-period{font-size:10px;letter-spacing:.8px;font-weight:600;color:var(--color-text-secondary);white-space:nowrap}
+.degree-cap{position:absolute;right:0;top:0;width:73px;height:60px;fill:none;stroke:var(--charcoal-900);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.degree-milestone h2{font-size:clamp(27px,3vw,40px);font-weight:700;line-height:1.25;letter-spacing:-1.35px;max-width:670px;margin-top:24px;text-wrap:balance}
+.degree-university{display:flex;align-items:center;gap:16px;margin-top:25px}
+.university-mark{width:54px;height:54px;object-fit:contain;flex-shrink:0}
+.degree-institution{font-size:14px;font-weight:500;line-height:1.7}
+.degree-location{font-size:12px;color:var(--color-text-secondary);margin-top:1px!important}
+.degree-focus{border-top:1px solid var(--color-border-default);padding-top:19px;margin-top:25px}
+.degree-focus ul{display:flex;flex-wrap:wrap;gap:8px 24px;list-style:none;margin:8px 0 0;padding:0;font-size:11px;line-height:1.7;color:var(--color-text-secondary)}
+.degree-focus li::before{content:'+';margin-right:7px;color:var(--jade-500)}
+.learning-stage{padding:0;max-width:850px}
+.stage-web{margin-left:30%;max-width:570px}
+.stage-python{margin-left:11%}
+.stage-systems{margin-left:23%;max-width:770px}
+.learning-stage-header{margin-bottom:20px}
+.learning-stage-header h3{font-size:20px;line-height:1.4;letter-spacing:-.6px;font-weight:600;margin-top:5px}
+.learning-branches{display:grid;gap:24px;list-style:none;margin:0;padding:0}
+.branches-single{max-width:410px}
+.branches-python{grid-template-columns:repeat(3,minmax(0,1fr))}
+.branches-systems{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.learning-node{position:relative;min-width:0}
+.certificate-trigger{display:flex;flex-direction:column;align-items:flex-start;text-align:left;width:100%;height:100%;margin:0;padding:21px 0 0;border:0;background:transparent;color:var(--color-text-primary);min-width:0;cursor:pointer}
+.certificate-trigger:disabled{cursor:default}
+.certificate-year{display:flex;gap:9px;align-items:center;font-size:10px;font-weight:500;color:var(--color-text-secondary);line-height:1.5;margin-bottom:11px}
+.mini-node{width:5px;height:5px;border:1px solid var(--jade-500);border-radius:50%;background:var(--jade-50);transition:background .2s}
+.certificate-title{font-size:15px;font-weight:600;line-height:1.55;letter-spacing:-.35px;transition:color .2s}
+.certificate-institution{font-size:11px;line-height:1.7;color:var(--color-text-secondary);margin-top:9px}
+.certificate-skills{font-size:10px;line-height:1.8;color:var(--color-text-secondary);margin-top:9px}
+.certificate-action{display:inline-flex;gap:7px;font-size:10px;line-height:1.6;font-weight:500;color:var(--jade-700);margin-top:14px;border-bottom:1px solid transparent;transition:border-color .2s}
+.certificate-action span{opacity:.6}
+.certificate-trigger:disabled .certificate-action{visibility:hidden}
+.certificate-trigger:not(:disabled):is(:hover,:focus-visible) .certificate-title{color:var(--jade-700)}
+.certificate-trigger:not(:disabled):is(:hover,:focus-visible) .mini-node{background:var(--jade-500)}
+.certificate-trigger:not(:disabled):is(:hover,:focus-visible) .certificate-action{border-bottom-color:var(--jade-500)}
+.journey-doodles{position:absolute;inset:0;z-index:-2;pointer-events:none}
+.journey-doodle{position:absolute;fill:none;stroke:var(--jade-500);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.21;animation:education-float var(--duration,13s) ease-in-out var(--delay,0s) infinite alternate;transform-origin:center}
+.doodle-braces{width:40px;left:2%;top:8%;--duration:11s;--delay:-3s;--drift-x:4px;--drift-y:-7px;--turn:2deg}
+.doodle-network{width:60px;height:auto;left:1%;top:47%;--duration:17s;--delay:-6s;--drift-x:6px;--drift-y:9px;--turn:-2deg}
+.doodle-chip{width:32px;right:3%;top:34%;--duration:14s;--delay:-8s;--drift-x:-3px;--drift-y:-6px;--turn:-1deg}
+.doodle-cloud{width:42px;right:1%;top:68%;--duration:18s;--delay:-4s;--drift-x:5px;--drift-y:7px;--turn:2deg}
+.doodle-terminal{width:40px;left:3%;top:86%;--duration:12s;--delay:-9s;--drift-x:-2px;--drift-y:6px;--turn:1deg}
+@keyframes education-float{from{transform:translate(0,0) rotate(0)}to{transform:translate(var(--drift-x),var(--drift-y)) rotate(var(--turn))}}
+.education-page.motion-paused .journey-doodle{animation-play-state:paused}
+.education-noscript{font-size:12px;line-height:1.8;color:var(--color-text-secondary);padding-bottom:32px}
+.education-page .footer-links{display:flex;gap:28px}
+.education-page .footer-links a:hover{color:var(--jade-700)}
+.certificate-dialog{width:min(710px,calc(100% - 48px));max-height:calc(100dvh - 64px);max-height:calc(100svh - 64px);overflow:auto;overscroll-behavior:contain;margin:auto;padding:34px;border:1px solid var(--color-border-default);border-radius:20px;background:var(--color-bg-surface);color:var(--color-text-primary)}
+.certificate-dialog:not([open]){display:none}
+.certificate-dialog[open]{animation:certificate-enter .2s ease-out}
+.certificate-dialog::backdrop{background:rgba(23,33,30,.28)}
+@keyframes certificate-enter{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:scale(1)}}
+.certificate-dialog>.journey-annotation{padding-right:40px;margin-bottom:22px}
+.certificate-close{position:absolute;right:17px;top:14px;width:44px;height:44px;display:grid;place-items:center;padding:0;border:0;border-radius:10px;background:transparent;color:var(--charcoal-900)}
+.certificate-close:hover{background:var(--jade-50)}
+.certificate-close svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.certificate-dialog h2{font-size:23px;line-height:1.45;font-weight:600;letter-spacing:-.55px;margin-top:24px}
+.certificate-modal-institution{font-size:13px;color:var(--color-text-secondary);margin-top:10px!important}
+.certificate-modal-meta{font-size:11px;font-weight:500;color:var(--jade-700);margin-top:15px!important}
+.certificate-modal-skills{font-size:11px;color:var(--color-text-secondary);line-height:1.8;margin-top:9px!important}
+.certificate-no-image{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:174px;padding:24px;border:1px solid var(--color-border-default);border-radius:12px;background:var(--color-bg-primary);text-align:center}
+.certificate-no-image svg{width:46px;height:51px;fill:none;stroke:var(--jade-700);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.certificate-no-image p,.certificate-image-error{font-size:12px;line-height:1.8;color:var(--color-text-secondary)}
+.certificate-image{display:block;width:100%;height:auto;max-height:48svh;object-fit:contain;border-radius:6px}
+.certificate-image-error{padding:28px 0}
+.certificate-gallery-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:15px}
+.certificate-gallery-controls button{min-height:42px;padding:8px 13px;border:1px solid var(--color-border-default);border-radius:0;background:var(--color-bg-primary);color:var(--jade-700);font-size:11px;font-weight:500}
+.certificate-gallery-controls button:disabled{cursor:default;color:var(--color-text-secondary)}
+.certificate-image-position{font-size:10px;color:var(--color-text-secondary)}
+.education-page.certificate-open{overflow:hidden}
+@media(max-width:1050px){
+ .education-hero{grid-template-columns:minmax(0,1fr) 190px;gap:32px}
+ .education-hero h1{font-size:46px}
+ .degree-milestone{margin-left:11%}
+ .stage-web{margin-left:22%}
+ .stage-python{margin-left:8%}
+ .stage-systems{margin-left:15%}
+ .branches-python{gap:20px}
+ .certificate-title{font-size:14px}
+}
+@media(max-width:900px){
+ .journey-map{gap:54px;padding-top:12px}
+ .journey-stop{margin-left:44px;max-width:none}
+ .route-node{left:-38px}
+ .route-node-degree{left:-40px}
+ .branches-python{grid-template-columns:1fr}
+ .certificate-trigger{padding:18px 0 0}
+ .certificate-title{font-size:16px}
+ .certificate-skills{margin-top:6px}
+ .certificate-action{margin-top:10px}
+ .branches-systems{grid-template-columns:1fr;gap:24px}
+ .learning-branches{gap:24px}
+ .doodle-network,.doodle-terminal{display:none}
+ .doodle-braces{left:auto;right:0;top:1%}
+ .doodle-chip{right:0;top:26%}
+ .doodle-cloud{right:0;top:63%}
+ .degree-milestone h2{max-width:630px}
+}
+@media(max-width:760px){
+ .education-hero{padding:42px 0 44px;gap:20px;grid-template-columns:1fr}
+ .education-hero-sketch{display:none}
+ .education-hero h1{font-size:clamp(35px,7.7vw,48px);letter-spacing:-1.5px;max-width:600px}
+ .education-hero-lead{font-size:16px;margin-top:20px!important}
+ .education-hero-note{font-size:12px;margin-top:12px!important}
+ .education-hero .section-label{margin-bottom:16px}
+ .academic-journey{padding:25px 0 58px}
+ .journey-heading{margin-bottom:30px}
+ .journey-heading p{display:none}
+ .degree-topline{padding-right:55px;flex-wrap:wrap;gap:8px}
+ .degree-cap{width:46px;height:40px}
+ .degree-milestone h2{font-size:28px;letter-spacing:-.9px;margin-top:19px}
+ .degree-focus ul{display:grid;gap:6px;font-size:11px}
+ .degree-institution{font-size:12px}
+ .degree-university{gap:12px}
+ .university-mark{width:42px;height:42px}
+ .degree-location{font-size:11px}
+ .journey-annotation{font-size:9px;letter-spacing:.9px}
+ .learning-stage-header h3{font-size:19px}
+ .doodle-chip,.doodle-cloud{display:none}
+ .doodle-braces{width:27px;top:14%;opacity:.15}
+ .certificate-dialog{width:calc(100% - 24px);max-height:calc(100svh - 32px);padding:26px 22px;border-radius:16px}
+ .certificate-dialog h2{font-size:20px}
+ .certificate-close{right:9px;top:7px}
+ .certificate-no-image{min-height:150px}
+ .education-page .nav-links{box-shadow:none;border-radius:0}
+}
+@media(prefers-reduced-motion:reduce){
+ .education-page *,.education-page *::before,.education-page *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .journey-doodle{transform:none}
+}
+@media(forced-colors:active){
+ .route-node,.mini-node{background:Canvas;border-color:CanvasText;outline-color:Canvas}
+ .journey-route{stroke:CanvasText;opacity:1}
+ .journey-doodles{display:none}
+ .certificate-trigger{color:CanvasText}
+ .certificate-dialog{border-color:CanvasText}
+}

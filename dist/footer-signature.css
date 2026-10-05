@@ -1,0 +1,54 @@
+/* The original signature silhouette supplies the stroke weight and letter shapes. */
+.footer-signature {
+  --signature-ink: #17211E;
+  --signature-underline: #0E8F78;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.footer-signature .signature-outline {
+  fill: var(--signature-ink);
+  stroke: none;
+}
+.footer-signature .signature-underline { fill: var(--signature-underline); }
+.footer-signature[data-signature-motion="ready"] .signature-reveal { stroke-dashoffset: var(--signature-length); }
+.site-footer .brand.footer-signoff {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(150px, 18vw, 180px);
+  max-width: 100%;
+  flex: 0 0 auto;
+  line-height: 0;
+}
+.site-footer[data-signature-footer] { align-items: center; }
+:is([data-theme="dark"], [data-color-scheme="dark"], .dark) .footer-signature {
+  --signature-ink: #F7F9F7;
+  --signature-underline: #36C6A5;
+}
+:is([data-theme="light"], [data-color-scheme="light"], .light) .footer-signature {
+  --signature-ink: #17211E;
+  --signature-underline: #0E8F78;
+}
+@media (max-width: 760px) {
+  .site-footer.site-footer[data-signature-footer] {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 16px;
+  }
+  .site-footer[data-signature-footer] .footer-contact {
+    width: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+  .site-footer[data-signature-footer] .footer-contact-separator { display: inline; }
+  .site-footer[data-signature-footer] .footer-links { width: auto; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-signature .signature-reveal { stroke-dashoffset: 0 !important; }
+}

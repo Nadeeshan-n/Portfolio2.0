@@ -1,0 +1,261 @@
+
+*{margin:0;padding:0;box-sizing:border-box}
+img{display:block}
+a{text-decoration:none;color:inherit}
+button{font:inherit;border:0}
+.generated-screen [data-12ui-focus-fact]:focus-visible{outline:2px solid var(--ly-interaction-focus-color);outline-offset:2px}
+.generated-screen [data-12ui-hover-mode="surface-color"]:not(:disabled):hover{--ly-interaction-state-surface:var(--ly-interaction-hover-surface)}
+.generated-screen [data-12ui-hover-mode="color-ring"]:not(:disabled):hover{outline:2px solid var(--ly-interaction-focus-color);outline-offset:-2px}
+html{background:#ffffff}
+.generated-screen{display:flow-root;background:#ffffff;min-height:100vh}
+body{font-family:system-ui,sans-serif;line-height:normal;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.generated-screen{container-type:inline-size}
+.fx-col{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0}
+.fx-row{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-start;gap:0}
+.fx-abs{position:relative}
+#viewport-1-winner-page{background:url("assets/design/plate-01.webp") center/cover no-repeat;position:absolute;left:0px;top:0px;width:1536px;height:1024px;margin:0;max-width:none}
+#viewport-2-a-page{background:url("assets/design/plate-02.webp") center/cover no-repeat;position:absolute;left:0px;top:0px;width:1536px;height:1024px;margin:0;max-width:none}
+#viewport-2-a-skills-programming{background:rgba(255,255,255,0.12);border:1.024px solid #bfdcd6;border-radius:10.24px;border-radius:10.24px;position:relative;margin:0px 0 0 0px;width:436.224px;height:172.032px;flex:none;max-width:none;border-style:solid;border-width:1px 1px 1px 1px}
+#viewport-2-a-skills-web{background:rgba(255,255,255,0.12);border:1.024px solid #bfdcd6;border-radius:10.24px;border-radius:10.24px;position:relative;margin:0px 0 0 21.504px;width:436.224px;height:172.032px;flex:none;max-width:none;border-style:solid;border-width:1px 1px 1px 1px}
+#viewport-2-a-skills-ai{background:rgba(255,255,255,0.12);border:1.024px solid #bfdcd6;border-radius:10.24px;border-radius:10.24px;position:relative;margin:0px 0 0 21.504px;width:436.224px;height:172.032px;flex:none;max-width:none;border-style:solid;border-width:1px 1px 1px 1px}
+#viewport-2-a-skills-automation{background:rgba(255,255,255,0.12);border:1.024px solid #bfdcd6;border-radius:10.24px;border-radius:10.24px;position:relative;margin:0px 0 0 0px;width:436.224px;height:172.032px;flex:none;max-width:none;border-style:solid;border-width:1px 1px 1px 1px}
+#viewport-2-a-skills-tools{background:rgba(255,255,255,0.12);border:1.024px solid #bfdcd6;border-radius:10.24px;border-radius:10.24px;position:relative;margin:0px 0 0 21.504px;width:436.224px;height:172.032px;flex:none;max-width:none;border-style:solid;border-width:1px 1px 1px 1px}
+#viewport-2-a-skills-databases{background:rgba(255,255,255,0.12);border:1.024px solid #bfdcd6;border-radius:10.24px;border-radius:10.24px;position:relative;margin:0px 0 0 21.504px;width:436.224px;height:172.032px;flex:none;max-width:none;border-style:solid;border-width:1px 1px 1px 1px}
+#viewport-3-b-page{background:url("assets/design/plate-03.webp") center/cover no-repeat;position:absolute;left:0px;top:0px;width:1536px;height:1024px;margin:0;max-width:none}
+#viewport-3-b-projects-task{background:rgba(255,255,255,0.12);border-radius:6.144px;border:1.024px solid #c8dfda;border-radius:6.144px;position:relative;margin:0px 0 0 0px;width:330.752px;height:449.536px;flex:none;max-width:none;border-style:solid;border-width:1px 1px 1px 1px}
+#viewport-3-b-projects-assistant{background:rgba(255,255,255,0.12);border-radius:6.144px;border:1.024px solid #c8dfda;border-radius:6.144px;position:relative;margin:0px 0 0 23.552px;width:325.632px;height:431.104px;flex:none;max-width:none;border-style:solid;border-width:1px 1px 1px 1px;padding:16.408px 0 0 18.456px}
+#viewport-3-b-projects-service{background:rgba(255,255,255,0.12);border-radius:6.144px;border:1.024px solid #c8dfda;border-radius:6.144px;position:relative;margin:0px 0 0 27.648px;width:328.704px;height:431.104px;flex:none;max-width:none;border-style:solid;border-width:1px 1px 1px 1px;padding:16.408px 0 0 18.456px}
+#viewport-3-b-projects-toolkit{background:rgba(255,255,255,0.12);border-radius:6.144px;border:1.024px solid #c8dfda;border-radius:6.144px;position:relative;margin:0px 0 0 24.576px;width:317.44px;height:431.104px;flex:none;max-width:none;border-style:solid;border-width:1px 1px 1px 1px;padding:16.408px 0 0 17.432px}
+#viewport-3-b-journey-foundations-surface-155{background:#e2efe9;border-radius:30.72px;border-radius:30.72px;position:relative;margin:0px 0 0 1.024px;width:49.152px;height:47.104px;flex:none;max-width:none;padding:12.288px 0 0 12.288px}
+#viewport-3-b-journey-projects-surface-156{background:#e2efe9;border-radius:30.72px;border-radius:30.72px;position:relative;margin:0px 0 0 1.024px;width:46.08px;height:47.104px;flex:none;max-width:none;padding:13.312px 0 0 9.216px}
+#viewport-3-b-journey-ai-surface-157{background:#e2efe9;border-radius:30.72px;border-radius:30.72px;position:relative;margin:0px 0 0 0px;width:47.104px;height:47.104px;flex:none;max-width:none;padding:9.216px 0 0 10.24px}
+#viewport-3-b-journey-growing-surface-158{background:#e2efe9;border-radius:30.72px;border-radius:30.72px;position:relative;margin:0px 0 0 0px;width:48.128px;height:47.104px;flex:none;max-width:none;padding:11.264px 0 0 12.288px}
+.ly-anchor-canvas{position:relative;width:1536px;height:3072px;margin-inline:auto;zoom:min(1,calc(100cqw / 1536px));display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0;padding:0px 0 0 0px}
+#page-flow{position:relative;margin:0px 0 0 0px;width:1536px;height:3072px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-1-winner{position:relative;margin:0px 0 0 0px;width:1536px;height:1024px;flex:none;max-width:none}
+#viewport-2-a{position:relative;margin:0px 0 0 0px;width:1536px;height:1024px;flex:none;max-width:none}
+#viewport-3-b{position:relative;margin:0px 0 0 0px;width:1536px;height:1024px;flex:none;max-width:none}
+#viewport-1-winner-hero{position:absolute;left:95.232px;top:135.168px;width:1344.512px;height:519.168px;margin:0;max-width:none}
+#viewport-1-winner-about{position:absolute;left:95.232px;top:733.184px;width:1344.512px;height:290.816px;margin:0;max-width:none}
+#viewport-1-winner-nav{position:absolute;left:94.208px;top:24.576px;width:1349.632px;height:41.984px;margin:0;max-width:none}
+#viewport-1-winner-nav-logo{position:absolute;left:0px;top:5.12px;width:148.48px;height:30.72px;margin:0}
+#viewport-1-winner-nav-divider{position:absolute;left:676.864px;top:39.936px;width:46.08px;height:2.048px;margin:0}
+#viewport-1-winner-nav-text{position:absolute;left:680.96px;top:14.336px;width:36.864px;height:12.288px;margin:0}
+#viewport-1-winner-nav-text-2{position:absolute;left:756.736px;top:14.336px;width:37.888px;height:12.288px;margin:0}
+#viewport-1-winner-nav-text-3{position:absolute;left:832.512px;top:14.336px;width:31.744px;height:12.288px;margin:0}
+#viewport-1-winner-nav-text-4{position:absolute;left:904.192px;top:14.336px;width:48.128px;height:12.288px;margin:0}
+#viewport-1-winner-nav-text-5{position:absolute;left:992.256px;top:14.336px;width:68.608px;height:12.288px;margin:0}
+#viewport-1-winner-nav-text-6{position:absolute;left:1099.776px;top:14.336px;width:50.176px;height:12.288px;margin:0}
+#viewport-1-winner-nav-action{position:absolute;left:1204.224px;top:0px;width:145.408px;height:41.984px;margin:0;max-width:none}
+#viewport-1-winner-nav-action-button{position:absolute;left:0px;top:0px;width:145.408px;height:41.984px;margin:0}
+#viewport-1-winner-nav-action-icon{position:absolute;left:114.688px;top:15.36px;width:12.288px;height:12.288px;margin:0}
+#viewport-1-winner-hero-source-row-1{position:absolute;left:2.048px;top:7.168px;width:236.544px;height:11.264px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-1-winner-hero-source-row-2{position:absolute;left:0px;top:0px;width:1275.904px;height:422.912px;margin:0;max-width:none}
+#viewport-1-winner-hero-footer{position:absolute;left:0px;top:481.28px;width:1344.512px;height:37.888px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-1-winner-hero-source-row-1-decoration{position:relative;margin:4.096px 0 0 0px;width:4.096px;height:5.12px;flex:none}
+#viewport-1-winner-hero-source-row-1-text{position:relative;margin:0px 0 0 12.288px;width:220.16px;height:11.264px;flex:none}
+#viewport-1-winner-hero-source-row-2-heading{position:absolute;left:0px;top:44.032px;width:536.576px;height:164.864px;margin:0}
+#viewport-1-winner-hero-source-row-2-paragraph{position:absolute;left:0px;top:278.528px;width:467.968px;height:70.656px;margin:0}
+#viewport-1-winner-hero-source-row-2-heading-2{position:absolute;left:2.048px;top:230.4px;width:299.008px;height:34.816px;margin:0}
+#viewport-1-winner-hero-work{position:absolute;left:2.048px;top:377.856px;width:178.176px;height:45.056px;margin:0;max-width:none}
+#viewport-1-winner-hero-github{position:absolute;left:195.584px;top:377.856px;width:150.528px;height:45.056px;margin:0;max-width:none}
+#viewport-1-winner-hero-art{position:absolute;left:742.4px;top:0px;width:533.504px;height:402.432px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-1-winner-hero-work-button{position:absolute;left:0px;top:0px;width:178.176px;height:45.056px;margin:0}
+#viewport-1-winner-hero-work-icon{position:absolute;left:135.168px;top:16.384px;width:13.312px;height:12.288px;margin:0}
+#viewport-1-winner-hero-github-button{position:absolute;left:0px;top:0px;width:150.528px;height:45.056px;margin:0}
+#viewport-1-winner-hero-github-icon{position:absolute;left:33.792px;top:13.312px;width:18.432px;height:19.456px;margin:0}
+#viewport-1-winner-hero-art-illustration{position:relative;margin:0px 0 0 0px;width:533.504px;height:402.432px;flex:none}
+#viewport-1-winner-hero-footer-divider{position:relative;margin:0px 0 0 2.048px;width:1342.464px;height:2.048px;flex:none}
+#viewport-1-winner-hero-footer-source-row-2{position:relative;margin:23.552px 0 0 0px;width:1342.464px;height:12.288px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-1-winner-hero-footer-source-row-2-text{position:relative;margin:1.024px 0 0 0px;width:232.448px;height:11.264px;flex:none}
+#viewport-1-winner-hero-footer-source-row-2-divider{position:relative;margin:5.12px 0 0 867.328px;width:70.656px;height:2.048px;flex:none}
+#viewport-1-winner-hero-footer-source-row-2-text-2{position:relative;margin:1.024px 0 0 25.6px;width:117.76px;height:11.264px;flex:none}
+#viewport-1-winner-hero-footer-source-row-2-icon{position:relative;margin:0px 0 0 18.432px;width:10.24px;height:12.288px;flex:none}
+#viewport-1-winner-about-photo{position:absolute;left:680.96px;top:0px;width:663.552px;height:290.816px;margin:0}
+#viewport-1-winner-about-divider{position:absolute;left:2.048px;top:16.384px;width:19.456px;height:2.048px;margin:0}
+#viewport-1-winner-about-text{position:absolute;left:37.888px;top:11.264px;width:49.152px;height:11.264px;margin:0}
+#viewport-1-winner-about-heading{position:absolute;left:1.024px;top:41.984px;width:271.36px;height:72.704px;margin:0}
+#viewport-1-winner-about-paragraph{position:absolute;left:0px;top:140.288px;width:397.312px;height:89.088px;margin:0}
+#viewport-2-a-about{position:absolute;left:92.16px;top:51.2px;width:1344.512px;height:457.728px;margin:0;max-width:none}
+#viewport-2-a-skills{position:absolute;left:94.208px;top:565.248px;width:1351.68px;height:397.312px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-2-a-about-artwork{position:absolute;left:721.92px;top:0px;width:622.592px;height:457.728px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-2-a-about-divider{position:absolute;left:2.048px;top:7.168px;width:21.504px;height:2.048px;margin:0}
+#viewport-2-a-about-text{position:absolute;left:38.912px;top:2.048px;width:46.08px;height:11.264px;margin:0}
+#viewport-2-a-about-heading{position:absolute;left:0px;top:41.984px;width:527.36px;height:141.312px;margin:0}
+#viewport-2-a-about-paragraph{position:absolute;left:1.024px;top:198.656px;width:527.36px;height:65.536px;margin:0}
+#viewport-2-a-about-paragraph-2{position:absolute;left:1.024px;top:284.672px;width:555.008px;height:65.536px;margin:0}
+#viewport-2-a-about-focus{position:absolute;left:2.048px;top:375.808px;width:567.296px;height:27.648px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-2-a-about-stack{position:absolute;left:2.048px;top:430.08px;width:634.88px;height:24.576px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-2-a-about-focus-icon{position:relative;margin:2.048px 0 0 0px;width:22.528px;height:24.576px;flex:none}
+#viewport-2-a-about-focus-text{position:relative;margin:8.192px 0 0 12.288px;width:118.784px;height:11.264px;flex:none}
+#viewport-2-a-about-focus-divider{position:relative;margin:0px 0 0 22.528px;width:2.048px;height:27.648px;flex:none}
+#viewport-2-a-about-focus-text-2{position:relative;margin:1.024px 0 0 30.72px;width:358.4px;height:14.336px;flex:none}
+#viewport-2-a-about-artwork-illustration{position:relative;margin:0px 0 0 0px;width:622.592px;height:457.728px;flex:none}
+#viewport-2-a-about-stack-icon{position:relative;margin:0px 0 0 0px;width:21.504px;height:24.576px;flex:none}
+#viewport-2-a-about-stack-text{position:relative;margin:3.072px 0 0 15.36px;width:156.672px;height:14.336px;flex:none}
+#viewport-2-a-about-stack-text-2{position:relative;margin:3.072px 0 0 16.384px;width:424.96px;height:14.336px;flex:none}
+#viewport-2-a-skills-source-row-1{position:relative;margin:0px 0 0 0px;width:195.584px;height:11.264px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-2-a-skills-source-row-2{position:relative;margin:19.456px 0 0 0px;width:1351.68px;height:172.032px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-2-a-skills-source-row-3{position:relative;margin:22.528px 0 0 0px;width:1351.68px;height:172.032px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-2-a-skills-source-row-1-divider{position:relative;margin:5.12px 0 0 0px;width:21.504px;height:2.048px;flex:none}
+#viewport-2-a-skills-source-row-1-text{position:relative;margin:0px 0 0 16.384px;width:157.696px;height:11.264px;flex:none}
+#viewport-2-a-skills-programming-decoration{position:absolute;left:20.504px;top:15.384px;width:56.32px;height:56.32px;margin:0}
+#viewport-2-a-skills-programming-icon{position:absolute;left:30.744px;top:31.768px;width:35.84px;height:24.576px;margin:0}
+#viewport-2-a-skills-programming-heading{position:absolute;left:98.328px;top:26.648px;width:121.856px;height:21.504px;margin:0}
+#viewport-2-a-skills-programming-paragraph{position:absolute;left:98.328px;top:58.392px;width:238.592px;height:34.816px;margin:0}
+#viewport-2-a-skills-programming-badge{position:absolute;left:20.504px;top:117.784px;width:67.584px;height:28.672px;margin:0}
+#viewport-2-a-skills-programming-badge-2{position:absolute;left:100.376px;top:117.784px;width:90.112px;height:28.672px;margin:0}
+#viewport-2-a-skills-programming-badge-3{position:absolute;left:202.776px;top:117.784px;width:89.088px;height:28.672px;margin:0}
+#viewport-2-a-skills-programming-badge-4{position:absolute;left:304.152px;top:117.784px;width:52.224px;height:28.672px;margin:0}
+#viewport-2-a-skills-web-decoration{position:absolute;left:20.504px;top:15.384px;width:56.32px;height:56.32px;margin:0}
+#viewport-2-a-skills-web-icon{position:absolute;left:30.744px;top:26.648px;width:35.84px;height:34.816px;margin:0}
+#viewport-2-a-skills-web-heading{position:absolute;left:97.304px;top:26.648px;width:164.864px;height:20.48px;margin:0}
+#viewport-2-a-skills-web-paragraph{position:absolute;left:97.304px;top:58.392px;width:247.808px;height:34.816px;margin:0}
+#viewport-2-a-skills-web-badge{position:absolute;left:20.504px;top:117.784px;width:59.392px;height:28.672px;margin:0}
+#viewport-2-a-skills-web-badge-2{position:absolute;left:91.16px;top:117.784px;width:64.512px;height:28.672px;margin:0}
+#viewport-2-a-skills-web-badge-3{position:absolute;left:167.96px;top:117.784px;width:65.536px;height:28.672px;margin:0}
+#viewport-2-a-skills-web-badge-4{position:absolute;left:245.784px;top:117.784px;width:70.656px;height:28.672px;margin:0}
+#viewport-2-a-skills-ai-decoration{position:absolute;left:20.504px;top:15.384px;width:56.32px;height:56.32px;margin:0}
+#viewport-2-a-skills-ai-icon{position:absolute;left:29.72px;top:26.648px;width:36.864px;height:34.816px;margin:0}
+#viewport-2-a-skills-ai-heading{position:absolute;left:97.304px;top:26.648px;width:194.56px;height:21.504px;margin:0}
+#viewport-2-a-skills-ai-paragraph{position:absolute;left:97.304px;top:58.392px;width:251.904px;height:34.816px;margin:0}
+#viewport-2-a-skills-ai-badge{position:absolute;left:20.504px;top:117.784px;width:89.088px;height:28.672px;margin:0}
+#viewport-2-a-skills-ai-badge-2{position:absolute;left:121.88px;top:117.784px;width:68.608px;height:28.672px;margin:0}
+#viewport-2-a-skills-ai-badge-3{position:absolute;left:201.752px;top:117.784px;width:89.088px;height:28.672px;margin:0}
+#viewport-2-a-skills-ai-badge-4{position:absolute;left:301.08px;top:117.784px;width:84.992px;height:28.672px;margin:0}
+#viewport-2-a-skills-automation-decoration{position:absolute;left:20.504px;top:15.384px;width:56.32px;height:56.32px;margin:0}
+#viewport-2-a-skills-automation-icon{position:absolute;left:30.744px;top:26.648px;width:35.84px;height:34.816px;margin:0}
+#viewport-2-a-skills-automation-heading{position:absolute;left:98.328px;top:27.672px;width:104.448px;height:16.384px;margin:0}
+#viewport-2-a-skills-automation-paragraph{position:absolute;left:98.328px;top:58.392px;width:244.736px;height:32.768px;margin:0}
+#viewport-2-a-skills-automation-badge{position:absolute;left:20.504px;top:117.784px;width:67.584px;height:28.672px;margin:0}
+#viewport-2-a-skills-automation-badge-2{position:absolute;left:100.376px;top:117.784px;width:76.8px;height:28.672px;margin:0}
+#viewport-2-a-skills-automation-badge-3{position:absolute;left:189.464px;top:117.784px;width:86.016px;height:28.672px;margin:0}
+#viewport-2-a-skills-automation-badge-4{position:absolute;left:287.768px;top:117.784px;width:50.176px;height:28.672px;margin:0}
+#viewport-2-a-skills-tools-decoration{position:absolute;left:20.504px;top:15.384px;width:56.32px;height:56.32px;margin:0}
+#viewport-2-a-skills-tools-icon{position:absolute;left:30.744px;top:29.72px;width:35.84px;height:26.624px;margin:0}
+#viewport-2-a-skills-tools-heading{position:absolute;left:97.304px;top:27.672px;width:138.24px;height:20.48px;margin:0}
+#viewport-2-a-skills-tools-paragraph{position:absolute;left:97.304px;top:58.392px;width:229.376px;height:34.816px;margin:0}
+#viewport-2-a-skills-tools-badge{position:absolute;left:20.504px;top:117.784px;width:52.224px;height:28.672px;margin:0}
+#viewport-2-a-skills-tools-badge-2{position:absolute;left:85.016px;top:117.784px;width:70.656px;height:28.672px;margin:0}
+#viewport-2-a-skills-tools-badge-3{position:absolute;left:167.96px;top:117.784px;width:59.392px;height:28.672px;margin:0}
+#viewport-2-a-skills-tools-badge-4{position:absolute;left:239.64px;top:117.784px;width:63.488px;height:28.672px;margin:0}
+#viewport-2-a-skills-databases-decoration{position:absolute;left:20.504px;top:15.384px;width:56.32px;height:56.32px;margin:0}
+#viewport-2-a-skills-databases-icon{position:absolute;left:33.816px;top:26.648px;width:29.696px;height:34.816px;margin:0}
+#viewport-2-a-skills-databases-heading{position:absolute;left:97.304px;top:27.672px;width:94.208px;height:16.384px;margin:0}
+#viewport-2-a-skills-databases-paragraph{position:absolute;left:97.304px;top:58.392px;width:277.504px;height:34.816px;margin:0}
+#viewport-2-a-skills-databases-badge{position:absolute;left:20.504px;top:117.784px;width:93.184px;height:28.672px;margin:0}
+#viewport-2-a-skills-databases-badge-2{position:absolute;left:125.976px;top:117.784px;width:81.92px;height:28.672px;margin:0}
+#viewport-2-a-skills-databases-badge-3{position:absolute;left:220.184px;top:117.784px;width:67.584px;height:28.672px;margin:0}
+#viewport-2-a-skills-databases-badge-4{position:absolute;left:298.008px;top:117.784px;width:75.776px;height:28.672px;margin:0}
+#viewport-3-b-projects{position:absolute;left:74.752px;top:38.912px;width:1378.304px;height:565.248px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-collaboration{position:absolute;left:912.384px;top:622.592px;width:540.672px;height:276.48px;margin:0;max-width:none}
+#viewport-3-b-journey{position:absolute;left:88.064px;top:621.568px;width:784.384px;height:253.952px;margin:0;max-width:none}
+#viewport-3-b-footer{position:absolute;left:87.04px;top:933.888px;width:1366.016px;height:47.104px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-projects-source-row-1{position:relative;margin:0px 0 0 14.336px;width:201.728px;height:11.264px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-projects-heading{position:relative;margin:14.336px 0 0 15.36px;width:433.152px;height:26.624px;flex:none}
+#viewport-3-b-projects-text{position:relative;margin:11.264px 0 0 13.312px;width:471.04px;height:35.84px;flex:none}
+#viewport-3-b-projects-source-row-4{position:relative;margin:16.384px 0 0 0px;width:1378.304px;height:449.536px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-projects-source-row-1-divider{position:relative;margin:5.12px 0 0 0px;width:21.504px;height:2.048px;flex:none}
+#viewport-3-b-projects-source-row-1-text{position:relative;margin:0px 0 0 16.384px;width:163.84px;height:11.264px;flex:none}
+#viewport-3-b-projects-task-illustration{position:absolute;left:72.728px;top:12.312px;width:221.184px;height:154.624px;margin:0}
+#viewport-3-b-projects-task-badge{position:absolute;left:27.672px;top:187.416px;width:122.88px;height:21.504px;margin:0}
+#viewport-3-b-projects-task-heading{position:absolute;left:27.672px;top:218.136px;width:178.176px;height:17.408px;margin:0}
+#viewport-3-b-projects-task-text{position:absolute;left:27.672px;top:246.808px;width:267.264px;height:73.728px;margin:0}
+#viewport-3-b-projects-task-source-row-5{position:absolute;left:27.672px;top:330.776px;width:125.952px;height:25.6px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-projects-task-source-row-6{position:absolute;left:-1px;top:371.736px;width:312.32px;height:76.8px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-projects-task-source-row-5-badge{position:relative;margin:0px 0 0 0px;width:65.536px;height:25.6px;flex:none}
+#viewport-3-b-projects-task-source-row-5-badge-2{position:relative;margin:0px 0 0 8.192px;width:52.224px;height:25.6px;flex:none}
+#viewport-3-b-projects-task-github{position:relative;margin:0px 0 0 0px;width:164.864px;height:76.8px;flex:none;max-width:none}
+#viewport-3-b-projects-task-demo{position:relative;margin:0px 0 0 11.264px;width:136.192px;height:39.936px;flex:none;max-width:none}
+#viewport-3-b-projects-task-github-button{position:absolute;left:28.672px;top:0px;width:136.192px;height:39.936px;margin:0}
+#viewport-3-b-projects-task-github-icon{position:absolute;left:0px;top:11.264px;width:98.304px;height:65.536px;margin:0}
+#viewport-3-b-projects-task-demo-button{position:absolute;left:0px;top:0px;width:136.192px;height:39.936px;margin:0}
+#viewport-3-b-projects-task-demo-icon{position:absolute;left:43.008px;top:14.336px;width:10.24px;height:11.264px;margin:0}
+#viewport-3-b-projects-assistant-illustration{position:relative;margin:0px 0 0 23.552px;width:232.448px;height:149.504px;flex:none}
+#viewport-3-b-projects-assistant-badge{position:relative;margin:21.504px 0 0 0px;width:134.144px;height:21.504px;flex:none}
+#viewport-3-b-projects-assistant-heading{position:relative;margin:9.216px 0 0 0px;width:195.584px;height:19.456px;flex:none}
+#viewport-3-b-projects-assistant-text{position:relative;margin:10.24px 0 0 0px;width:286.72px;height:53.248px;flex:none}
+#viewport-3-b-projects-assistant-source-row-5{position:relative;margin:29.696px 0 0 0px;width:110.592px;height:25.6px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-projects-assistant-source-row-6{position:relative;margin:15.36px 0 0 0px;width:287.744px;height:39.936px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-projects-assistant-source-row-5-badge{position:relative;margin:0px 0 0 0px;width:64.512px;height:25.6px;flex:none}
+#viewport-3-b-projects-assistant-source-row-5-badge-2{position:relative;margin:0px 0 0 9.216px;width:36.864px;height:25.6px;flex:none}
+#viewport-3-b-projects-assistant-github{position:relative;margin:0px 0 0 0px;width:140.288px;height:39.936px;flex:none;max-width:none}
+#viewport-3-b-projects-assistant-demo{position:relative;margin:0px 0 0 10.24px;width:137.216px;height:39.936px;flex:none;max-width:none}
+#viewport-3-b-projects-assistant-github-button{position:absolute;left:0px;top:0px;width:140.288px;height:39.936px;margin:0}
+#viewport-3-b-projects-assistant-github-icon{position:absolute;left:38.912px;top:11.264px;width:16.384px;height:16.384px;margin:0}
+#viewport-3-b-projects-assistant-demo-button{position:absolute;left:0px;top:0px;width:137.216px;height:39.936px;margin:0}
+#viewport-3-b-projects-assistant-demo-icon{position:absolute;left:43.008px;top:14.336px;width:11.264px;height:11.264px;margin:0}
+#viewport-3-b-projects-service-illustration{position:relative;margin:0px 0 0 26.624px;width:235.52px;height:150.528px;flex:none}
+#viewport-3-b-projects-service-badge{position:relative;margin:20.48px 0 0 0px;width:135.168px;height:21.504px;flex:none}
+#viewport-3-b-projects-service-heading{position:relative;margin:9.216px 0 0 0px;width:113.664px;height:17.408px;flex:none}
+#viewport-3-b-projects-service-text{position:relative;margin:11.264px 0 0 0px;width:254.976px;height:52.224px;flex:none}
+#viewport-3-b-projects-service-source-row-5{position:relative;margin:31.744px 0 0 0px;width:135.168px;height:25.6px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-projects-service-source-row-6{position:relative;margin:15.36px 0 0 0px;width:290.816px;height:39.936px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-projects-service-source-row-5-badge{position:relative;margin:0px 0 0 0px;width:58.368px;height:25.6px;flex:none}
+#viewport-3-b-projects-service-source-row-5-badge-2{position:relative;margin:0px 0 0 11.264px;width:65.536px;height:25.6px;flex:none}
+#viewport-3-b-projects-service-github{position:relative;margin:0px 0 0 0px;width:141.312px;height:39.936px;flex:none;max-width:none}
+#viewport-3-b-projects-service-demo{position:relative;margin:0px 0 0 11.264px;width:138.24px;height:39.936px;flex:none;max-width:none}
+#viewport-3-b-projects-service-github-button{position:absolute;left:0px;top:0px;width:141.312px;height:39.936px;margin:0}
+#viewport-3-b-projects-service-github-icon{position:absolute;left:39.936px;top:11.264px;width:17.408px;height:16.384px;margin:0}
+#viewport-3-b-projects-service-demo-button{position:absolute;left:0px;top:0px;width:138.24px;height:39.936px;margin:0}
+#viewport-3-b-projects-service-demo-icon{position:absolute;left:44.032px;top:14.336px;width:11.264px;height:11.264px;margin:0}
+#viewport-3-b-projects-toolkit-illustration{position:relative;margin:0px 0 0 15.36px;width:249.856px;height:152.576px;flex:none}
+#viewport-3-b-projects-toolkit-badge{position:relative;margin:18.432px 0 0 1.024px;width:129.024px;height:21.504px;flex:none}
+#viewport-3-b-projects-toolkit-heading{position:relative;margin:9.216px 0 0 1.024px;width:172.032px;height:17.408px;flex:none}
+#viewport-3-b-projects-toolkit-text{position:relative;margin:11.264px 0 0 1.024px;width:251.904px;height:54.272px;flex:none}
+#viewport-3-b-projects-toolkit-badge-2{position:relative;margin:29.696px 0 0 1.024px;width:63.488px;height:25.6px;flex:none}
+#viewport-3-b-projects-toolkit-source-row-6{position:relative;margin:15.36px 0 0 0px;width:280.576px;height:39.936px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-projects-toolkit-github{position:relative;margin:0px 0 0 0px;width:136.192px;height:39.936px;flex:none;max-width:none}
+#viewport-3-b-projects-toolkit-demo{position:relative;margin:0px 0 0 11.264px;width:133.12px;height:39.936px;flex:none;max-width:none}
+#viewport-3-b-projects-toolkit-github-button{position:absolute;left:0px;top:0px;width:136.192px;height:39.936px;margin:0}
+#viewport-3-b-projects-toolkit-github-icon{position:absolute;left:36.864px;top:11.264px;width:16.384px;height:16.384px;margin:0}
+#viewport-3-b-projects-toolkit-demo-button{position:absolute;left:0px;top:0px;width:133.12px;height:39.936px;margin:0}
+#viewport-3-b-projects-toolkit-demo-icon{position:absolute;left:40.96px;top:14.336px;width:11.264px;height:11.264px;margin:0}
+#viewport-3-b-journey-divider{position:absolute;left:1.024px;top:5.12px;width:21.504px;height:2.048px;margin:0}
+#viewport-3-b-journey-text{position:absolute;left:38.912px;top:0px;width:131.072px;height:10.24px;margin:0}
+#viewport-3-b-journey-heading{position:absolute;left:1.024px;top:23.552px;width:434.176px;height:29.696px;margin:0}
+#viewport-3-b-journey-text-2{position:absolute;left:0px;top:59.392px;width:473.088px;height:36.864px;margin:0}
+#viewport-3-b-journey-divider-2{position:absolute;left:25.6px;top:143.36px;width:626.688px;height:1.024px;margin:0}
+#viewport-3-b-journey-foundations{position:absolute;left:0px;top:120.832px;width:128px;height:132.096px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-journey-projects{position:absolute;left:211.968px;top:120.832px;width:134.144px;height:133.12px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-journey-ai{position:absolute;left:420.864px;top:120.832px;width:130.048px;height:115.712px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-journey-growing{position:absolute;left:624.64px;top:120.832px;width:159.744px;height:133.12px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-journey-foundations-heading{position:relative;margin:12.288px 0 0 1.024px;width:90.112px;height:12.288px;flex:none}
+#viewport-3-b-journey-foundations-text{position:relative;margin:13.312px 0 0 0px;width:128px;height:47.104px;flex:none}
+#viewport-3-b-journey-foundations-surface-155-icon{position:relative;margin:0px 0 0 0px;width:26.624px;height:22.528px;flex:none}
+#viewport-3-b-journey-projects-heading{position:relative;margin:12.288px 0 0 0px;width:115.712px;height:15.36px;flex:none}
+#viewport-3-b-journey-projects-text{position:relative;margin:10.24px 0 0 0px;width:134.144px;height:48.128px;flex:none}
+#viewport-3-b-journey-projects-surface-156-icon{position:relative;margin:0px 0 0 0px;width:27.648px;height:20.48px;flex:none}
+#viewport-3-b-journey-ai-heading{position:relative;margin:12.288px 0 0 0px;width:83.968px;height:15.36px;flex:none}
+#viewport-3-b-journey-ai-text{position:relative;margin:10.24px 0 0 0px;width:130.048px;height:30.72px;flex:none}
+#viewport-3-b-journey-ai-surface-157-icon{position:relative;margin:0px 0 0 0px;width:26.624px;height:28.672px;flex:none}
+#viewport-3-b-journey-growing-heading{position:relative;margin:12.288px 0 0 1.024px;width:58.368px;height:15.36px;flex:none}
+#viewport-3-b-journey-growing-text{position:relative;margin:10.24px 0 0 0px;width:159.744px;height:48.128px;flex:none}
+#viewport-3-b-journey-growing-surface-158-icon{position:relative;margin:0px 0 0 0px;width:24.576px;height:25.6px;flex:none}
+#viewport-3-b-collaboration-source-row-1{position:absolute;left:45.056px;top:0px;width:145.408px;height:9.216px;margin:0;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-collaboration-heading{position:absolute;left:44.032px;top:26.624px;width:300.032px;height:62.464px;margin:0}
+#viewport-3-b-collaboration-source-row-3{position:absolute;left:0px;top:0px;width:540.672px;height:276.48px;margin:0;max-width:none}
+#viewport-3-b-collaboration-source-row-1-divider{position:relative;margin:4.096px 0 0 0px;width:19.456px;height:2.048px;flex:none}
+#viewport-3-b-collaboration-source-row-1-text{position:relative;margin:0px 0 0 13.312px;width:112.64px;height:9.216px;flex:none}
+#viewport-3-b-collaboration-source-row-3-divider{position:absolute;left:0px;top:0px;width:2.048px;height:276.48px;margin:0}
+#viewport-3-b-collaboration-source-row-3-text{position:absolute;left:43.008px;top:99.328px;width:357.376px;height:57.344px;margin:0}
+#viewport-3-b-collaboration-email{position:absolute;left:45.056px;top:182.272px;width:218.112px;height:40.96px;margin:0;max-width:none}
+#viewport-3-b-collaboration-github{position:absolute;left:282.624px;top:182.272px;width:118.784px;height:40.96px;margin:0;max-width:none}
+#viewport-3-b-collaboration-linkedin{position:absolute;left:422.912px;top:182.272px;width:117.76px;height:40.96px;margin:0;max-width:none}
+#viewport-3-b-collaboration-email-button{position:absolute;left:0px;top:0px;width:218.112px;height:40.96px;margin:0}
+#viewport-3-b-collaboration-email-icon{position:absolute;left:21.504px;top:13.312px;width:16.384px;height:14.336px;margin:0}
+#viewport-3-b-collaboration-github-button{position:absolute;left:0px;top:0px;width:118.784px;height:40.96px;margin:0}
+#viewport-3-b-collaboration-github-icon{position:absolute;left:27.648px;top:11.264px;width:17.408px;height:17.408px;margin:0}
+#viewport-3-b-collaboration-linkedin-button{position:absolute;left:0px;top:0px;width:117.76px;height:40.96px;margin:0}
+#viewport-3-b-collaboration-linkedin-icon{position:absolute;left:22.528px;top:11.264px;width:17.408px;height:17.408px;margin:0}
+#viewport-3-b-footer-divider{position:relative;margin:0px 0 0 2.048px;width:1363.968px;height:1.024px;flex:none}
+#viewport-3-b-footer-source-row-2{position:relative;margin:18.432px 0 0 0px;width:1364.992px;height:27.648px;flex:none;max-width:none;padding:0px 0 0 0px}
+#viewport-3-b-footer-source-row-2-logo{position:relative;margin:0px 0 0 0px;width:129.024px;height:27.648px;flex:none}
+#viewport-3-b-footer-source-row-2-text{position:relative;margin:8.192px 0 0 83.968px;width:45.056px;height:11.264px;flex:none}
+#viewport-3-b-footer-source-row-2-text-2{position:relative;margin:8.192px 0 0 14.336px;width:6.144px;height:11.264px;flex:none}
+#viewport-3-b-footer-source-row-2-text-3{position:relative;margin:8.192px 0 0 12.288px;width:44.032px;height:11.264px;flex:none}
+#viewport-3-b-footer-source-row-2-text-4{position:relative;margin:8.192px 0 0 14.336px;width:6.144px;height:11.264px;flex:none}
+#viewport-3-b-footer-source-row-2-text-5{position:relative;margin:8.192px 0 0 12.288px;width:38.912px;height:11.264px;flex:none}
+#viewport-3-b-footer-source-row-2-divider{position:relative;margin:13.312px 0 0 694.272px;width:24.576px;height:1.024px;flex:none}
+#viewport-3-b-footer-source-row-2-text-6{position:relative;margin:8.192px 0 0 13.312px;width:199.68px;height:11.264px;flex:none}
+#viewport-3-b-footer-source-row-2-icon{position:relative;margin:9.216px 0 0 15.36px;width:11.264px;height:10.24px;flex:none}

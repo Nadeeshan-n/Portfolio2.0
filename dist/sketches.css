@@ -1,0 +1,23 @@
+/* Decorative artwork only; the portfolio's layout and type scale are retained. */
+.skill-icon img.sketch-icon{object-fit:contain!important;aspect-ratio:1;pointer-events:none}
+.sketch-accent{position:absolute;right:0;top:86px;width:64px;height:40px;pointer-events:none;user-select:none}
+.contact>.sketch-accent{top:0;right:0;width:50px;height:32px}
+@media(max-width:1020px){.skills>.sketch-accent{top:66px}}
+@media(max-width:520px){.skills>.sketch-accent{top:54px;width:56px}}
+
+/* The unchanged 4:3 hero bitmap remains the only layer in document flow. */
+.hero-art.hero-art{position:relative!important}
+.hero-art[data-reveal="pending"]>img,.hero-art[data-reveal="building"]>img{visibility:hidden}
+.hero-art>.hero-motion{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;user-select:none;visibility:hidden;overflow:hidden}
+.hero-art[data-reveal="building"]>.hero-motion,.hero-art[data-reveal="complete"]>.hero-motion{visibility:visible}
+.hero-art[data-reveal="complete"] .hero-construction{visibility:hidden}
+.hero-motion .hero-live-layer,.hero-motion .hero-live-ink{pointer-events:none}
+.hero-motion .hero-draw-mask{stroke-linecap:round;stroke-linejoin:round}
+.hero-motion .hero-code-cursor{animation:hero-cursor-activity 3.8s ease-in-out infinite;animation-play-state:paused}
+.hero-art[data-motion="running"][data-flow="ready"] .hero-code-cursor{animation-play-state:running}
+@keyframes hero-cursor-activity{0%,15%,100%{opacity:0}30%,65%{opacity:.48}80%{opacity:0}}
+@media(prefers-reduced-motion:reduce){
+ .hero-art.hero-art>img{visibility:visible}
+ .hero-art.hero-art>.hero-motion{visibility:hidden}
+ .hero-motion .hero-code-cursor{animation:none;opacity:0}
+}

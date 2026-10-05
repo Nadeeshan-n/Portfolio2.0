@@ -1,0 +1,191 @@
+{
+  "updated": "2026-10-04",
+  "projects": [
+    {
+      "slug": "ai-work-planner",
+      "title": "AI Work Planner",
+      "visual": "planner",
+      "description": "Project overview to be added.",
+      "cardStack": [],
+      "technologies": [],
+      "overview": "Project details will be added soon.",
+      "flow": [],
+      "features": [],
+      "learned": null,
+      "github": null,
+      "demo": null,
+      "sources": [],
+      "dataStatus": "placeholder",
+      "image": null,
+      "previewImages": []
+    },
+    {
+      "slug": "ai-web-assistant",
+      "title": "AI-powered Web Assistant",
+      "visual": "assistant",
+      "description": "A Flask assistant that turns messages into a structured summary, sentiment and reply.",
+      "cardStack": [
+        "Python",
+        "Flask",
+        "LangChain",
+        "Gemini"
+      ],
+      "technologies": [
+        "Python",
+        "Flask",
+        "LangChain",
+        "Gemini",
+        "Pydantic",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "overview": "A work-in-progress web assistant with a working chat flow. A simple browser interface sends a message to Flask; LangChain calls Gemini and Pydantic parses the response into summary, sentiment and reply fields.",
+      "flow": [
+        "Message",
+        "Flask",
+        "Gemini",
+        "JSON response"
+      ],
+      "features": [
+        "Browser-based message interface.",
+        "Structured summary, sentiment and reply.",
+        "Configurable model settings and basic error handling."
+      ],
+      "learned": null,
+      "github": "https://github.com/Nadeeshan-n/AI-powered-Web-Assistant-",
+      "demo": null,
+      "sources": [
+        "https://github.com/Nadeeshan-n/AI-powered-Web-Assistant-/blob/main/README.md"
+      ],
+      "dataStatus": "repository-documented",
+      "image": null,
+      "previewImages": []
+    },
+    {
+      "slug": "personal-task-mcp-server",
+      "title": "Personal Task MCP Server",
+      "visual": "mcp",
+      "description": "A local task-management server exploring how AI applications connect to tools and data through MCP.",
+      "cardStack": [
+        "Python",
+        "MCP",
+        "Gemini",
+        "Google ADK"
+      ],
+      "technologies": [
+        "Python",
+        "MCP",
+        "Gemini",
+        "Google ADK",
+        "JSON",
+        "stdio"
+      ],
+      "overview": "A hands-on learning project built around a small Python task manager. Custom MCP clients, Gemini and a Google ADK agent use the server's tools, resources and prompts. Local communication uses stdio, with task data stored in JSON.",
+      "flow": [
+        "Request",
+        "AI + MCP client",
+        "MCP tools",
+        "JSON tasks"
+      ],
+      "features": [
+        "Add, list, complete, delete and search tasks.",
+        "MCP tool discovery, resources and prompts.",
+        "Gemini and Google ADK client integrations."
+      ],
+      "learned": "I learned how MCP acts as a standard connection layer between AI applications and external tools, including tool discovery, invocation, resources, prompts and local stdio communication.",
+      "github": "https://github.com/Nadeeshan-n/Personal-Task-MCP-Server",
+      "demo": null,
+      "sources": [
+        "https://github.com/Nadeeshan-n/Personal-Task-MCP-Server/blob/main/README.md",
+        "https://github.com/Nadeeshan-n/My_Portfolio/blob/main/src/data/data.js"
+      ],
+      "dataStatus": "repository-documented",
+      "image": null,
+      "previewImages": []
+    },
+    {
+      "slug": "drive-smart",
+      "title": "Drive Smart 2.0",
+      "visual": "drive",
+      "description": "A Windows desktop system for vehicle rentals, fleet maintenance, customers, payments and reports.",
+      "cardStack": [
+        "C#",
+        ".NET 8",
+        "WPF",
+        "SQLite"
+      ],
+      "technologies": [
+        "C#",
+        ".NET 8",
+        "WPF",
+        "XAML",
+        "SQLite",
+        "Entity Framework Core",
+        "QuestPDF",
+        "ClosedXML"
+      ],
+      "overview": "A modular Windows desktop application that brings day-to-day vehicle rental and fleet operations into one system. Employee roles control access to vehicle, customer, payment and maintenance modules, with SQLite persistence and operational reporting.",
+      "flow": [
+        "Employee",
+        "Rental modules",
+        "SQLite",
+        "Reports"
+      ],
+      "features": [
+        "Employee authentication and Admin, Manager and Staff roles.",
+        "Vehicle, customer, payment and maintenance management.",
+        "Billing, PDF reports and Excel exports."
+      ],
+      "learned": null,
+      "github": "https://github.com/Nadeeshan-n/Drive-Smart-2.0-",
+      "demo": null,
+      "sources": [
+        "https://github.com/Nadeeshan-n/Drive-Smart-2.0-/blob/main/README.md",
+        "https://github.com/Nadeeshan-n/My_Portfolio/blob/main/src/data/data.js"
+      ],
+      "dataStatus": "repository-documented",
+      "image": null,
+      "previewImages": []
+    },
+    {
+      "slug": "person-identifier",
+      "title": "Person Identifier",
+      "visual": "identifier",
+      "description": "A beginner-friendly face-recognition project using face embeddings and KNN to identify people.",
+      "cardStack": [
+        "Python",
+        "OpenCV",
+        "Face embeddings",
+        "KNN"
+      ],
+      "technologies": [
+        "Python",
+        "OpenCV",
+        "Face embeddings",
+        "KNN"
+      ],
+      "overview": "A Python face-recognition project using OpenCV, face embeddings and KNN machine learning. The repository describes it as the first part of a larger AI and IoT project for identifying and interacting with people.",
+      "flow": [
+        "Face",
+        "Embedding",
+        "KNN",
+        "Match"
+      ],
+      "features": [
+        "OpenCV-based face-recognition workflow.",
+        "Face embeddings as recognition features.",
+        "KNN-based person identification."
+      ],
+      "learned": null,
+      "github": "https://github.com/Nadeeshan-n/Person-Identifier",
+      "demo": null,
+      "sources": [
+        "https://github.com/Nadeeshan-n/Person-Identifier"
+      ],
+      "dataStatus": "repository-description",
+      "image": null,
+      "previewImages": []
+    }
+  ]
+}

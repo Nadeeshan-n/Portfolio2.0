@@ -1,0 +1,118 @@
+{
+  "retrieved_date": "2026-10-04",
+  "usage": "Inline SVG with CSS color: #0E8F78. SVG fill=currentColor inherits CSS color when inline. For 22px circular buttons set the SVG to about 14px; preserve aspect ratio and original viewBox. Standalone <img> SVG does not inherit document currentColor.",
+  "modifications": "Only presentation sizing, accessibility attributes, and monochrome fill changed. Original path d values and viewBoxes are preserved. WhatsApp stylesheet/class removed and equivalent currentColor applied inline; no shape changes.",
+  "licenses": [
+    {
+      "package": "Simple Icons",
+      "version": "16.34.0",
+      "commit": "98820a4dc8c363ca72fa2c0d294ea4a0a9bba75d",
+      "license": "CC0-1.0 (package)",
+      "license_url": "https://github.com/simple-icons/simple-icons/blob/98820a4dc8c363ca72fa2c0d294ea4a0a9bba75d/LICENSE.md",
+      "disclaimer_url": "https://github.com/simple-icons/simple-icons/blob/98820a4dc8c363ca72fa2c0d294ea4a0a9bba75d/DISCLAIMER.md",
+      "note": "Package license does not release brand trademarks; follow the individual brand guidelines."
+    },
+    {
+      "package": "Font Awesome Free",
+      "version": "7.3.1",
+      "commit": "14c65a3747d0f3b751f15831fc719236aea8729d",
+      "license": "CC BY 4.0 (SVG icons)",
+      "license_url": "https://fontawesome.com/license/free",
+      "attribution": "Font Awesome Free 7.3.1 by @fontawesome. Copyright 2026 Fonticons, Inc.",
+      "note": "Keep the embedded Font Awesome attribution comment when inlining linkedin.svg."
+    },
+    {
+      "package": "Brand-owned GitHub / WhatsApp / X downloads",
+      "license": "Brand trademark guidelines; no general-purpose open-source logo license assumed."
+    }
+  ],
+  "limitations": [
+    "LinkedIn\u2019s current brand download supplies only PNG, so the SVG is taken from Font Awesome\u2019s own official source package and checked against the official black [in] icon.",
+    "Facebook\u2019s downloadable brand pack contains PNG/AI. TikTok\u2019s developer pack contains button SVGs and AI/PNG logo assets. Simple Icons supplies monochrome SVG glyphs sourced to the brands.",
+    "Requested green recoloring is mechanically supported. LinkedIn, WhatsApp, Pinterest and other brands impose color restrictions; currentColor preparation is not a claim that custom green is a brand-approved color.",
+    "GitHub uses the 2025+ Invertocat from the current official ZIP. WhatsApp uses the current 2026 glyph, not the older Simple Icons phone shape."
+  ],
+  "icons": [
+    {
+      "file": "facebook.svg",
+      "brand": "Facebook",
+      "viewBox": "0 0 24 24",
+      "brand_guidelines": "https://www.meta.com/brand/resources/facebook/logo/",
+      "original_file": "originals/facebook.svg",
+      "source_package": "Simple Icons 16.34.0",
+      "svg_source": "https://raw.githubusercontent.com/simple-icons/simple-icons/98820a4dc8c363ca72fa2c0d294ea4a0a9bba75d/icons/facebook.svg",
+      "brand_origin": "https://about.meta.com/brand/resources/facebook/logo"
+    },
+    {
+      "file": "linkedin.svg",
+      "brand": "LinkedIn",
+      "viewBox": "0 0 448 512",
+      "brand_guidelines": "https://brand.linkedin.com/in-logo",
+      "original_file": "originals/fa-linkedin.svg",
+      "source_package": "Font Awesome Free 7.3.1",
+      "svg_source": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/brands/linkedin.svg",
+      "official_brand_download": "https://content.linkedin.com/content/dam/me/business/en-us/amp/xbu/linkedin-revised-brand-guidelines/logos/in-logo.zip"
+    },
+    {
+      "file": "tiktok.svg",
+      "brand": "TikTok",
+      "viewBox": "0 0 24 24",
+      "brand_guidelines": "https://developers.tiktok.com/docs/en/getting-started-design-guidelines",
+      "original_file": "originals/tiktok.svg",
+      "source_package": "Simple Icons 16.34.0",
+      "svg_source": "https://raw.githubusercontent.com/simple-icons/simple-icons/98820a4dc8c363ca72fa2c0d294ea4a0a9bba75d/icons/tiktok.svg",
+      "brand_origin": "https://tiktok.com"
+    },
+    {
+      "file": "youtube.svg",
+      "brand": "YouTube",
+      "viewBox": "0 0 24 24",
+      "brand_guidelines": "https://brand.youtube/",
+      "original_file": "originals/youtube.svg",
+      "source_package": "Simple Icons 16.34.0",
+      "svg_source": "https://raw.githubusercontent.com/simple-icons/simple-icons/98820a4dc8c363ca72fa2c0d294ea4a0a9bba75d/icons/youtube.svg",
+      "brand_origin": "https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors"
+    },
+    {
+      "file": "whatsapp.svg",
+      "brand": "WhatsApp",
+      "viewBox": "0 0 720 720",
+      "brand_guidelines": "https://www.meta.com/brand/resources/whatsapp/whatsapp-brand/",
+      "original_file": "originals/WhatsApp_Glyph_Black_2026.svg",
+      "source_package": "WhatsApp official 2026 brand pack",
+      "svg_source_archive": "Official Logo Pack download on https://www.meta.com/brand/resources/whatsapp/whatsapp-brand/",
+      "archive_member": "Brand Resource Center Page Downloads/01_Glyph/01_Digital RGB/03_SVG/Digital_Glyph_Black_RGB_2026.svg",
+      "download_url_record": "originals/official-whatsapp.zip.url"
+    },
+    {
+      "file": "x.svg",
+      "brand": "X",
+      "viewBox": "0 0 1200 1227",
+      "brand_guidelines": "https://about.x.com/es/who-we-are/brand-toolkit",
+      "original_file": "originals/X_Logo.svg",
+      "source_package": "X official brand toolkit",
+      "svg_source_archive": "https://about.x.com/content/dam/about-twitter/x/brand-toolkit/x-logo.zip",
+      "archive_member": "logo.svg"
+    },
+    {
+      "file": "pinterest.svg",
+      "brand": "Pinterest",
+      "viewBox": "0 0 24 24",
+      "brand_guidelines": "https://business.pinterest.com/brand-guidelines/",
+      "original_file": "originals/pinterest.svg",
+      "source_package": "Simple Icons 16.34.0",
+      "svg_source": "https://raw.githubusercontent.com/simple-icons/simple-icons/98820a4dc8c363ca72fa2c0d294ea4a0a9bba75d/icons/pinterest.svg",
+      "brand_origin": "https://business.pinterest.com/en/brand-guidelines"
+    },
+    {
+      "file": "github.svg",
+      "brand": "GitHub",
+      "viewBox": "0 0 98 96",
+      "brand_guidelines": "https://brand.github.com/foundations/logo",
+      "original_file": "originals/GitHub_Invertocat_Black.svg",
+      "source_package": "GitHub official brand toolkit",
+      "svg_source_archive": "https://brand.github.com/GitHub_Logos.zip",
+      "archive_member": "GitHub Logos/SVG/GitHub_Invertocat_Black.svg"
+    }
+  ]
+}
