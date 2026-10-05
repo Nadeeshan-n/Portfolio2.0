@@ -1,0 +1,15 @@
+/* Shared social-profile controls used by the Home and Contact pages. */
+.contact-socials{position:relative;z-index:2;margin:32px auto 0;text-align:center}
+.home-socials{margin-top:0;padding-bottom:72px;background:var(--color-bg-primary)}
+.contact-socials h2{font-size:12px;font-weight:600;line-height:1.5;letter-spacing:.2px;color:var(--charcoal-900)}
+.social-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:17px;margin:16px auto 0;max-width:530px}
+.social-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 48px;width:48px;height:48px;margin:0;padding:12px;border:1px solid var(--jade-500);border-radius:50%;background:var(--white-0);color:var(--jade-500);cursor:pointer;transition:background-color .23s,color .23s,border-color .23s;line-height:1}
+.social-glyph{display:block;width:22px;height:22px;fill:currentColor;transition:transform .23s;pointer-events:none}
+a.social-icon:hover{background:var(--jade-500);border-color:var(--jade-500);color:var(--white-0)}
+a.social-icon:hover .social-glyph{transform:translateY(-1px)}
+a.social-icon:active{background:var(--jade-800);border-color:var(--jade-800);color:var(--white-0)}
+.social-icon:focus-visible{outline:3px solid var(--jade-500);outline-offset:4px}
+.social-icon:disabled{--social-opacity:.45;opacity:.45;cursor:default}
+@media(max-width:520px){.social-row{gap:16px 20px;max-width:252px}.contact-socials{margin-top:28px}}
+@media(prefers-reduced-motion:reduce){.social-glyph{transition:none!important;transform:none!important}}
+@media(forced-colors:active){.social-icon{background:ButtonFace;color:ButtonText;border-color:ButtonText}a.social-icon:is(:hover,:active){background:Highlight;color:HighlightText;border-color:Highlight}.social-icon:disabled{color:GrayText;border-color:GrayText;opacity:1}}

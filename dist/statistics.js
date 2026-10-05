@@ -69,9 +69,9 @@
   // Count the same records used by Projects and Education, independently.
   // Each failed request keeps that counter's generated fallback.
   const sources = [
-    { key: 'projects', url: '/projects/projects.json', count: data => Array.isArray(data.projects) ? data.projects.length : null },
-    { key: 'certificates', url: '/education/education.json', count: data => Array.isArray(data.certificates) ? data.certificates.length : null },
-    { key: 'experience', url: '/portfolio.json', count: data => data.statistics?.experience }
+    { key: 'projects', url: 'projects/projects.json', count: data => Array.isArray(data.projects) ? data.projects.length : null },
+    { key: 'certificates', url: 'education/education.json', count: data => Array.isArray(data.certificates) ? data.certificates.length : null },
+    { key: 'experience', url: 'portfolio.json', count: data => data.statistics?.experience }
   ];
   Promise.allSettled(sources.map(async source => {
     const response = await fetch(source.url, { credentials: 'same-origin' });

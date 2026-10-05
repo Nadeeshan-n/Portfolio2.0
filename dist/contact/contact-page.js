@@ -34,42 +34,6 @@
   const year = document.querySelector('.contact-year');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  // Real profile destinations only. Empty entries remain visibly unavailable.
-  const platforms = {
-    facebook: ['facebook.com', 'fb.com'], linkedin: ['linkedin.com'],
-    whatsapp: ['whatsapp.com', 'wa.me'], x: ['x.com', 'twitter.com'], github: ['github.com']
-  };
-  const safeProfile = (platform, value) => {
-    if (typeof value !== 'string') return null;
-    try {
-      const url = new URL(value);
-      const host = url.hostname.replace(/^www\./, '');
-      return url.protocol === 'https:' && !url.username && !url.password && platforms[platform]?.includes(host) ? url.href : null;
-    } catch { return null; }
-  };
-  const configureSocials = data => {
-    if (!data || typeof data !== 'object') return;
-    section.querySelectorAll('[data-social-platform]').forEach(control => {
-      const platform = control.dataset.socialPlatform;
-      const url = safeProfile(platform, data[platform]);
-      if (!url) return;
-      let link = control;
-      if (control.tagName !== 'A') {
-        link = document.createElement('a');
-        link.className = control.className;
-        link.style.cssText = control.style.cssText;
-        link.dataset.socialPlatform = platform;
-        link.dataset.socialLabel = control.dataset.socialLabel;
-        while (control.firstChild) link.appendChild(control.firstChild);
-        control.replaceWith(link);
-      }
-      link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer';
-      link.title = link.dataset.socialLabel;
-      link.setAttribute('aria-label', link.dataset.socialLabel + ' (opens in a new tab)');
-    });
-  };
-  if (typeof fetch === 'function') fetch('/contact/socials.json', { credentials: 'same-origin' })
-    .then(response => response.ok ? response.json() : null).then(configureSocials).catch(() => {});
 
   // Share the existing delivery configuration; never claim a message was sent without acceptance.
   const form = section.querySelector('.contact-form');
@@ -116,7 +80,7 @@
     recipient = safeEmail(data?.email); endpoint = safeEndpoint(data?.endpoint);
     send.disabled = !(recipient || endpoint);
   };
-  if (typeof fetch === 'function') fetch('/contact.json', { credentials: 'same-origin' })
+  if (typeof fetch === 'function') fetch(new URL('../contact.json', new URL('.', document.currentScript.src)), { credentials: 'same-origin' })
     .then(response => response.ok ? response.json() : null).then(configureDelivery).catch(() => configureDelivery(null));
   form.addEventListener('submit', async event => {
     event.preventDefault();
