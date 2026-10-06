@@ -11,7 +11,7 @@
  --color-action-primary:var(--jade-500);--color-action-primary-hover:var(--jade-700);--color-action-primary-active:var(--jade-800);
  --color-action-primary-focus:var(--jade-500);--color-action-primary-disabled:var(--gray-green-400);
  --color-selection-bg:var(--jade-50);--color-selection-fg:var(--jade-700);
- --page-padding:clamp(24px,6.25vw,96px);--radius:16px;
+ --page-padding:clamp(16px,2.5vw,40px);--radius:16px;
 }
 *{box-sizing:border-box}
 html{background:var(--color-bg-primary);scroll-behavior:smooth;scroll-padding-top:105px}
@@ -22,7 +22,15 @@ button{cursor:pointer}
 ::selection{background:var(--color-selection-bg);color:var(--color-selection-fg)}
 :focus-visible{outline:3px solid var(--color-action-primary-focus);outline-offset:5px}
 [id^="viewport-"]{position:static!important;left:auto!important;top:auto!important;width:auto!important;height:auto!important;max-width:none!important;margin:0!important;padding:0!important;flex:none!important;z-index:auto!important}
-#page-flow{position:relative!important;display:block;width:100%!important;height:auto!important;max-width:1536px!important;padding:0 var(--page-padding)!important;margin:0 auto!important}
+#page-flow {
+  position: relative !important;
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  padding: 0 var(--page-padding) !important;
+  margin: 0 auto !important;
+}
 .section.section,.journey.journey,.contact.contact{position:relative!important}
 .section-anchor{position:absolute;top:0;left:0;width:1px;height:1px;scroll-margin-top:105px;pointer-events:none}
 .section{padding:88px 0!important}
