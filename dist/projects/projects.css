@@ -4,7 +4,12 @@
 .projects-page .nav-link[aria-current]{color:var(--jade-500)}
 .projects-page .menu-toggle[hidden]{display:none}
 .projects-page .site-footer .footer-links{display:flex;gap:24px}
-.projects-shell{width:100%;max-width:1392px;margin:0 auto;padding:0 var(--page-padding) 92px}
+.projects-shell {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 var(--page-padding) 92px;
+}
 .projects-intro{position:relative;isolation:isolate;padding:58px 0 50px}
 .projects-intro-copy{position:relative;z-index:1;max-width:930px}
 .projects-intro h1{max-width:940px;margin-top:22px;font-size:clamp(34px,3.8vw,52px);font-weight:700;line-height:1.2;letter-spacing:-1.9px;text-wrap:balance}

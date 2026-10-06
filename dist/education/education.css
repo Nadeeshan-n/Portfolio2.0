@@ -4,7 +4,12 @@
 .education-page a{color:inherit;text-decoration:none}
 .education-page button{font:inherit}
 .education-page [hidden]{display:none!important}
-.education-main{max-width:1344px;margin:0 auto;padding:0 var(--page-padding)}
+.education-main {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 var(--page-padding);
+}
 .education-hero{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:72px;align-items:center;padding:64px 0 68px}
 .education-hero .section-label{margin-bottom:20px}
 .education-hero h1{font-size:clamp(38px,4.4vw,62px);font-weight:700;line-height:1.12;letter-spacing:-2.4px;text-wrap:balance;max-width:790px}

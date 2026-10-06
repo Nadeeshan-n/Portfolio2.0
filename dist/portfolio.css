@@ -11,7 +11,7 @@
  --color-action-primary:var(--jade-500);--color-action-primary-hover:var(--jade-700);--color-action-primary-active:var(--jade-800);
  --color-action-primary-focus:var(--jade-500);--color-action-primary-disabled:var(--gray-green-400);
  --color-selection-bg:var(--jade-50);--color-selection-fg:var(--jade-700);
- --page-padding:clamp(16px,2.5vw,40px);--radius:16px;
+--page-padding: clamp(24px, 6.25vw, 96px);--radius:16px;
 }
 *{box-sizing:border-box}
 html{background:var(--color-bg-primary);scroll-behavior:smooth;scroll-padding-top:105px}
