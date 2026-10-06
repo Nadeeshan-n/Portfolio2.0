@@ -36,65 +36,64 @@
   header.classList.toggle('scrolled', scrollY > 8);
   document.querySelector('.education-year').textContent = String(new Date().getFullYear());
 
-  // Route geometry follows the actual layout; wrapping text never detaches its nodes.
-  const map = document.querySelector('.journey-map');
-  const svg = map.querySelector('.journey-route');
-  const ink = svg.querySelector('.route-ink');
-  const branchInk = svg.querySelector('.route-branches');
-  let routePending = false;
-  const drawRoute = () => {
-    routePending = false;
-    const bounds = map.getBoundingClientRect();
+  // Timeline: one smooth S-curve is generated from the real positions of the dots,
+  // so wrapping text, resizing or late-loading images never detach it.
+  const wrap = document.querySelector('.timeline-wrap');
+  const curve = wrap.querySelector('.timeline-curve');
+  const curvePath = curve.querySelector('path');
+  let timelinePending = false;
+  const drawTimeline = () => {
+    timelinePending = false;
+    const bounds = wrap.getBoundingClientRect();
     if (!bounds.width || !bounds.height) return;
-    const nodes = [...map.querySelectorAll('.route-node')].map(node => {
-      const box = node.getBoundingClientRect();
-      const stop = node.closest('.journey-stop').getBoundingClientRect();
-      return { x: box.left + box.width / 2 - bounds.left, y: box.top + box.height / 2 - bounds.top, bottom: stop.bottom - bounds.top };
+    const dots = [...wrap.querySelectorAll('.timeline-dot')].map(dot => {
+      const box = dot.getBoundingClientRect();
+      return { x: box.left + box.width / 2 - bounds.left, y: box.top + box.height / 2 - bounds.top };
     });
-    svg.setAttribute('viewBox', `0 0 ${bounds.width} ${bounds.height}`);
-    let path = `M${nodes[0].x} ${Math.max(0, nodes[0].y - 18)} L${nodes[0].x} ${nodes[0].y}`;
-    for (let index = 1; index < nodes.length; index++) {
-      const a = nodes[index - 1], b = nodes[index];
-      // Elbows live in the whitespace between modules, never across their text.
-      const middle = a.bottom + (b.y - a.bottom) * .5;
-      if (Math.abs(a.x - b.x) < 1) path += ` L${b.x} ${b.y}`;
-      else {
-        const direction = b.x > a.x ? 1 : -1;
-        const radius = Math.min(7, Math.abs(b.x - a.x) / 3, (b.y - a.y) / 5);
-        path += ` L${a.x} ${middle - radius} Q${a.x} ${middle} ${a.x + radius * direction} ${middle}`;
-        path += ` L${b.x - radius * direction} ${middle} Q${b.x} ${middle} ${b.x} ${middle + radius} L${b.x} ${b.y}`;
-      }
+    if (!dots.length) return;
+    curve.setAttribute('viewBox', `0 0 ${bounds.width} ${bounds.height}`);
+    const first = dots[0], last = dots[dots.length - 1];
+    let path = `M${first.x} ${Math.max(0, first.y - 24)} L${first.x} ${first.y}`;
+    for (let index = 1; index < dots.length; index++) {
+      const a = dots[index - 1], b = dots[index], middle = (a.y + b.y) / 2;
+      // Vertical tangents at every dot keep the curve smooth, with no kinks.
+      path += ` C${a.x} ${middle} ${b.x} ${middle} ${b.x} ${b.y}`;
     }
-    ink.setAttribute('d', path);
-    let branches = '';
-    map.querySelectorAll('.learning-stage').forEach(stage => {
-      const hub = stage.querySelector('.route-node').getBoundingClientRect();
-      const hubX = hub.left + hub.width / 2 - bounds.left;
-      const hubY = hub.top + hub.height / 2 - bounds.top;
-      stage.querySelectorAll('.learning-node').forEach(learning => {
-        const box = learning.getBoundingClientRect();
-        const dot = learning.querySelector('.mini-node').getBoundingClientRect();
-        const x = dot.left + dot.width / 2 - bounds.left;
-        const y = dot.top + dot.height / 2 - bounds.top;
-        const railY = box.top + 4 - bounds.top;
-        branches += `M${hubX} ${hubY} V${railY} H${x} V${y} `;
-      });
-    });
-    branchInk.setAttribute('d', branches);
+    path += ` L${last.x} ${Math.min(bounds.height, last.y + 28)}`;
+    curvePath.setAttribute('d', path);
   };
-  const requestRoute = () => {
-    if (routePending) return;
-    routePending = true;
-    requestAnimationFrame(drawRoute);
+  const requestTimeline = () => {
+    if (timelinePending) return;
+    timelinePending = true;
+    requestAnimationFrame(drawTimeline);
   };
   if ('ResizeObserver' in window) {
-    const observer = new ResizeObserver(requestRoute);
-    observer.observe(map);
-    map.querySelectorAll('.journey-stop').forEach(stop => observer.observe(stop));
+    const observer = new ResizeObserver(requestTimeline);
+    observer.observe(wrap);
+    wrap.querySelectorAll('.timeline-item').forEach(item => observer.observe(item));
   }
-  addEventListener('resize', requestRoute, { passive: true });
-  document.fonts?.ready.then(requestRoute);
-  requestRoute();
+  addEventListener('resize', requestTimeline, { passive: true });
+  addEventListener('load', requestTimeline);
+  document.fonts?.ready.then(requestTimeline);
+  requestTimeline();
+
+  // University emblem: show a clean "USJ" if the image cannot load.
+  const mark = wrap.querySelector('.university-mark');
+  if (mark) {
+    const showFallback = () => {
+      if (!mark.isConnected) return;
+      const fallback = document.createElement('span');
+      fallback.className = 'university-fallback';
+      fallback.textContent = 'USJ';
+      mark.replaceWith(fallback);
+      requestTimeline();
+    };
+    if (mark.complete && mark.naturalWidth === 0) showFallback();
+    else {
+      mark.addEventListener('error', showFallback, { once: true });
+      mark.addEventListener('load', requestTimeline, { once: true });
+    }
+  }
 
   // Decorative motion never reacts to a pointer. Pause it when this page is hidden.
   const setMotion = () => document.body.classList.toggle('motion-paused', document.hidden);
@@ -166,6 +165,20 @@
     dialog.scrollTop = 0;
     close.focus({ preventScroll: true });
   };
+  // Certificate thumbnails come from the same records as the preview dialog.
+  document.querySelectorAll('.timeline-media[data-certificate]').forEach(cell => {
+    const record = certificates.get(cell.dataset.certificate);
+    const first = record && Array.isArray(record.images) ? record.images.find(safeImage) : null;
+    if (!first) return;
+    const thumb = document.createElement('img');
+    thumb.alt = '';
+    thumb.decoding = 'async';
+    thumb.loading = 'lazy';
+    thumb.addEventListener('load', () => { cell.classList.add('has-image'); requestTimeline(); });
+    thumb.addEventListener('error', () => { thumb.remove(); cell.classList.remove('has-image'); });
+    thumb.src = new URL(first.src, location.href).href;
+    cell.append(thumb);
+  });
   document.querySelectorAll('.certificate-trigger').forEach(trigger => {
     if (!certificates.has(trigger.dataset.certificate)) return;
     trigger.disabled = false;
