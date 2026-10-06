@@ -1,0 +1,5 @@
+[
+  {"slug":"understanding-mcp","title":"Understanding Model Context Protocol","excerpt":"A practical exploration of how MCP connects AI applications with external tools and data.","category":"AI & Development","date":"2026-10-06","readTime":"8 min read","image":"/assets/blog/understanding-mcp/thumbnail.svg","featured":true},
+  {"slug":"practical-rag-system","title":"Building a Practical RAG System","excerpt":"The small design decisions that make retrieval augmented generation useful in real applications.","category":"AI & Development","date":"2026-09-18","readTime":"7 min read","image":"/assets/blog/practical-rag-system/thumbnail.svg","featured":false},
+  {"slug":"ai-application-lessons","title":"Lessons From Building AI-Powered Applications","excerpt":"Notes on scope, interfaces, evaluation and the engineering work around a model call.","category":"Engineering Notes","date":"2026-08-29","readTime":"6 min read","image":"/assets/blog/ai-application-lessons/thumbnail.svg","featured":false}
+]
