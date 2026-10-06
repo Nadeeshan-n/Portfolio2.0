@@ -73,11 +73,6 @@
     try {
       const response = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload), credentials: 'omit', ...(controller ? { signal: controller.signal } : {}) });
       if (!response.ok) throw new Error('Delivery was not accepted');
-      const contentType = response.headers && response.headers.get('content-type');
-      if (contentType && contentType.includes('application/json')) {
-        const result = await response.json();
-        if (result && (result.ok === false || result.success === false || result.error)) throw new Error('Delivery was not accepted');
-      }
       form.reset(); inputs.forEach(clearError); tell('Your message was sent. Thanks for reaching out.');
     } catch {
       tell('Your message could not be sent. Please try again, or connect on GitHub.');
