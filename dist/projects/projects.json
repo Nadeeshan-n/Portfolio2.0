@@ -186,6 +186,28 @@
       "dataStatus": "repository-description",
       "image": null,
       "previewImages": []
-    }
+    },
+    {
+  "slug": "my-new-project",
+  "title": "My New Project",
+  "visual": "default",
+  "description": "A short description of my project.",
+  "cardStack": [],
+  "technologies": [
+    "Python",
+    "FastAPI",
+    "AI"
+  ],
+  "overview": "A longer description of the project.",
+  "flow": [],
+  "features": [],
+  "learned": null,
+  "github": "https://github.com/Nadeeshan-n/my-new-project",
+  "demo": null,
+  "sources": [],
+  "dataStatus": "complete",
+  "image": "/assets/projects/my-new-project.png",
+  "previewImages": []
+}
   ]
 }
