@@ -102,9 +102,34 @@
 
   const dialog = document.querySelector('#certificate-dialog');
   if (typeof dialog.showModal !== 'function') return;
-  let records;
-  try { records = JSON.parse(document.querySelector('#education-data').textContent).certificates; }
-  catch { return; }
+  const timelineList = wrap.querySelector('.timeline-list');
+  fetch('education.json')
+    .then(response => {
+      if (!response.ok) throw new Error(`Unable to load education.json (${response.status})`);
+      return response.json();
+    })
+    .then(data => {
+      const records = data.certificates;
+      if (!Array.isArray(records)) throw new Error('education.json has no certificates array');
+      const degree = data.degree || {};
+      const degreeCard = wrap.querySelector('.timeline-card-degree');
+      if (degreeCard) {
+        degreeCard.querySelector('.timeline-year').textContent = degree.period || '';
+        degreeCard.querySelector('.timeline-title').textContent = degree.title || '';
+        degreeCard.querySelector('.timeline-issuer').textContent = [degree.institution, degree.location].filter(Boolean).join(' · ');
+        degreeCard.querySelector('.timeline-focus').textContent = Array.isArray(degree.focus) ? degree.focus.join(' · ') : '';
+      }
+      timelineList.querySelectorAll('.timeline-item:not(.timeline-item-degree)').forEach(item => item.remove());
+      records.forEach(record => {
+        const item = document.createElement('li');
+        item.className = 'timeline-item';
+        item.innerHTML = `<span class="timeline-dot" aria-hidden="true"></span><article class="timeline-card"><button class="timeline-media certificate-trigger" type="button" data-certificate="${record.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" aria-label="Open certificate: ${record.title}" tabindex="-1" disabled><span class="timeline-placeholder">Certificate<br>image</span></button><div class="timeline-content"><p class="timeline-year">${record.year}</p><h3 class="timeline-title"></h3><p class="timeline-issuer"></p><button class="timeline-link certificate-trigger" type="button" data-certificate="${record.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" disabled>View certificate <span aria-hidden="true">→</span></button></div></article>`;
+        const card = item.querySelector('.timeline-card');
+        card.querySelector('.timeline-title').textContent = record.title || '';
+        card.querySelector('.timeline-issuer').textContent = record.institution || '';
+        timelineList.append(item);
+      });
+      requestTimeline();
   const certificates = new Map(records.map(item => [item.id, item]));
   const close = dialog.querySelector('.certificate-close');
   const title = dialog.querySelector('#certificate-modal-title');
@@ -199,4 +224,6 @@
   previous.addEventListener('click', () => { if (imageIndex > 0) { imageIndex--; showImage(); } });
   next.addEventListener('click', () => { if (imageIndex < images.length - 1) { imageIndex++; showImage(); } });
   image.addEventListener('error', () => { if (dialog.open && images.length) { image.hidden = true; error.hidden = false; } });
+    })
+    .catch(() => {});
 })();
