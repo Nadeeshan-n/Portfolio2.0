@@ -16,7 +16,8 @@
       "demo": null,
       "sources": [],
       "dataStatus": "placeholder",
-      "image": "/assets/blog/understanding-mcp/thumbail.png",      "previewImages": []
+      "image": "/assets/blog/understanding-mcp/thumbnail.png",
+      "previewImages": []
     },
     {
       "slug": "ai-web-assistant",
@@ -185,26 +186,6 @@
       "dataStatus": "repository-description",
       "image": null,
       "previewImages": []
-    },
-    {
-      "slug": "test-project",
-      "title": "Test Project",
-      "visual": "test",
-      "description": "Testing JSON rendering.",
-      "cardStack": ["HTML", "CSS"],
-      "technologies": ["HTML", "CSS"],
-      "overview": "",
-  "flow": [],
-  "features": [],
-  "learned": null,
-  "github": null,
-  "demo": null,
-  "sources": [],
-  "dataStatus": "test",
-  "image": null,
-  "previewImages": []
-}
-
-
+    }
   ]
 }

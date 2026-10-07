@@ -61,6 +61,22 @@
         media.dataset.projectMedia = project.slug;
         media.dataset.projectTitle = project.title || '';
         media.innerHTML = '<div class="work-image-surface"><img class="work-image" alt="" hidden><p class="work-image-empty">Project image</p></div>';
+        const image = media.querySelector('.work-image');
+        const placeholder = media.querySelector('.work-image-empty');
+        if (typeof project.image === 'string' && project.image.trim()) {
+          image.src = project.image;
+          image.alt = `${project.title || 'Project'} project image`;
+          image.hidden = false;
+          placeholder.hidden = true;
+          image.addEventListener('error', () => {
+            image.hidden = true;
+            image.removeAttribute('src');
+            placeholder.hidden = false;
+          }, { once: true });
+        } else {
+          image.hidden = true;
+          placeholder.hidden = false;
+        }
 
         const copy = document.createElement('div');
         copy.className = 'work-copy';
