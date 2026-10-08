@@ -151,15 +151,27 @@
         "https://github.com/Nadeeshan-n/ai-agent-memory-system/blob/main/README.md"
       ],
       "dataStatus": "repository-documented",
-      "image": "/assets/projects/ai-agent-memory-system.svg",
+      "image": "/assets/projects/ai-agent-memory-system-1.svg",
       "previewImages": [
         {
-          "src": "/assets/projects/ai-agent-memory-system.svg",
-          "alt": "AI Agent Memory System — structured long-term memory for AI agents"
+          "src": "/assets/projects/ai-agent-memory-system-1.svg",
+          "alt": "n8n workflow for the AI agent memory pipeline"
         },
         {
           "src": "/assets/projects/ai-agent-memory-system-2.svg",
-          "alt": "AI Agent Memory System — cross-session memory infrastructure"
+          "alt": "FastAPI memory service running with uvicorn"
+        },
+        {
+          "src": "/assets/projects/ai-agent-memory-system-3.svg",
+          "alt": "ngrok tunnel exposing the local n8n instance"
+        },
+        {
+          "src": "/assets/projects/ai-agent-memory-system-4.svg",
+          "alt": "Successful n8n workflow executions"
+        },
+        {
+          "src": "/assets/projects/ai-agent-memory-system-5.svg",
+          "alt": "WhatsApp chat with the memory-enabled AI agent"
         }
       ]
     },
