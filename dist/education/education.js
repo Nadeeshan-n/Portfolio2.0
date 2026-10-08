@@ -165,7 +165,64 @@
         </svg></div>`,
         'machine-learning': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 19l9-6M18 22l9 8M18 42l9-8M18 45l9 5M37 13l9 6M37 30l9-8M37 34l9 8M37 51l9-6"/><circle cx="13" cy="20" r="4.5"/><circle cx="13" cy="44" r="4.5"/><circle cx="32" cy="12" r="4.5"/><circle cx="32" cy="32" r="4.5" stroke="#0E8F78"/><circle cx="32" cy="52" r="4.5"/><circle cx="51" cy="20" r="4.5"/><circle cx="51" cy="44" r="4.5" stroke="#0E8F78"/></svg>`,
         'artificial-intelligence': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 18V11"/><circle cx="32" cy="8" r="3"/><rect x="15" y="18" width="34" height="26" rx="9"/><circle cx="25" cy="30" r="2.6" fill="#0E8F78" stroke="none"/><circle cx="39" cy="30" r="2.6" fill="#0E8F78" stroke="none"/><path d="M25 38h14"/><path d="M15 26v10M49 26v10"/></svg>`,
-        linux: `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="32" cy="38" rx="13" ry="16"/><circle cx="32" cy="17" r="9"/><path d="M28.5 17.5L32 20l3.5-2.5" stroke="#0E8F78"/><circle cx="29" cy="15" r="1.3" fill="currentColor" stroke="none"/><circle cx="35" cy="15" r="1.3" fill="currentColor" stroke="none"/><ellipse cx="32" cy="40" rx="7" ry="10"/><path d="M19 36l-6 4M45 36l6 4"/><path d="M24 54l-3 4M40 54l3 4"/></svg>`,
+        linux: `<div class="linux-stage" style="width:84px"><svg class="linux-icon" viewBox="0 0 200 200" role="img" aria-label="Linux technology illustration">
+          <g class="linux-float">
+            <g class="linux-tilt">
+              <g class="px-terminal">
+                <g class="linux-terminal">
+                  <rect class="linux-draw term-box" style="--d:1.5s" pathLength="1" x="16" y="64" width="46" height="38" rx="5" fill="#17211E" stroke="#0E8F78" stroke-width="2.5" stroke-opacity="0.55"/>
+                  <g class="linux-fadein" style="--d:1.9s" stroke="#0E8F78" stroke-width="2.5" stroke-linecap="round" fill="none">
+                    <path d="M24 84 l7 5 -7 5"/>
+                  </g>
+                  <rect class="term-cursor linux-fadein" style="--d:2s" x="36" y="80" width="7" height="10" fill="#0E8F78"/>
+                </g>
+              </g>
+              <g class="px-gear">
+                <g class="linux-fadein" style="--d:1.7s">
+                  <g class="linux-gearspin">
+                    <circle cx="163" cy="118" r="13" fill="none" stroke="#0E8F78" stroke-width="9" stroke-dasharray="5 5.21"/>
+                    <circle cx="163" cy="118" r="6.5" fill="#E9F5EF" stroke="#0E8F78" stroke-width="2.5"/>
+                  </g>
+                </g>
+              </g>
+              <g class="px-penguin">
+                <g class="linux-breathe">
+                  <path class="linux-draw" style="--d:0s" pathLength="1" d="M100 42 C70 42 56 66 56 100 C56 140 72 168 100 168 C128 168 144 140 144 100 C144 66 130 42 100 42 Z" fill="#17211E" stroke="#17211E" stroke-width="6" stroke-linejoin="round"/>
+                  <path class="linux-draw" style="--d:0.2s" pathLength="1" d="M60 102 C50 110 48 126 54 138" fill="none" stroke="#17211E" stroke-width="11" stroke-linecap="round"/>
+                  <path class="linux-draw" style="--d:0.25s" pathLength="1" d="M140 102 C150 110 152 126 146 138" fill="none" stroke="#17211E" stroke-width="11" stroke-linecap="round"/>
+                  <ellipse class="linux-pop" style="--d:0.95s" cx="100" cy="128" rx="29" ry="33" fill="#E9F5EF"/>
+                  <path class="linux-pop" style="--d:0.8s" d="M78 68 C78 59 87 55 100 55 C113 55 122 59 122 68 C122 79 111 87 100 87 C89 87 78 79 78 68 Z" fill="#E9F5EF"/>
+                  <g class="linux-fadein" style="--d:1.1s">
+                    <g class="linux-eye">
+                      <circle cx="89" cy="69" r="7.5" fill="#FFFFFF"/>
+                      <circle cx="89" cy="70" r="3.2" fill="#17211E"/>
+                    </g>
+                    <g class="linux-eye" style="animation-delay:0.12s">
+                      <circle cx="111" cy="69" r="7.5" fill="#FFFFFF"/>
+                      <circle cx="111" cy="70" r="3.2" fill="#17211E"/>
+                    </g>
+                  </g>
+                  <path class="linux-pop" style="--d:1.2s" d="M100 84 L109 90 L100 97 L91 90 Z" fill="#F2A93B" stroke="#17211E" stroke-width="2" stroke-linejoin="round"/>
+                  <g class="linux-feet">
+                    <ellipse class="linux-pop foot-l" style="--d:1.3s" cx="76" cy="164" rx="15" ry="9" fill="#F2A93B" stroke="#17211E" stroke-width="2.5"/>
+                    <ellipse class="linux-pop foot-r" style="--d:1.45s" cx="124" cy="164" rx="15" ry="9" fill="#F2A93B" stroke="#17211E" stroke-width="2.5"/>
+                  </g>
+                </g>
+              </g>
+              <g class="px-decor">
+                <g class="linux-fadein" style="--d:1.8s">
+                  <circle class="linux-dot d1" cx="30" cy="40" r="3" fill="#0E8F78"/>
+                  <circle class="linux-dot d2" cx="178" cy="80" r="2.5" fill="#17211E"/>
+                  <circle class="linux-dot d3" cx="170" cy="160" r="3" fill="#0E8F78"/>
+                  <circle class="linux-dot d4" cx="36" cy="150" r="2" fill="#17211E"/>
+                </g>
+                <path class="linux-accent a1" pathLength="1" d="M18 108 C12 124 14 142 24 154" fill="none" stroke="#17211E" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="linux-accent a2" pathLength="1" d="M184 104 C190 120 188 138 178 150" fill="none" stroke="#17211E" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="linux-accent a3" pathLength="1" d="M132 22 l10 -8" fill="none" stroke="#0E8F78" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </g>
+          </g>
+        </svg></div>`,
         'web-development': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 20L9 32l14 12"/><path d="M41 20l14 12-14 12"/><path d="M36 14l-8 36" stroke="#0E8F78"/></svg>`,
       };
       // Thumbnails + popup triggers are wired once after the category cards render.
@@ -208,6 +265,56 @@
           stage.addEventListener('pointerleave', () => { tx = 0; ty = 0; kick(); });
         });
       };
+      // Animated Linux icon: reveal on scroll into view + layered pointer parallax.
+      // Runs after the category icons are injected; each stage initializes once.
+      const initLinuxIcons = () => {
+        const stages = document.querySelectorAll('.linux-stage:not([data-lx-init])');
+        if (!stages.length) return;
+        stages.forEach(stage => stage.setAttribute('data-lx-init', '1'));
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if ('IntersectionObserver' in window) {
+          const io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) { entry.target.classList.add('is-inview'); io.unobserve(entry.target); }
+            });
+          }, { threshold: 0.3 });
+          stages.forEach(stage => io.observe(stage));
+        } else {
+          stages.forEach(stage => stage.classList.add('is-inview'));
+        }
+        if (reduceMotion) return;
+        stages.forEach(stage => {
+          const layers = [
+            [stage.querySelector('.px-penguin'), 2],
+            [stage.querySelector('.px-terminal'), 4],
+            [stage.querySelector('.px-gear'), 5],
+            [stage.querySelector('.px-decor'), 6]
+          ].filter(pair => pair[0]);
+          if (!layers.length) return;
+          let raf = 0, nx = 0, ny = 0;
+          const cur = layers.map(() => ({ x: 0, y: 0 }));
+          const tick = () => {
+            let moving = false;
+            layers.forEach((pair, i) => {
+              const el = pair[0], max = pair[1], c = cur[i];
+              const tx = nx * max, ty = ny * max;
+              c.x += (tx - c.x) * 0.12;
+              c.y += (ty - c.y) * 0.12;
+              el.style.translate = c.x.toFixed(2) + 'px ' + c.y.toFixed(2) + 'px';
+              if (Math.abs(tx - c.x) > 0.05 || Math.abs(ty - c.y) > 0.05) moving = true;
+            });
+            raf = moving ? requestAnimationFrame(tick) : 0;
+          };
+          const kick = () => { if (!raf) raf = requestAnimationFrame(tick); };
+          stage.addEventListener('pointermove', e => {
+            const r = stage.getBoundingClientRect();
+            nx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+            ny = ((e.clientY - r.top) / r.height - 0.5) * 2;
+            kick();
+          });
+          stage.addEventListener('pointerleave', () => { nx = 0; ny = 0; kick(); });
+        });
+      };
       const wireTriggers = () => {
         document.querySelectorAll('.timeline-media[data-category]:not([data-wired])').forEach(cell => {
           cell.dataset.wired = '1';
@@ -235,6 +342,7 @@
           trigger.addEventListener('click', () => openCategory(trigger));
         });
         initPythonIcons();
+        initLinuxIcons();
       };
       // One card per category: the card opens the popup slider at that category's certificates.
       const categories = Array.isArray(data.categories) && data.categories.length
