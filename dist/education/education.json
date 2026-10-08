@@ -76,7 +76,12 @@
         "Programming",
         "Problem Solving"
       ],
-      "images": [],
+      "images": [
+        {
+          "src": "/assets/certificates/python-basics.svg",
+          "alt": "Python Basics — University of Michigan course certificate"
+        }
+      ],
       "credentialUrl": "https://www.coursera.org/account/accomplishments/records/O5JB4V6QFV7F"
     },
     {
