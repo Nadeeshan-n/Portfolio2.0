@@ -44,12 +44,7 @@
       ],
       "dataStatus": "repository-documented",
       "image": "/assets/projects/personal-task-mcp-server.svg",
-      "previewImages": [
-        {
-          "src": "/assets/projects/personal-task-mcp-server.svg",
-          "alt": "Personal Task MCP Server thumbnail"
-        }
-      ]
+      "previewImages": []
     },
     {
       "slug": "drive-smart",
@@ -100,12 +95,7 @@
       ],
       "dataStatus": "repository-documented",
       "image": "/assets/projects/drive-smart.svg",
-      "previewImages": [
-        {
-          "src": "/assets/projects/drive-smart.svg",
-          "alt": "Drive Smart 2.0 — fleet management desktop app thumbnail"
-        }
-      ]
+      "previewImages": []
     },
     {
       "slug": "ai-agent-memory-system",
@@ -153,10 +143,6 @@
       "dataStatus": "repository-documented",
       "image": "/assets/projects/ai-agent-memory-system-1.svg",
       "previewImages": [
-        {
-          "src": "/assets/projects/ai-agent-memory-system-1.svg",
-          "alt": "n8n workflow for the AI agent memory pipeline"
-        },
         {
           "src": "/assets/projects/ai-agent-memory-system-2.svg",
           "alt": "FastAPI memory service running with uvicorn"
@@ -214,12 +200,7 @@
       ],
       "dataStatus": "repository-documented",
       "image": "/assets/projects/weather-forecast-accuracy.svg",
-      "previewImages": [
-        {
-          "src": "/assets/projects/weather-forecast-accuracy.svg",
-          "alt": "Weather Forecast Accuracy thumbnail"
-        }
-      ]
+      "previewImages": []
     },
     {
       "slug": "drive-smart-java",
@@ -260,12 +241,7 @@
       ],
       "dataStatus": "repository-documented",
       "image": "/assets/projects/drive-smart-java.svg",
-      "previewImages": [
-        {
-          "src": "/assets/projects/drive-smart-java.svg",
-          "alt": "Drive Smart car rental management system thumbnail"
-        }
-      ]
+      "previewImages": []
     },
     {
       "slug": "campusfind",
@@ -312,12 +288,7 @@
       ],
       "dataStatus": "repository-documented",
       "image": "/assets/projects/campusfind.svg",
-      "previewImages": [
-        {
-          "src": "/assets/projects/campusfind.svg",
-          "alt": "CampusFind university lost and found thumbnail"
-        }
-      ]
+      "previewImages": []
     }
   ]
 }

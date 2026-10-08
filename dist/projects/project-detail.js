@@ -117,7 +117,12 @@
   function renderPreview(project) {
     if (!previewEl) return;
     const images = project.previewImages || [];
-    if (!images.length) return; // keep the built-in empty placeholder
+    if (!images.length) {
+      // No inside images: hide the preview section instead of showing an empty box.
+      const section = previewEl.closest('.detail-section');
+      if (section) section.hidden = true;
+      return;
+    }
 
     previewEl.textContent = '';
     const gallery = document.createElement('div');
