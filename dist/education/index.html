@@ -49,7 +49,6 @@
       <header class="journey-heading">
         <h2 id="academic-journey-heading" class="section-label">Academic journey</h2>
       </header>
-      <div class="category-tabs" id="category-tabs" role="tablist" aria-label="Certificate categories"></div>
       <div class="timeline-wrap" id="timeline">
         <svg class="timeline-curve" aria-hidden="true" focusable="false"><path/></svg>
         <ol class="timeline-list">
@@ -187,15 +186,15 @@
     <div class="certificate-gallery" hidden>
       <img class="certificate-image" alt="" decoding="async">
       <p class="certificate-image-error" role="status" hidden>This certificate image is unavailable.</p>
-      <div class="certificate-gallery-controls" hidden>
-        <button type="button" class="certificate-previous" aria-label="Previous certificate image">Previous</button>
-        <span class="certificate-image-position" aria-live="polite" aria-atomic="true"></span>
-        <button type="button" class="certificate-next" aria-label="Next certificate image">Next</button>
-      </div>
     </div>
     <div class="certificate-no-image" hidden>
       <svg viewBox="0 0 58 64" aria-hidden="true" focusable="false"><path d="m9 5 31-.3 10 11-.3 43-41 .3Zm30 0v12h11M18 29h23M18 36h18M18 43h11"/><circle cx="38" cy="48" r="5"/><path d="m34 52-1 7 5-2 5 2-1-7"/></svg>
       <p>Certificate image hasn’t been added yet.</p>
+    </div>
+    <div class="certificate-slide-controls" hidden>
+      <button type="button" class="certificate-previous" aria-label="Previous certificate">← Previous</button>
+      <span class="certificate-image-position" aria-live="polite" aria-atomic="true"></span>
+      <button type="button" class="certificate-next" aria-label="Next certificate">Next →</button>
     </div>
     <h2 id="certificate-modal-title"></h2>
     <p class="certificate-modal-institution"></p>

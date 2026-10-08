@@ -119,66 +119,59 @@
         degreeCard.querySelector('.timeline-issuer').textContent = [degree.institution, degree.location].filter(Boolean).join(' · ');
         degreeCard.querySelector('.timeline-focus').textContent = Array.isArray(degree.focus) ? degree.focus.join(' · ') : '';
       }
-      const renderCertificates = (list) => {
-        timelineList.querySelectorAll('.timeline-item:not(.timeline-item-degree)').forEach(item => item.remove());
-        list.forEach(record => {
-          const item = document.createElement('li');
-          item.className = 'timeline-item';
-          item.innerHTML = `<span class="timeline-dot" aria-hidden="true"></span><article class="timeline-card"><button class="timeline-media certificate-trigger" type="button" data-certificate="${record.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" aria-label="Open certificate: ${record.title}" tabindex="-1" disabled><span class="timeline-placeholder">Certificate<br>image</span></button><div class="timeline-content"><p class="timeline-year">${record.year}</p><h3 class="timeline-title"></h3><p class="timeline-issuer"></p><button class="timeline-link certificate-trigger" type="button" data-certificate="${record.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" disabled>View certificate <span aria-hidden="true">→</span></button></div></article>`;
-          const card = item.querySelector('.timeline-card');
-          card.querySelector('.timeline-title').textContent = record.title || '';
-          card.querySelector('.timeline-issuer').textContent = record.institution || '';
-          timelineList.append(item);
-        });
-        requestTimeline();
+      const safeImage = item => {
+        if (!item || typeof item.src !== 'string') return false;
+        try {
+          const url = new URL(item.src, location.href);
+          return url.protocol === 'https:' || (url.origin === location.origin && url.protocol === 'http:');
+        } catch { return false; }
       };
-      // Category tabs: one category of certificates at a time, degree card always stays.
-      const tablist = document.querySelector('#category-tabs');
+      // Thumbnails + popup triggers are wired once after the category cards render.
+      const wireTriggers = () => {
+        document.querySelectorAll('.timeline-media[data-category]:not([data-wired])').forEach(cell => {
+          const certs = records.filter(record => record.category === cell.dataset.category);
+          const first = certs.length && Array.isArray(certs[0].images) ? certs[0].images.find(safeImage) : null;
+          cell.dataset.wired = '1';
+          if (!first) return;
+          const thumb = document.createElement('img');
+          thumb.alt = '';
+          thumb.decoding = 'async';
+          thumb.loading = 'lazy';
+          thumb.addEventListener('load', () => { cell.classList.add('has-image'); requestTimeline(); });
+          thumb.addEventListener('error', () => { thumb.remove(); cell.classList.remove('has-image'); });
+          thumb.src = new URL(first.src, location.href).href;
+          cell.append(thumb);
+        });
+        document.querySelectorAll('.certificate-trigger[data-category]:not([data-wired])').forEach(trigger => {
+          trigger.disabled = false;
+          trigger.dataset.wired = '1';
+          trigger.addEventListener('click', () => openCategory(trigger));
+        });
+      };
+      // One card per category: the card opens the popup slider at that category's certificates.
       const categories = Array.isArray(data.categories) && data.categories.length
         ? data.categories
         : [...new Set(records.map(record => record.category).filter(Boolean))].map(id => ({ id, label: id }));
-      const tabButtons = categories.map(cat => {
-        const tab = document.createElement('button');
-        tab.type = 'button';
-        tab.className = 'category-tab';
-        tab.setAttribute('role', 'tab');
-        tab.id = `category-tab-${cat.id}`;
-        tab.dataset.category = cat.id;
-        tab.setAttribute('aria-selected', 'false');
-        tab.tabIndex = -1;
-        tab.textContent = cat.label || cat.id;
-        const count = document.createElement('span');
-        count.className = 'category-count';
-        count.textContent = String(records.filter(record => record.category === cat.id).length);
-        tab.append(count);
-        tab.addEventListener('click', () => selectCategory(cat.id));
-        tablist.append(tab);
-        return tab;
-      });
-      const selectCategory = (id, focusTab = false) => {
-        tabButtons.forEach(tab => {
-          const selected = tab.dataset.category === id;
-          tab.setAttribute('aria-selected', String(selected));
-          tab.tabIndex = selected ? 0 : -1;
-          if (selected && focusTab) tab.focus();
+      const renderCategoryCards = () => {
+        timelineList.querySelectorAll('.timeline-item:not(.timeline-item-degree)').forEach(item => item.remove());
+        categories.forEach(cat => {
+          const certs = records.filter(record => record.category === cat.id);
+          if (!certs.length) return;
+          const years = certs.map(record => parseInt(record.year, 10)).filter(Number.isFinite);
+          const plural = certs.length > 1;
+          const label = cat.label || cat.id;
+          const item = document.createElement('li');
+          item.className = 'timeline-item';
+          item.innerHTML = `<span class="timeline-dot" aria-hidden="true"></span><article class="timeline-card"><button class="timeline-media certificate-trigger" type="button" data-category="${cat.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" aria-label="Open certificates: ${label}" tabindex="-1" disabled><span class="timeline-placeholder">Certificate<br>image</span></button><div class="timeline-content"><p class="timeline-year">${years.length ? Math.max(...years) : ''}</p><h3 class="timeline-title"></h3><p class="timeline-issuer"></p><button class="timeline-link certificate-trigger" type="button" data-category="${cat.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" disabled>View certificate${plural ? 's' : ''} <span aria-hidden="true">→</span></button></div></article>`;
+          const card = item.querySelector('.timeline-card');
+          card.querySelector('.timeline-title').textContent = label;
+          card.querySelector('.timeline-issuer').textContent = `${certs.length} certificate${plural ? 's' : ''}`;
+          timelineList.append(item);
         });
-        renderCertificates(records.filter(record => record.category === id));
+        wireTriggers();
+        requestTimeline();
       };
-      tablist.addEventListener('keydown', event => {
-        const current = tabButtons.findIndex(tab => tab.getAttribute('aria-selected') === 'true');
-        let next = -1;
-        if (event.key === 'ArrowRight') next = (current + 1) % tabButtons.length;
-        else if (event.key === 'ArrowLeft') next = (current - 1 + tabButtons.length) % tabButtons.length;
-        else if (event.key === 'Home') next = 0;
-        else if (event.key === 'End') next = tabButtons.length - 1;
-        if (next >= 0) {
-          event.preventDefault();
-          selectCategory(tabButtons[next].dataset.category, true);
-        }
-      });
-      if (tabButtons.length) selectCategory(tabButtons[0].dataset.category);
-      else renderCertificates(records);
-  const certificates = new Map(records.map(item => [item.id, item]));
+      renderCategoryCards();
   const close = dialog.querySelector('.certificate-close');
   const title = dialog.querySelector('#certificate-modal-title');
   const institution = dialog.querySelector('.certificate-modal-institution');
@@ -189,29 +182,48 @@
   const gallery = dialog.querySelector('.certificate-gallery');
   const image = dialog.querySelector('.certificate-image');
   const error = dialog.querySelector('.certificate-image-error');
-  const controls = dialog.querySelector('.certificate-gallery-controls');
+  const slideControls = dialog.querySelector('.certificate-slide-controls');
   const previous = dialog.querySelector('.certificate-previous');
   const next = dialog.querySelector('.certificate-next');
   const position = dialog.querySelector('.certificate-image-position');
-  let opener = null, current = null, images = [], imageIndex = 0, pointerBeganOutside = false;
-  const safeImage = item => {
-    if (!item || typeof item.src !== 'string') return false;
-    try {
-      const url = new URL(item.src, location.href);
-      return url.protocol === 'https:' || (url.origin === location.origin && url.protocol === 'http:');
-    } catch { return false; }
-  };
-  const showImage = () => {
-    const record = images[imageIndex];
+  let opener = null, slideRecords = [], slideIndex = 0, pointerBeganOutside = false;
+  const renderSlide = () => {
+    const record = slideRecords[slideIndex];
     if (!record) return;
-    image.hidden = false;
-    error.hidden = true;
-    image.alt = record.alt || `${current.title} certificate${images.length > 1 ? `, image ${imageIndex + 1} of ${images.length}` : ''}`;
-    image.src = new URL(record.src, location.href).href;
-    position.textContent = `${imageIndex + 1} / ${images.length}`;
-    previous.disabled = imageIndex === 0;
-    next.disabled = imageIndex === images.length - 1;
-    controls.hidden = images.length < 2;
+    const first = Array.isArray(record.images) ? record.images.find(safeImage) : null;
+    title.textContent = record.title || '';
+    institution.textContent = record.institution || '';
+    meta.textContent = `Certificate · ${record.year || ''}`;
+    skills.textContent = Array.isArray(record.skills) ? record.skills.join(' · ') : '';
+    if (verify) {
+      if (record.credentialUrl) { verify.href = record.credentialUrl; verify.hidden = false; }
+      else { verify.removeAttribute('href'); verify.hidden = true; }
+    }
+    gallery.hidden = !first;
+    noImage.hidden = !!first;
+    if (first) {
+      image.hidden = false;
+      error.hidden = true;
+      image.alt = first.alt || `${record.title} certificate`;
+      image.src = new URL(first.src, location.href).href;
+    } else {
+      image.removeAttribute('src');
+      image.alt = '';
+    }
+    const multi = slideRecords.length > 1;
+    slideControls.hidden = !multi;
+    if (multi) {
+      position.textContent = `${slideIndex + 1} / ${slideRecords.length}`;
+      previous.disabled = slideIndex === 0;
+      next.disabled = slideIndex === slideRecords.length - 1;
+    }
+  };
+  const stepSlide = direction => {
+    const nextIndex = slideIndex + direction;
+    if (!dialog.open || nextIndex < 0 || nextIndex >= slideRecords.length) return;
+    slideIndex = nextIndex;
+    renderSlide();
+    dialog.scrollTop = 0;
   };
   const dismiss = () => { if (dialog.open) dialog.close(); };
   const restore = () => {
@@ -219,49 +231,19 @@
     image.removeAttribute('src');
     opener?.focus({ preventScroll: true });
   };
-  const openCertificate = trigger => {
-    const record = certificates.get(trigger.dataset.certificate);
-    if (!record || dialog.open) return;
+  const openCategory = trigger => {
+    const categoryId = trigger.dataset.category;
+    if (!categoryId || dialog.open) return;
+    slideRecords = records.filter(item => item.category === categoryId);
+    if (!slideRecords.length) return;
     opener = trigger;
-    current = record;
-    images = Array.isArray(record.images) ? record.images.filter(safeImage) : [];
-    imageIndex = 0;
-    title.textContent = record.title;
-    institution.textContent = record.institution;
-    meta.textContent = `Certificate · ${record.year}`;
-    skills.textContent = record.skills.join(' · ');
-    if (verify) {
-      if (record.credentialUrl) { verify.href = record.credentialUrl; verify.hidden = false; }
-      else { verify.removeAttribute('href'); verify.hidden = true; }
-    }
-    gallery.hidden = images.length === 0;
-    noImage.hidden = images.length !== 0;
-    if (images.length) showImage();
-    else { image.removeAttribute('src'); image.alt = ''; }
+    slideIndex = 0;
+    renderSlide();
     document.body.classList.add('certificate-open');
     dialog.showModal();
     dialog.scrollTop = 0;
     close.focus({ preventScroll: true });
   };
-  // Certificate thumbnails come from the same records as the preview dialog.
-  document.querySelectorAll('.timeline-media[data-certificate]').forEach(cell => {
-    const record = certificates.get(cell.dataset.certificate);
-    const first = record && Array.isArray(record.images) ? record.images.find(safeImage) : null;
-    if (!first) return;
-    const thumb = document.createElement('img');
-    thumb.alt = '';
-    thumb.decoding = 'async';
-    thumb.loading = 'lazy';
-    thumb.addEventListener('load', () => { cell.classList.add('has-image'); requestTimeline(); });
-    thumb.addEventListener('error', () => { thumb.remove(); cell.classList.remove('has-image'); });
-    thumb.src = new URL(first.src, location.href).href;
-    cell.append(thumb);
-  });
-  document.querySelectorAll('.certificate-trigger').forEach(trigger => {
-    if (!certificates.has(trigger.dataset.certificate)) return;
-    trigger.disabled = false;
-    trigger.addEventListener('click', () => openCertificate(trigger));
-  });
   close.addEventListener('click', dismiss);
   dialog.addEventListener('close', restore);
   dialog.addEventListener('cancel', event => { event.preventDefault(); dismiss(); });
@@ -274,9 +256,18 @@
     if (pointerBeganOutside && event.target === dialog && outside(event)) dismiss();
     pointerBeganOutside = false;
   });
-  previous.addEventListener('click', () => { if (imageIndex > 0) { imageIndex--; showImage(); } });
-  next.addEventListener('click', () => { if (imageIndex < images.length - 1) { imageIndex++; showImage(); } });
-  image.addEventListener('error', () => { if (dialog.open && images.length) { image.hidden = true; error.hidden = false; } });
+  previous.addEventListener('click', () => stepSlide(-1));
+  next.addEventListener('click', () => stepSlide(1));
+  dialog.addEventListener('keydown', event => {
+    if (slideRecords.length < 2) return;
+    if (event.key === 'ArrowLeft') { event.preventDefault(); stepSlide(-1); }
+    else if (event.key === 'ArrowRight') { event.preventDefault(); stepSlide(1); }
+  });
+  image.addEventListener('error', () => {
+    const record = slideRecords[slideIndex];
+    const hasImage = record && Array.isArray(record.images) && record.images.some(safeImage);
+    if (dialog.open && hasImage) { image.hidden = true; error.hidden = false; }
+  });
     })
     .catch(() => {});
 })();

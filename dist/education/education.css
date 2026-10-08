@@ -41,20 +41,12 @@
 .certificate-no-image p,.certificate-image-error{font-size:12px;line-height:1.8;color:var(--color-text-secondary)}
 .certificate-image{display:block;width:100%;height:auto;max-height:48svh;object-fit:contain;border-radius:6px}
 .certificate-image-error{padding:28px 0}
-.certificate-gallery-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:15px}
-.certificate-gallery-controls button{min-height:42px;padding:8px 13px;border:1px solid var(--color-border-default);border-radius:0;background:var(--color-bg-primary);color:var(--jade-700);font-size:11px;font-weight:500}
-.certificate-gallery-controls button:disabled{cursor:default;color:var(--color-text-secondary)}
+.certificate-slide-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:15px}
+.certificate-slide-controls button{min-height:42px;padding:8px 13px;border:1px solid var(--color-border-default);border-radius:0;background:var(--color-bg-primary);color:var(--jade-700);font-size:11px;font-weight:500}
+.certificate-slide-controls button:disabled{cursor:default;color:var(--color-text-secondary)}
 .certificate-image-position{font-size:10px;color:var(--color-text-secondary)}
 .education-page.certificate-open{overflow:hidden}
 .journey-heading{margin-bottom:36px}
-/* Certificate category tabs: one category at a time, degree card always stays. */
-.category-tabs{display:flex;flex-wrap:wrap;gap:6px 26px;margin:4px 0 44px}
-.category-tab{background:none;border:0;border-bottom:2px solid transparent;border-radius:0;padding:8px 2px 6px;font-size:14px;font-weight:600;color:var(--color-text-secondary);cursor:pointer}
-.category-tab:hover{color:var(--color-text-primary)}
-.category-tab:focus-visible{outline:2px solid var(--jade-500);outline-offset:3px}
-.category-tab[aria-selected="true"]{color:var(--jade-700);border-bottom-color:var(--jade-500)}
-.category-count{font-size:11px;font-weight:500;color:var(--color-text-secondary);margin-left:7px}
-.category-tab[aria-selected="true"] .category-count{color:var(--jade-700)}
 /* Timeline: one continuous S-curve (SVG, drawn by education.js) behind alternating cards. */
 .timeline-wrap{--tl-accent:#2F6F5E;--tl-line:#CFDAD4;--tl-dot-bg:var(--color-bg-primary,#F7F9F7);position:relative;padding:8px 0}
 .timeline-curve{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:0;pointer-events:none;fill:none;stroke:var(--tl-line);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
@@ -98,8 +90,6 @@ button.timeline-media:not(:disabled){cursor:pointer}
  .education-hero-note{font-size:12px;margin-top:12px!important}
  .education-hero .section-label{margin-bottom:16px}
  .academic-journey{padding:25px 0 58px}
- .category-tabs{gap:4px 18px;margin-bottom:34px}
- .category-tab{font-size:13px}
  .journey-heading{margin-bottom:30px}
  .journey-annotation{font-size:9px;letter-spacing:.9px}
  .timeline-list{gap:24px}
