@@ -119,17 +119,65 @@
         degreeCard.querySelector('.timeline-issuer').textContent = [degree.institution, degree.location].filter(Boolean).join(' · ');
         degreeCard.querySelector('.timeline-focus').textContent = Array.isArray(degree.focus) ? degree.focus.join(' · ') : '';
       }
-      timelineList.querySelectorAll('.timeline-item:not(.timeline-item-degree)').forEach(item => item.remove());
-      records.forEach(record => {
-        const item = document.createElement('li');
-        item.className = 'timeline-item';
-        item.innerHTML = `<span class="timeline-dot" aria-hidden="true"></span><article class="timeline-card"><button class="timeline-media certificate-trigger" type="button" data-certificate="${record.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" aria-label="Open certificate: ${record.title}" tabindex="-1" disabled><span class="timeline-placeholder">Certificate<br>image</span></button><div class="timeline-content"><p class="timeline-year">${record.year}</p><h3 class="timeline-title"></h3><p class="timeline-issuer"></p><button class="timeline-link certificate-trigger" type="button" data-certificate="${record.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" disabled>View certificate <span aria-hidden="true">→</span></button></div></article>`;
-        const card = item.querySelector('.timeline-card');
-        card.querySelector('.timeline-title').textContent = record.title || '';
-        card.querySelector('.timeline-issuer').textContent = record.institution || '';
-        timelineList.append(item);
+      const renderCertificates = (list) => {
+        timelineList.querySelectorAll('.timeline-item:not(.timeline-item-degree)').forEach(item => item.remove());
+        list.forEach(record => {
+          const item = document.createElement('li');
+          item.className = 'timeline-item';
+          item.innerHTML = `<span class="timeline-dot" aria-hidden="true"></span><article class="timeline-card"><button class="timeline-media certificate-trigger" type="button" data-certificate="${record.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" aria-label="Open certificate: ${record.title}" tabindex="-1" disabled><span class="timeline-placeholder">Certificate<br>image</span></button><div class="timeline-content"><p class="timeline-year">${record.year}</p><h3 class="timeline-title"></h3><p class="timeline-issuer"></p><button class="timeline-link certificate-trigger" type="button" data-certificate="${record.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" disabled>View certificate <span aria-hidden="true">→</span></button></div></article>`;
+          const card = item.querySelector('.timeline-card');
+          card.querySelector('.timeline-title').textContent = record.title || '';
+          card.querySelector('.timeline-issuer').textContent = record.institution || '';
+          timelineList.append(item);
+        });
+        requestTimeline();
+      };
+      // Category tabs: one category of certificates at a time, degree card always stays.
+      const tablist = document.querySelector('#category-tabs');
+      const categories = Array.isArray(data.categories) && data.categories.length
+        ? data.categories
+        : [...new Set(records.map(record => record.category).filter(Boolean))].map(id => ({ id, label: id }));
+      const tabButtons = categories.map(cat => {
+        const tab = document.createElement('button');
+        tab.type = 'button';
+        tab.className = 'category-tab';
+        tab.setAttribute('role', 'tab');
+        tab.id = `category-tab-${cat.id}`;
+        tab.dataset.category = cat.id;
+        tab.setAttribute('aria-selected', 'false');
+        tab.tabIndex = -1;
+        tab.textContent = cat.label || cat.id;
+        const count = document.createElement('span');
+        count.className = 'category-count';
+        count.textContent = String(records.filter(record => record.category === cat.id).length);
+        tab.append(count);
+        tab.addEventListener('click', () => selectCategory(cat.id));
+        tablist.append(tab);
+        return tab;
       });
-      requestTimeline();
+      const selectCategory = (id, focusTab = false) => {
+        tabButtons.forEach(tab => {
+          const selected = tab.dataset.category === id;
+          tab.setAttribute('aria-selected', String(selected));
+          tab.tabIndex = selected ? 0 : -1;
+          if (selected && focusTab) tab.focus();
+        });
+        renderCertificates(records.filter(record => record.category === id));
+      };
+      tablist.addEventListener('keydown', event => {
+        const current = tabButtons.findIndex(tab => tab.getAttribute('aria-selected') === 'true');
+        let next = -1;
+        if (event.key === 'ArrowRight') next = (current + 1) % tabButtons.length;
+        else if (event.key === 'ArrowLeft') next = (current - 1 + tabButtons.length) % tabButtons.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabButtons.length - 1;
+        if (next >= 0) {
+          event.preventDefault();
+          selectCategory(tabButtons[next].dataset.category, true);
+        }
+      });
+      if (tabButtons.length) selectCategory(tabButtons[0].dataset.category);
+      else renderCertificates(records);
   const certificates = new Map(records.map(item => [item.id, item]));
   const close = dialog.querySelector('.certificate-close');
   const title = dialog.querySelector('#certificate-modal-title');
