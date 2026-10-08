@@ -1,54 +1,15 @@
 [
-    {
-        "slug": "understanding-mcp",
-        "title": "Understanding Model Context Protocol",
-        "excerpt": "A practical exploration of how MCP connects AI applications with external tools and data.",
-        "category": "AI & Development",
-        "date": "2026-10-06",
-        "readTime": "8 min read",
-        "image": "/assets/blog/understanding-mcp/thumbnail.png",
-        "hero": "/assets/blog/understanding-mcp/thumbnail.svg",
-        "heroAlt": "Diagram showing an MCP connection between an AI application and tools",
-        "featured": true,
-        "content": "<p>Model Context Protocol, or MCP, describes a consistent way for an AI application to discover and use capabilities outside the model itself. The useful shift is architectural: a model can remain focused on language while a server exposes carefully defined tools and resources.</p><h2>The boundary matters</h2><p>A small interface between the model and an external system makes responsibilities easier to reason about. The client manages conversation and permissions; the server owns the domain operation; the model chooses when a tool is relevant.</p><ul><li>Tools describe actions with explicit inputs and outputs.</li><li>Resources provide context without hiding where it came from.</li><li>Errors remain visible so the application can decide how to recover.</li></ul><h2>Designing a useful tool</h2><p>A good tool is narrow, predictable and easy to test without a model. For a task system, that could mean separate operations for listing tasks, creating a task and marking one complete. Clear schemas reduce ambiguity and make the integration easier to evolve.</p><h2>What I take forward</h2><p>MCP is most valuable when it keeps integration work explicit. It does not remove the need for authentication, validation or observability; it gives those concerns a clear place to live.</p>"
-    },
-    {
-        "slug": "ai-application-lessons",
-        "title": "Lessons From Building AI-Powered Applications",
-        "excerpt": "Notes on scope, interfaces, evaluation and the engineering work around a model call.",
-        "category": "Engineering Notes",
-        "date": "2026-08-29",
-        "readTime": "6 min read",
-        "image": "/assets/blog/ai-application-lessons/thumbnail.svg",
-        "hero": "/assets/blog/ai-application-lessons/thumbnail.svg",
-        "heroAlt": "Technical sketch representing an iterative AI application workflow",
-        "featured": false,
-        "content": "<p>An AI feature becomes an application only when it fits a real workflow. The model is one component among interfaces, data, validation, error handling and the feedback loop that helps the system improve.</p><h2>Make the first version small</h2><p>A narrow workflow makes behavior easier to observe. Start with one input, one useful output and a clear failure state. This gives the surrounding interface room to expose what the model is doing instead of hiding uncertainty behind a single chat box.</p><h2>Structure the boundary</h2><p>Typed inputs and outputs make model calls easier to test. Validation belongs at the boundary, and the application should still behave sensibly when the model is slow, unavailable or uncertain.</p><h2>Learn from the edges</h2><p>The most valuable notes often come from cases that do not fit the happy path: incomplete data, ambiguous requests and outputs that sound plausible but are not useful. Recording those cases turns experimentation into engineering work.</p><p>Building these systems has made the surrounding software discipline feel more important, not less. Good interfaces, small tests and honest fallbacks create the conditions in which model capabilities can be useful.</p>"
-    },
-    {
-        "slug": "practical-rag-system",
-        "title": "Building a Practical RAG System",
-        "excerpt": "The small design decisions that make retrieval augmented generation useful in real applications.",
-        "category": "AI & Development",
-        "date": "2026-09-18",
-        "readTime": "7 min read",
-        "image": "/assets/blog/practical-rag-system/thumbnail.svg",
-        "hero": "/assets/blog/practical-rag-system/thumbnail.svg",
-        "heroAlt": "Diagram showing documents flowing through a retrieval step",
-        "featured": false,
-        "content": "<p>Retrieval augmented generation is a pattern for giving a language model relevant context at request time. The practical challenge is not adding a vector database; it is deciding what information to retrieve, how to present it and how to tell whether it helped.</p><h2>Start with the question</h2><p>Before choosing an embedding model, collect the questions the application should answer. They reveal the document boundaries, metadata and failure modes that matter. A small, representative evaluation set is more useful than a large collection with no expected answers.</p><h2>Keep retrieval inspectable</h2><p>Store the source, section and score alongside each chunk. During development, show the retrieved context and compare it with the final answer. This makes poor chunking and irrelevant matches visible early.</p><ul><li>Split documents at meaningful headings where possible.</li><li>Preserve source references for every generated claim.</li><li>Return a clear fallback when no useful context is found.</li></ul><h2>Measure the whole path</h2><p>Answer quality depends on retrieval, prompt construction and model behavior together. Testing each stage separately makes it easier to find the actual bottleneck and keeps improvements grounded in user questions.</p>"
-    },
-    {
-        "slug": "practical-rag-system_2",
-        "title": "Building a Practical RAG System",
-        "excerpt": "The small design decisions that make retrieval augmented generation useful in real applications.",
-        "category": "AI & Development",
-        "date": "2026-09-18",
-        "readTime": "7 min read",
-        "image": "/assets/blog/practical-rag-system/thumbnail.svg",
-        "hero": "/assets/blog/practical-rag-system/thumbnail.svg",
-        "heroAlt": "Diagram showing documents flowing through a retrieval step",
-        "featured": false,
-        "content": "<p>Retrieval augmented generation is a pattern for giving a language model relevant context at request time. The practical challenge is not adding a vector database; it is deciding what information to retrieve, how to present it and how to tell whether it helped.</p><h2>Start with the question</h2><p>Before choosing an embedding model, collect the questions the application should answer. They reveal the document boundaries, metadata and failure modes that matter. A small, representative evaluation set is more useful than a large collection with no expected answers.</p><h2>Keep retrieval inspectable</h2><p>Store the source, section and score alongside each chunk. During development, show the retrieved context and compare it with the final answer. This makes poor chunking and irrelevant matches visible early.</p><ul><li>Split documents at meaningful headings where possible.</li><li>Preserve source references for every generated claim.</li><li>Return a clear fallback when no useful context is found.</li></ul><h2>Measure the whole path</h2><p>Answer quality depends on retrieval, prompt construction and model behavior together. Testing each stage separately makes it easier to find the actual bottleneck and keeps improvements grounded in user questions.</p>"
-    }
+  {
+    "slug": "understanding-mcp",
+    "title": "Understanding Model Context Protocol",
+    "excerpt": "A practical exploration of how MCP connects AI applications with external tools and data.",
+    "category": "AI & Development",
+    "date": "2026-10-06",
+    "readTime": "8 min read",
+    "image": "/assets/blog/understanding-mcp/thumbnail.png",
+    "hero": "/assets/blog/understanding-mcp/thumbnail.svg",
+    "heroAlt": "Diagram showing an MCP connection between an AI application and tools",
+    "featured": true,
+    "content": "<p>Model Context Protocol, or MCP, describes a consistent way for an AI application to discover and use capabilities outside the model itself. The useful shift is architectural: a model can remain focused on language while a server exposes carefully defined tools and resources.</p><h2>The boundary matters</h2><p>A small interface between the model and an external system makes responsibilities easier to reason about. The client manages conversation and permissions; the server owns the domain operation; the model chooses when a tool is relevant.</p><ul><li>Tools describe actions with explicit inputs and outputs.</li><li>Resources provide context without hiding where it came from.</li><li>Errors remain visible so the application can decide how to recover.</li></ul><h2>Designing a useful tool</h2><p>A good tool is narrow, predictable and easy to test without a model. For a task system, that could mean separate operations for listing tasks, creating a task and marking one complete. Clear schemas reduce ambiguity and make the integration easier to evolve.</p><h2>What I take forward</h2><p>MCP is most valuable when it keeps integration work explicit. It does not remove the need for authentication, validation or observability; it gives those concerns a clear place to live.</p>"
+  }
 ]
