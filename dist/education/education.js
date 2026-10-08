@@ -136,6 +136,7 @@
   const institution = dialog.querySelector('.certificate-modal-institution');
   const meta = dialog.querySelector('.certificate-modal-meta');
   const skills = dialog.querySelector('.certificate-modal-skills');
+  const verify = dialog.querySelector('#certificate-verify');
   const noImage = dialog.querySelector('.certificate-no-image');
   const gallery = dialog.querySelector('.certificate-gallery');
   const image = dialog.querySelector('.certificate-image');
@@ -181,6 +182,10 @@
     institution.textContent = record.institution;
     meta.textContent = `Certificate · ${record.year}`;
     skills.textContent = record.skills.join(' · ');
+    if (verify) {
+      if (record.credentialUrl) { verify.href = record.credentialUrl; verify.hidden = false; }
+      else { verify.removeAttribute('href'); verify.hidden = true; }
+    }
     gallery.hidden = images.length === 0;
     noImage.hidden = images.length !== 0;
     if (images.length) showImage();

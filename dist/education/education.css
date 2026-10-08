@@ -76,6 +76,8 @@ button.timeline-media:not(:disabled){cursor:pointer}
 .timeline-actions .timeline-link{margin-top:0;align-self:auto}
 .timeline-verify{color:var(--color-text-secondary);font-weight:500}
 .timeline-verify:hover,.timeline-verify:focus-visible{border-bottom-color:var(--tl-accent);color:var(--tl-accent)}
+.certificate-verify-btn{display:inline-block;margin-top:22px;background:var(--jade-500);color:#fff;font-size:13px;font-weight:700;line-height:1.5;padding:11px 22px;border-radius:8px;text-decoration:none}
+.certificate-verify-btn:hover,.certificate-verify-btn:focus-visible{background:var(--jade-700);color:#fff}
 .education-noscript{font-size:12px;line-height:1.8;color:var(--color-text-secondary);padding-bottom:32px}
 .education-page .footer-links{display:flex;gap:28px}
 .education-page .footer-links a:hover{color:var(--jade-700)}
