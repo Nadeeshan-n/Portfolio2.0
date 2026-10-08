@@ -40,7 +40,12 @@
         "LLMs",
         "AI Applications"
       ],
-      "images": [],
+      "images": [
+        {
+          "src": "/assets/certificates/genai-applications.svg",
+          "alt": "Develop Generative AI Applications: Get Started — IBM course certificate"
+        }
+      ],
       "credentialUrl": "https://www.coursera.org/account/accomplishments/records/0086ZDXQ8VBK"
     },
     {
