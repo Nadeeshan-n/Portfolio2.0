@@ -22,7 +22,7 @@
   if (hero) {
     const originalImage = hero.querySelector('img');
     if (originalImage) {
-      const buildSlider = related => {
+      const buildSlider = (slides, includeHero) => {
         const section = document.createElement('section');
         section.className = 'article-slider-section';
         section.setAttribute('aria-label', 'Article images');
@@ -30,8 +30,8 @@
         slider.className = 'article-slider';
         const track = document.createElement('div');
         track.className = 'article-slider-track';
-        const slidesData = [{ src: originalImage.getAttribute('src'), alt: originalImage.alt || 'Article image' }]
-          .concat(related);
+        const heroSlide = { src: originalImage.getAttribute('src'), alt: originalImage.alt || 'Article image' };
+        const slidesData = includeHero ? [heroSlide].concat(slides) : slides;
         slidesData.forEach((data, index) => {
           const slide = document.createElement('figure');
           slide.className = 'article-slide' + (index === 0 ? ' is-active' : '');
@@ -66,20 +66,31 @@
         hero.replaceWith(section);
       };
       const slug = location.pathname.split('/').filter(Boolean).pop();
+      const resolveSrc = src => (src && src.charAt(0) === '/') ? '../../../' + src.slice(1) : src;
       fetch('../../blog.json')
         .then(response => { if (!response.ok) throw new Error('blog.json unavailable'); return response.json(); })
-        .then(posts => {
+        .then(data => {
+          const posts = Array.isArray(data) ? data : data.posts || [];
+          const current = posts.find(post => post.slug === slug);
+          const gallery = (current && current.gallery) || [];
+          if (gallery.length) {
+            buildSlider(gallery.map(item => ({
+              src: resolveSrc(item.src),
+              alt: item.alt || 'Article image'
+            })), false);
+            return;
+          }
           const related = posts
             .filter(post => post.slug !== slug)
             .slice(0, 2)
             .map(post => {
               const src = post.hero || post.image;
               return {
-                src: src.charAt(0) === '/' ? '../../../' + src.slice(1) : src,
+                src: resolveSrc(src),
                 alt: post.heroAlt || ((post.title || 'Related article') + ' article visual')
               };
             });
-          if (related.length) buildSlider(related);
+          if (related.length) buildSlider(related, true);
         })
         .catch(() => {});
     }
