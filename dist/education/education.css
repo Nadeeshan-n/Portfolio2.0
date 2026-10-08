@@ -532,3 +532,6 @@ button.timeline-media:not(:disabled){cursor:pointer}
    @media (prefers-reduced-motion: reduce) {
      .ai-stage, .ai-stage * { animation: none !important; transition: none !important; }
    }
+
+/* Test: white backdrop behind the Python card logo only. */
+.timeline-media.is-python-media{background:#fff}

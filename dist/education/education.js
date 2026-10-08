@@ -128,7 +128,7 @@
       };
       // Hand-drawn sketch icons for each category card (charcoal strokes, jade accents).
       const CATEGORY_ICONS = {
-        python: `<div class="python-stage" style="width:84px"><svg class="python-icon" viewBox="0 0 200 200" role="img" aria-label="Python technology illustration">
+        python: `<div class="python-stage" style="width:120px"><svg class="python-icon" viewBox="0 0 200 200" role="img" aria-label="Python technology illustration">
           <g class="python-float">
             <g class="python-tilt">
               <g class="python-breathe">
@@ -707,6 +707,7 @@
           if (icon) {
             cell.innerHTML = icon;
             cell.classList.add('has-icon');
+            if (cell.dataset.category === 'python') cell.classList.add('is-python-media');
             return;
           }
           const certs = records.filter(record => record.category === cell.dataset.category);
