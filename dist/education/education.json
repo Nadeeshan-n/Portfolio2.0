@@ -27,7 +27,8 @@
           "src": "/assets/certificates/rag-applications.svg",
           "alt": "Build RAG Applications: Get Started — IBM course certificate"
         }
-      ]
+      ],
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/BR9DWHKGK9FG"
     },
     {
       "id": "genai-applications",
@@ -39,7 +40,8 @@
         "LLMs",
         "AI Applications"
       ],
-      "images": []
+      "images": [],
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/0086ZDXQ8VBK"
     },
     {
       "id": "web-foundations",
@@ -51,7 +53,8 @@
         "HTML",
         "CSS"
       ],
-      "images": []
+      "images": [],
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/5SJ9UFLEKLCP"
     },
     {
       "id": "python-basics",
@@ -63,7 +66,8 @@
         "Programming",
         "Problem Solving"
       ],
-      "images": []
+      "images": [],
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/O5JB4V6QFV7F"
     },
     {
       "id": "python-data-structures",
@@ -75,7 +79,8 @@
         "Data Structures",
         "Problem Solving"
       ],
-      "images": []
+      "images": [],
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/2KI28ZW26UEN"
     },
     {
       "id": "python-web-data",
@@ -87,7 +92,8 @@
         "Web Data",
         "APIs"
       ],
-      "images": []
+      "images": [],
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/7HIOJ9AK4CIZ"
     },
     {
       "id": "linear-algebra",
@@ -99,7 +105,8 @@
         "Machine Learning",
         "Data Science"
       ],
-      "images": []
+      "images": [],
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/XWE5UCP1UWBI"
     },
     {
       "id": "linux-shell",
@@ -111,7 +118,8 @@
         "Shell Scripting",
         "Command Line"
       ],
-      "images": []
+      "images": [],
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/Y4M0EXWL5LZS"
     }
   ]
 }

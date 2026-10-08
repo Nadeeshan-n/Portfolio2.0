@@ -72,6 +72,10 @@ button.timeline-media:not(:disabled){cursor:pointer}
 .timeline-link{align-self:flex-start;margin:6px 0 0;padding:4px 0 1px;border:0;border-bottom:1px solid transparent;background:none;color:var(--tl-accent);font-size:12px;font-weight:600;line-height:1.5;cursor:pointer;transition:border-color .2s}
 .timeline-link:hover,.timeline-link:focus-visible{border-bottom-color:var(--tl-accent)}
 .timeline-link:disabled{visibility:hidden;cursor:default}
+.timeline-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:8px}
+.timeline-actions .timeline-link{margin-top:0;align-self:auto}
+.timeline-verify{color:var(--color-text-secondary);font-weight:500}
+.timeline-verify:hover,.timeline-verify:focus-visible{border-bottom-color:var(--tl-accent);color:var(--tl-accent)}
 .education-noscript{font-size:12px;line-height:1.8;color:var(--color-text-secondary);padding-bottom:32px}
 .education-page .footer-links{display:flex;gap:28px}
 .education-page .footer-links a:hover{color:var(--jade-700)}
