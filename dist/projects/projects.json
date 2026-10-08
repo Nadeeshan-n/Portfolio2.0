@@ -100,7 +100,20 @@
       ],
       "dataStatus": "repository-documented",
       "image": "/assets/projects/drive-smart.svg",
-      "previewImages": []
+      "previewImages": [
+        {
+          "src": "/assets/projects/drive-smart/infographic-part-1.svg",
+          "alt": "Drive Smart 2.0: overview and core features"
+        },
+        {
+          "src": "/assets/projects/drive-smart/infographic-part-2.svg",
+          "alt": "Drive Smart 2.0: roles, modules and workflow"
+        },
+        {
+          "src": "/assets/projects/drive-smart/infographic-part-3.svg",
+          "alt": "Drive Smart 2.0: technology, architecture and data"
+        }
+      ]
     },
     {
       "slug": "ai-agent-memory-system",
