@@ -204,7 +204,16 @@
       ],
       "dataStatus": "repository-documented",
       "image": "/assets/projects/weather-forecast-accuracy.svg",
-      "previewImages": []
+      "previewImages": [
+        {
+          "src": "/assets/projects/weather-forecast-accuracy/infographic-part-1.svg",
+          "alt": "Weather Forecast Accuracy: overview and core idea"
+        },
+        {
+          "src": "/assets/projects/weather-forecast-accuracy/infographic-part-2.svg",
+          "alt": "Weather Forecast Accuracy: workflow, files and learning"
+        }
+      ]
     },
     {
       "slug": "drive-smart-java",
