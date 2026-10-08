@@ -126,12 +126,26 @@
           return url.protocol === 'https:' || (url.origin === location.origin && url.protocol === 'http:');
         } catch { return false; }
       };
+      // Hand-drawn sketch icons for each category card (charcoal strokes, jade accents).
+      const CATEGORY_ICONS = {
+        python: `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 6c-7 0-11 1.6-12.6 5.2C16 15.4 19.5 18 23.5 18H33v5.5H19c-7.5 0-12.5 4.3-12.5 11.5"/><path d="M34 58c7 0 11-1.6 12.6-5.2 1.4-4.2-2.1-6.8-6.1-6.8H31v-5.5h14c7.5 0 12.5-4.3 12.5-11.5"/><circle cx="24" cy="13.5" r="1.8" fill="currentColor" stroke="none"/><circle cx="40" cy="50.5" r="1.8" fill="currentColor" stroke="none"/></svg>`,
+        'machine-learning': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 19l9-6M18 22l9 8M18 42l9-8M18 45l9 5M37 13l9 6M37 30l9-8M37 34l9 8M37 51l9-6"/><circle cx="13" cy="20" r="4.5"/><circle cx="13" cy="44" r="4.5"/><circle cx="32" cy="12" r="4.5"/><circle cx="32" cy="32" r="4.5" stroke="#0E8F78"/><circle cx="32" cy="52" r="4.5"/><circle cx="51" cy="20" r="4.5"/><circle cx="51" cy="44" r="4.5" stroke="#0E8F78"/></svg>`,
+        'artificial-intelligence': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 18V11"/><circle cx="32" cy="8" r="3"/><rect x="15" y="18" width="34" height="26" rx="9"/><circle cx="25" cy="30" r="2.6" fill="#0E8F78" stroke="none"/><circle cx="39" cy="30" r="2.6" fill="#0E8F78" stroke="none"/><path d="M25 38h14"/><path d="M15 26v10M49 26v10"/></svg>`,
+        linux: `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="32" cy="38" rx="13" ry="16"/><circle cx="32" cy="17" r="9"/><path d="M28.5 17.5L32 20l3.5-2.5" stroke="#0E8F78"/><circle cx="29" cy="15" r="1.3" fill="currentColor" stroke="none"/><circle cx="35" cy="15" r="1.3" fill="currentColor" stroke="none"/><ellipse cx="32" cy="40" rx="7" ry="10"/><path d="M19 36l-6 4M45 36l6 4"/><path d="M24 54l-3 4M40 54l3 4"/></svg>`,
+        'web-development': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 20L9 32l14 12"/><path d="M41 20l14 12-14 12"/><path d="M36 14l-8 36" stroke="#0E8F78"/></svg>`,
+      };
       // Thumbnails + popup triggers are wired once after the category cards render.
       const wireTriggers = () => {
         document.querySelectorAll('.timeline-media[data-category]:not([data-wired])').forEach(cell => {
+          cell.dataset.wired = '1';
+          const icon = CATEGORY_ICONS[cell.dataset.category];
+          if (icon) {
+            cell.innerHTML = icon;
+            cell.classList.add('has-icon');
+            return;
+          }
           const certs = records.filter(record => record.category === cell.dataset.category);
           const first = certs.length && Array.isArray(certs[0].images) ? certs[0].images.find(safeImage) : null;
-          cell.dataset.wired = '1';
           if (!first) return;
           const thumb = document.createElement('img');
           thumb.alt = '';

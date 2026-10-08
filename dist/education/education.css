@@ -66,6 +66,8 @@
 button.timeline-media:not(:disabled){cursor:pointer}
 .timeline-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .timeline-media.has-image .timeline-placeholder{display:none}
+.timeline-media .category-icon{width:84px;height:84px;color:var(--charcoal-900)}
+.timeline-media.has-icon .timeline-placeholder{display:none}
 .timeline-media-logo img.university-mark{position:static;width:60px;height:60px;object-fit:contain}
 .university-fallback{font-size:18px;font-weight:700;letter-spacing:1px;color:var(--tl-accent)}
 .timeline-content{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:16px 18px;overflow-wrap:anywhere}
