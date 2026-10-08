@@ -58,8 +58,8 @@
 
     if (slides.length === 1) return;
     const controls = gallery.querySelector('.preview-controls');
-    const previous = gallery.querySelector('.preview-previous');
-    const next = gallery.querySelector('.preview-next');
+    const previous = gallery.querySelector('.preview-arrow-prev');
+    const next = gallery.querySelector('.preview-arrow-next');
     const position = gallery.querySelector('.preview-position');
     if (!controls || !previous || !next || !position) return;
 
@@ -157,16 +157,26 @@
     gallery.appendChild(track);
 
     if (images.length > 1) {
-      const controls = document.createElement('div');
-      controls.className = 'preview-controls';
-      controls.hidden = true;
-
+      // Overlay arrow heads, vertically centered on the image.
       const prevBtn = document.createElement('button');
       prevBtn.type = 'button';
-      prevBtn.className = 'secondary-button preview-previous';
+      prevBtn.className = 'preview-arrow preview-arrow-prev';
       prevBtn.setAttribute('aria-label', 'Previous preview image');
       prevBtn.setAttribute('aria-controls', 'project-preview-images');
-      prevBtn.textContent = 'Previous';
+      prevBtn.innerHTML = '<span aria-hidden="true">&#8249;</span>';
+
+      const nextBtn = document.createElement('button');
+      nextBtn.type = 'button';
+      nextBtn.className = 'preview-arrow preview-arrow-next';
+      nextBtn.setAttribute('aria-label', 'Next preview image');
+      nextBtn.setAttribute('aria-controls', 'project-preview-images');
+      nextBtn.innerHTML = '<span aria-hidden="true">&#8250;</span>';
+
+      gallery.appendChild(prevBtn);
+      gallery.appendChild(nextBtn);
+
+      const controls = document.createElement('div');
+      controls.className = 'preview-controls';
 
       const position = document.createElement('p');
       position.className = 'preview-position';
@@ -175,16 +185,7 @@
       position.setAttribute('aria-atomic', 'true');
       position.textContent = `1 of ${images.length}`;
 
-      const nextBtn = document.createElement('button');
-      nextBtn.type = 'button';
-      nextBtn.className = 'secondary-button preview-next';
-      nextBtn.setAttribute('aria-label', 'Next preview image');
-      nextBtn.setAttribute('aria-controls', 'project-preview-images');
-      nextBtn.textContent = 'Next';
-
-      controls.appendChild(prevBtn);
       controls.appendChild(position);
-      controls.appendChild(nextBtn);
       gallery.appendChild(controls);
     }
 

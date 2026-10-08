@@ -89,6 +89,14 @@
 .preview-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px}
 .preview-position{color:var(--gray-green-600);font-size:12px;white-space:nowrap}
 .project-preview [hidden]{display:none!important}
+.project-preview{position:relative}
+.preview-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:rgba(23,33,30,.55);color:#fff;font-size:24px;line-height:1;display:grid;place-items:center;cursor:pointer;transition:background .2s ease,transform .2s ease;padding:0}
+.preview-arrow span{transform:translateY(-2px)}
+.preview-arrow:hover{background:var(--jade-500,#0E8F78)}
+.preview-arrow:focus-visible{outline:3px solid var(--jade-500,#0E8F78);outline-offset:2px}
+.preview-arrow-prev{left:12px}
+.preview-arrow-next{right:12px}
+@media(max-width:640px){.preview-arrow{width:38px;height:38px;font-size:20px}.preview-arrow-prev{left:8px}.preview-arrow-next{right:8px}}
 .preview-track:focus-visible{outline:3px solid var(--jade-500);outline-offset:4px}
 .project-preview.preview-slider .preview-track{scrollbar-width:none}
 .project-preview.preview-slider .preview-track::-webkit-scrollbar{display:none}
