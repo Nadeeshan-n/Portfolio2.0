@@ -112,7 +112,7 @@
         }
         const link = document.createElement('a');
         link.className = 'primary-button work-link';
-        link.href = `${project.slug}/`;
+        link.href = `project-detail.html?project=${encodeURIComponent(project.slug)}`;
         link.setAttribute('aria-label', `View project: ${project.title || ''}`);
         link.textContent = 'View Project';
         copy.append(link);

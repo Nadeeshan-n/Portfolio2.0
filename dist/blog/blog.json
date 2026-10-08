@@ -37,5 +37,18 @@
         "heroAlt": "Diagram showing documents flowing through a retrieval step",
         "featured": false,
         "content": "<p>Retrieval augmented generation is a pattern for giving a language model relevant context at request time. The practical challenge is not adding a vector database; it is deciding what information to retrieve, how to present it and how to tell whether it helped.</p><h2>Start with the question</h2><p>Before choosing an embedding model, collect the questions the application should answer. They reveal the document boundaries, metadata and failure modes that matter. A small, representative evaluation set is more useful than a large collection with no expected answers.</p><h2>Keep retrieval inspectable</h2><p>Store the source, section and score alongside each chunk. During development, show the retrieved context and compare it with the final answer. This makes poor chunking and irrelevant matches visible early.</p><ul><li>Split documents at meaningful headings where possible.</li><li>Preserve source references for every generated claim.</li><li>Return a clear fallback when no useful context is found.</li></ul><h2>Measure the whole path</h2><p>Answer quality depends on retrieval, prompt construction and model behavior together. Testing each stage separately makes it easier to find the actual bottleneck and keeps improvements grounded in user questions.</p>"
+    },
+    {
+        "slug": "practical-rag-system_2",
+        "title": "Building a Practical RAG System",
+        "excerpt": "The small design decisions that make retrieval augmented generation useful in real applications.",
+        "category": "AI & Development",
+        "date": "2026-09-18",
+        "readTime": "7 min read",
+        "image": "/assets/blog/practical-rag-system/thumbnail.svg",
+        "hero": "/assets/blog/practical-rag-system/thumbnail.svg",
+        "heroAlt": "Diagram showing documents flowing through a retrieval step",
+        "featured": false,
+        "content": "<p>Retrieval augmented generation is a pattern for giving a language model relevant context at request time. The practical challenge is not adding a vector database; it is deciding what information to retrieve, how to present it and how to tell whether it helped.</p><h2>Start with the question</h2><p>Before choosing an embedding model, collect the questions the application should answer. They reveal the document boundaries, metadata and failure modes that matter. A small, representative evaluation set is more useful than a large collection with no expected answers.</p><h2>Keep retrieval inspectable</h2><p>Store the source, section and score alongside each chunk. During development, show the retrieved context and compare it with the final answer. This makes poor chunking and irrelevant matches visible early.</p><ul><li>Split documents at meaningful headings where possible.</li><li>Preserve source references for every generated claim.</li><li>Return a clear fallback when no useful context is found.</li></ul><h2>Measure the whole path</h2><p>Answer quality depends on retrieval, prompt construction and model behavior together. Testing each stage separately makes it easier to find the actual bottleneck and keeps improvements grounded in user questions.</p>"
     }
 ]
