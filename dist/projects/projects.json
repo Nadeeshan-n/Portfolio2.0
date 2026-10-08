@@ -44,7 +44,12 @@
       ],
       "dataStatus": "repository-documented",
       "image": "/assets/projects/personal-task-mcp-server.svg",
-      "previewImages": []
+      "previewImages": [
+        {
+          "src": "/assets/projects/personal-task-mcp-server/adk-dev-ui.svg",
+          "alt": "Personal Task MCP Server agent running in the Google ADK development UI"
+        }
+      ]
     },
     {
       "slug": "drive-smart",
