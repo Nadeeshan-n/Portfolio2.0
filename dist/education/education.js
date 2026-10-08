@@ -182,7 +182,7 @@
   const gallery = dialog.querySelector('.certificate-gallery');
   const image = dialog.querySelector('.certificate-image');
   const error = dialog.querySelector('.certificate-image-error');
-  const slideControls = dialog.querySelector('.certificate-slide-controls');
+  const slideWrap = dialog.querySelector('.certificate-slide');
   const previous = dialog.querySelector('.certificate-previous');
   const next = dialog.querySelector('.certificate-next');
   const position = dialog.querySelector('.certificate-image-position');
@@ -211,7 +211,8 @@
       image.alt = '';
     }
     const multi = slideRecords.length > 1;
-    slideControls.hidden = !multi;
+    slideWrap.hidden = !multi;
+    position.hidden = !multi;
     if (multi) {
       position.textContent = `${slideIndex + 1} / ${slideRecords.length}`;
       previous.disabled = slideIndex === 0;
