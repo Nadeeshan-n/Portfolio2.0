@@ -13,7 +13,6 @@
   const techEl = document.getElementById('project-detail-technology-list');
   const learningEl = document.getElementById('project-detail-learning');
   const githubEl = document.getElementById('project-detail-github');
-  const demoEl = document.getElementById('project-detail-demo');
 
   function setList(el, items) {
     if (!el) return;
@@ -229,8 +228,6 @@
     } else if (githubEl) {
       githubEl.hidden = true;
     }
-    // The portfolio no longer ships live demos; keep the button hidden.
-    if (demoEl) demoEl.hidden = true;
 
     renderPreview(project);
   }
