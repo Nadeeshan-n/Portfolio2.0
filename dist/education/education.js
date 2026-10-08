@@ -163,7 +163,72 @@
             </g>
           </g>
         </svg></div>`,
-        'machine-learning': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 19l9-6M18 22l9 8M18 42l9-8M18 45l9 5M37 13l9 6M37 30l9-8M37 34l9 8M37 51l9-6"/><circle cx="13" cy="20" r="4.5"/><circle cx="13" cy="44" r="4.5"/><circle cx="32" cy="12" r="4.5"/><circle cx="32" cy="32" r="4.5" stroke="#0E8F78"/><circle cx="32" cy="52" r="4.5"/><circle cx="51" cy="20" r="4.5"/><circle cx="51" cy="44" r="4.5" stroke="#0E8F78"/></svg>`,
+        'machine-learning': `<div class="ml-stage" style="width:84px"><svg class="ml-icon" viewBox="0 0 200 200" role="img" aria-label="Machine Learning technology illustration">
+          <g class="ml-float">
+            <g class="px-brain">
+              <g class="ml-breathe">
+                <path class="ml-draw" style="--d:0s" pathLength="1" d="M100 44 C78 44 60 52 52 68 C46 80 48 92 54 100 C46 108 46 122 54 132 C62 144 78 150 94 148 C98 152 102 152 106 150 C102 146 96 140 100 128 C108 100 94 72 100 44 Z" fill="#0E8F78" stroke="#17211E" stroke-width="4" stroke-linejoin="round"/>
+                <path class="ml-draw" style="--d:0.1s" pathLength="1" d="M100 44 C94 72 108 100 100 128 C96 140 102 146 106 150 C110 152 116 152 120 148 C136 150 148 142 154 128 C160 116 158 104 152 96 C158 84 154 68 144 58 C132 48 116 44 100 44 Z" fill="#E9F5EF" stroke="#17211E" stroke-width="4" stroke-linejoin="round"/>
+                <g fill="none" stroke="#17211E" stroke-width="2.5" stroke-linecap="round" opacity="0.7">
+                  <path class="ml-draw" style="--d:0.5s" pathLength="1" d="M70 70 C76 76 78 84 76 92"/>
+                  <path class="ml-draw" style="--d:0.6s" pathLength="1" d="M62 104 C68 108 70 116 68 124"/>
+                  <path class="ml-draw" style="--d:0.7s" pathLength="1" d="M84 118 C90 122 92 130 90 138"/>
+                  <path class="ml-draw ml-fold-loop" style="--d:0.6s" pathLength="1" d="M88 62 C94 66 96 74 94 82"/>
+                </g>
+              </g>
+            </g>
+            <g class="px-network">
+              <g class="ml-network" fill="none" stroke="#0E8F78" stroke-width="1.8" opacity="0.55" stroke-linecap="round">
+                <path class="ml-draw" style="--d:0.7s" pathLength="1" d="M114 76 L134 66"/>
+                <path class="ml-draw" style="--d:0.75s" pathLength="1" d="M114 76 L134 90"/>
+                <path class="ml-draw" style="--d:0.8s" pathLength="1" d="M114 100 L134 90"/>
+                <path class="ml-draw" style="--d:0.85s" pathLength="1" d="M114 100 L134 114"/>
+                <path class="ml-draw" style="--d:0.9s" pathLength="1" d="M114 124 L134 114"/>
+                <path class="ml-draw" style="--d:0.95s" pathLength="1" d="M114 124 L134 138"/>
+                <path class="ml-draw" style="--d:1s" pathLength="1" d="M134 66 L154 78"/>
+                <path class="ml-draw" style="--d:1.05s" pathLength="1" d="M134 90 L154 78"/>
+                <path class="ml-draw" style="--d:1.1s" pathLength="1" d="M134 90 L154 102"/>
+                <path class="ml-draw" style="--d:1.15s" pathLength="1" d="M134 114 L154 102"/>
+                <path class="ml-draw" style="--d:1.2s" pathLength="1" d="M134 114 L154 126"/>
+                <path class="ml-draw" style="--d:1.25s" pathLength="1" d="M134 138 L154 126"/>
+              </g>
+              <g stroke="#17211E" stroke-width="2">
+                <g class="ml-pop" style="--d:0.9s"><g class="ml-node" style="--pd:0s"><circle cx="114" cy="76" r="6" fill="#0E8F78"/></g></g>
+                <g class="ml-pop" style="--d:0.98s"><g class="ml-node" style="--pd:-0.7s"><circle cx="114" cy="100" r="6" fill="#0E8F78"/></g></g>
+                <g class="ml-pop" style="--d:1.06s"><g class="ml-node" style="--pd:-1.4s"><circle cx="114" cy="124" r="6" fill="#0E8F78"/></g></g>
+                <g class="ml-pop" style="--d:1.14s"><g class="ml-node" style="--pd:-2.1s"><circle cx="134" cy="66" r="6" fill="#0E8F78"/></g></g>
+                <g class="ml-pop" style="--d:1.22s"><g class="ml-node" style="--pd:-0.4s"><circle cx="134" cy="90" r="6" fill="#E9F5EF"/></g></g>
+                <g class="ml-pop" style="--d:1.3s"><g class="ml-node" style="--pd:-1.1s"><circle cx="134" cy="114" r="6" fill="#0E8F78"/></g></g>
+                <g class="ml-pop" style="--d:1.38s"><g class="ml-node" style="--pd:-1.8s"><circle cx="134" cy="138" r="6" fill="#0E8F78"/></g></g>
+                <g class="ml-pop" style="--d:1.46s"><g class="ml-node" style="--pd:-0.9s"><circle cx="154" cy="78" r="5.5" fill="#0E8F78"/></g></g>
+                <g class="ml-pop" style="--d:1.54s"><g class="ml-node" style="--pd:-1.6s"><circle cx="154" cy="102" r="5.5" fill="#E9F5EF"/></g></g>
+                <g class="ml-pop" style="--d:1.62s"><g class="ml-node" style="--pd:-2.4s"><circle cx="154" cy="126" r="5.5" fill="#0E8F78"/></g></g>
+              </g>
+              <g class="ml-fadein" style="--d:1.6s">
+                <circle class="ml-signal" style="--sd:0s; offset-path: path('M114 76 L134 90 L154 102')" cx="114" cy="76" r="3.2" fill="#0E8F78"/>
+                <circle class="ml-signal" style="--sd:-3s; offset-path: path('M114 124 L134 114 L154 102')" cx="114" cy="124" r="3.2" fill="#0E8F78"/>
+              </g>
+            </g>
+            <g class="px-data">
+              <g class="ml-fadein" style="--d:1.4s">
+                <path d="M158 178 H192" stroke="#17211E" stroke-width="2.5" stroke-linecap="round"/>
+                <rect class="ml-bar" style="--bd:0s" x="162" y="164" width="8" height="14" fill="#0E8F78" stroke="#17211E" stroke-width="2"/>
+                <rect class="ml-bar" style="--bd:-1.2s" x="173" y="156" width="8" height="22" fill="#0E8F78" stroke="#17211E" stroke-width="2"/>
+                <rect class="ml-bar" style="--bd:-2.4s" x="184" y="148" width="8" height="30" fill="#0E8F78" stroke="#17211E" stroke-width="2"/>
+              </g>
+            </g>
+            <g class="px-decor">
+              <g class="ml-fadein" style="--d:1.5s">
+                <circle class="ml-dot d1" cx="28" cy="60" r="3" fill="#0E8F78"/>
+                <circle class="ml-dot d2" cx="176" cy="44" r="2.5" fill="#17211E"/>
+                <circle class="ml-dot d3" cx="36" cy="150" r="2" fill="#17211E"/>
+                <circle class="ml-dot d4" cx="120" cy="180" r="2.5" fill="#0E8F78"/>
+              </g>
+              <path class="ml-accent a1" pathLength="1" d="M24 100 C18 116 20 134 30 146" fill="none" stroke="#17211E" stroke-width="2.5" stroke-linecap="round"/>
+              <path class="ml-accent a2" pathLength="1" d="M140 26 l10 -8" fill="none" stroke="#0E8F78" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+          </g>
+        </svg></div>`,
         'artificial-intelligence': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 18V11"/><circle cx="32" cy="8" r="3"/><rect x="15" y="18" width="34" height="26" rx="9"/><circle cx="25" cy="30" r="2.6" fill="#0E8F78" stroke="none"/><circle cx="39" cy="30" r="2.6" fill="#0E8F78" stroke="none"/><path d="M25 38h14"/><path d="M15 26v10M49 26v10"/></svg>`,
         linux: `<div class="linux-stage" style="width:84px"><svg class="linux-icon" viewBox="0 0 200 200" role="img" aria-label="Linux technology illustration">
           <g class="linux-float">
@@ -174,7 +239,7 @@
                   <g class="linux-fadein" style="--d:1.9s" stroke="#0E8F78" stroke-width="2.5" stroke-linecap="round" fill="none">
                     <path d="M24 84 l7 5 -7 5"/>
                   </g>
-                  <rect class="term-cursor linux-fadein" style="--d:2s" x="36" y="80" width="7" height="10" fill="#0E8F78"/>
+                  <g class="linux-fadein" style="--d:2s"><rect class="term-cursor" x="36" y="80" width="7" height="10" fill="#0E8F78"/></g>
                 </g>
               </g>
               <g class="px-gear">
@@ -204,8 +269,8 @@
                   </g>
                   <path class="linux-pop" style="--d:1.2s" d="M100 84 L109 90 L100 97 L91 90 Z" fill="#F2A93B" stroke="#17211E" stroke-width="2" stroke-linejoin="round"/>
                   <g class="linux-feet">
-                    <ellipse class="linux-pop foot-l" style="--d:1.3s" cx="76" cy="164" rx="15" ry="9" fill="#F2A93B" stroke="#17211E" stroke-width="2.5"/>
-                    <ellipse class="linux-pop foot-r" style="--d:1.45s" cx="124" cy="164" rx="15" ry="9" fill="#F2A93B" stroke="#17211E" stroke-width="2.5"/>
+                    <g class="linux-pop" style="--d:1.3s"><ellipse class="foot-l" cx="76" cy="164" rx="15" ry="9" fill="#F2A93B" stroke="#17211E" stroke-width="2.5"/></g>
+                    <g class="linux-pop" style="--d:1.45s"><ellipse class="foot-r" cx="124" cy="164" rx="15" ry="9" fill="#F2A93B" stroke="#17211E" stroke-width="2.5"/></g>
                   </g>
                 </g>
               </g>
@@ -315,6 +380,56 @@
           stage.addEventListener('pointerleave', () => { nx = 0; ny = 0; kick(); });
         });
       };
+      // Animated Machine Learning icon: reveal on scroll into view + layered parallax.
+      // Runs after the category icons are injected; each stage initializes once.
+      const initMLIcons = () => {
+        const stages = document.querySelectorAll('.ml-stage:not([data-ml-init])');
+        if (!stages.length) return;
+        stages.forEach(stage => stage.setAttribute('data-ml-init', '1'));
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if ('IntersectionObserver' in window) {
+          const io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) { entry.target.classList.add('is-inview'); io.unobserve(entry.target); }
+            });
+          }, { threshold: 0.3 });
+          stages.forEach(stage => io.observe(stage));
+        } else {
+          stages.forEach(stage => stage.classList.add('is-inview'));
+        }
+        if (reduceMotion) return;
+        stages.forEach(stage => {
+          const layers = [
+            [stage.querySelector('.px-brain'), 2],
+            [stage.querySelector('.px-network'), 4],
+            [stage.querySelector('.px-data'), 5],
+            [stage.querySelector('.px-decor'), 6]
+          ].filter(pair => pair[0]);
+          if (!layers.length) return;
+          let raf = 0, nx = 0, ny = 0;
+          const cur = layers.map(() => ({ x: 0, y: 0 }));
+          const tick = () => {
+            let moving = false;
+            layers.forEach((pair, i) => {
+              const el = pair[0], max = pair[1], c = cur[i];
+              const tx = nx * max, ty = ny * max;
+              c.x += (tx - c.x) * 0.12;
+              c.y += (ty - c.y) * 0.12;
+              el.style.translate = c.x.toFixed(2) + 'px ' + c.y.toFixed(2) + 'px';
+              if (Math.abs(tx - c.x) > 0.05 || Math.abs(ty - c.y) > 0.05) moving = true;
+            });
+            raf = moving ? requestAnimationFrame(tick) : 0;
+          };
+          const kick = () => { if (!raf) raf = requestAnimationFrame(tick); };
+          stage.addEventListener('pointermove', e => {
+            const r = stage.getBoundingClientRect();
+            nx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+            ny = ((e.clientY - r.top) / r.height - 0.5) * 2;
+            kick();
+          });
+          stage.addEventListener('pointerleave', () => { nx = 0; ny = 0; kick(); });
+        });
+      };
       const wireTriggers = () => {
         document.querySelectorAll('.timeline-media[data-category]:not([data-wired])').forEach(cell => {
           cell.dataset.wired = '1';
@@ -343,6 +458,7 @@
         });
         initPythonIcons();
         initLinuxIcons();
+        initMLIcons();
       };
       // One card per category: the card opens the popup slider at that category's certificates.
       const categories = Array.isArray(data.categories) && data.categories.length
