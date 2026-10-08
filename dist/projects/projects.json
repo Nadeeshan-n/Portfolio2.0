@@ -102,8 +102,13 @@
         "https://github.com/Nadeeshan-n/My_Portfolio/blob/main/src/data/data.js"
       ],
       "dataStatus": "repository-documented",
-      "image": null,
-      "previewImages": []
+      "image": "/assets/projects/personal-task-mcp-server.svg",
+      "previewImages": [
+        {
+          "src": "/assets/projects/personal-task-mcp-server.svg",
+          "alt": "Personal Task MCP Server thumbnail"
+        }
+      ]
     },
     {
       "slug": "drive-smart",
@@ -153,8 +158,13 @@
         "https://github.com/Nadeeshan-n/My_Portfolio/blob/main/src/data/data.js"
       ],
       "dataStatus": "repository-documented",
-      "image": null,
-      "previewImages": []
+      "image": "/assets/projects/drive-smart.svg",
+      "previewImages": [
+        {
+          "src": "/assets/projects/drive-smart.svg",
+          "alt": "Drive Smart 2.0 — fleet management desktop app thumbnail"
+        }
+      ]
     },
     {
       "slug": "person-identifier",
@@ -285,6 +295,10 @@
         {
           "src": "/assets/projects/ai-agent-memory-system.svg",
           "alt": "AI Agent Memory System — structured long-term memory for AI agents"
+        },
+        {
+          "src": "/assets/projects/ai-agent-memory-system-2.svg",
+          "alt": "AI Agent Memory System — cross-session memory infrastructure"
         }
       ]
     },
@@ -326,8 +340,13 @@
         "https://github.com/Nadeeshan-n/weather-forecast-project"
       ],
       "dataStatus": "repository-documented",
-      "image": null,
-      "previewImages": []
+      "image": "/assets/projects/weather-forecast-accuracy.svg",
+      "previewImages": [
+        {
+          "src": "/assets/projects/weather-forecast-accuracy.svg",
+          "alt": "Weather Forecast Accuracy thumbnail"
+        }
+      ]
     },
     {
       "slug": "drive-smart-java",
@@ -367,8 +386,13 @@
         "https://github.com/Nadeeshan-n/Drive-Smart-System"
       ],
       "dataStatus": "repository-documented",
-      "image": null,
-      "previewImages": []
+      "image": "/assets/projects/drive-smart-java.svg",
+      "previewImages": [
+        {
+          "src": "/assets/projects/drive-smart-java.svg",
+          "alt": "Drive Smart car rental management system thumbnail"
+        }
+      ]
     },
     {
       "slug": "campusfind",
@@ -414,8 +438,13 @@
         "https://github.com/Nadeeshan-n/Find-and-report-web-app"
       ],
       "dataStatus": "repository-documented",
-      "image": null,
-      "previewImages": []
+      "image": "/assets/projects/campusfind.svg",
+      "previewImages": [
+        {
+          "src": "/assets/projects/campusfind.svg",
+          "alt": "CampusFind university lost and found thumbnail"
+        }
+      ]
     }
   ]
 }
