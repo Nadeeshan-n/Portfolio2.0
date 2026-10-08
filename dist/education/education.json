@@ -120,7 +120,12 @@
         "Machine Learning",
         "Data Science"
       ],
-      "images": [],
+      "images": [
+        {
+          "src": "/assets/certificates/linear-algebra.svg",
+          "alt": "Linear Algebra for Machine Learning and Data Science — DeepLearning.AI course certificate"
+        }
+      ],
       "credentialUrl": "https://www.coursera.org/account/accomplishments/records/XWE5UCP1UWBI"
     },
     {
