@@ -141,8 +141,12 @@
         "https://github.com/Nadeeshan-n/ai-agent-memory-system/blob/main/README.md"
       ],
       "dataStatus": "repository-documented",
-      "image": "/assets/projects/ai-agent-memory-system-1.svg",
+      "image": "/assets/projects/ai-agent-memory-system.svg",
       "previewImages": [
+        {
+          "src": "/assets/projects/ai-agent-memory-system-1.svg",
+          "alt": "n8n workflow for the AI agent memory pipeline"
+        },
         {
           "src": "/assets/projects/ai-agent-memory-system-2.svg",
           "alt": "FastAPI memory service running with uvicorn"
