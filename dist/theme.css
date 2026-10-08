@@ -1,0 +1,79 @@
+/* ============================================================
+   Nadeeshan portfolio — theme toggle + dark mode
+   Loaded after all page stylesheets. Dark mode remaps the
+   design tokens, so every variable-driven surface follows.
+   ============================================================ */
+
+/* ---------- Theme toggle button (lives in .site-header) ---------- */
+.theme-toggle{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;flex:none;
+  border-radius:50%;
+  border:1px solid var(--color-border-default);
+  background:var(--color-bg-surface);
+  color:var(--color-text-secondary);
+  cursor:pointer;
+  transition:border-color .2s ease,color .2s ease,background-color .2s ease,transform .15s ease;
+  padding:0;
+}
+.theme-toggle:hover{color:var(--jade-500);border-color:var(--jade-500)}
+.theme-toggle:active{transform:scale(.94)}
+.theme-toggle:focus-visible{outline:2px solid var(--jade-500);outline-offset:2px}
+/* show moon in light mode, sun in dark mode */
+.theme-toggle .tt-sun{display:none}
+:root[data-theme="dark"] .theme-toggle .tt-sun{display:block}
+:root[data-theme="dark"] .theme-toggle .tt-moon{display:none}
+
+/* ---------- Dark theme: remap the design tokens ---------- */
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  background-color:#0b100e;
+
+  /* raw palette */
+  --jade-400:#45d8a6;
+  --jade-700:#35b489;
+  --jade-800:#2a946f;
+  --charcoal-900:#eaf2ed;
+  --gray-green-600:#9db3a7;
+  --gray-green-400:#5a6e63;
+  --gray-green-200:#26352c;
+  --gray-green-100:#18211c;
+  --ivory-50:#0b100e;
+  --white-0:#121915;
+  --jade-50:#122019;
+
+  /* derived surfaces follow automatically, explicit for clarity */
+  --color-selection-bg:#0f3d31;
+  --color-selection-fg:#8fe8c6;
+}
+
+/* ---------- Hard-coded light surfaces (bypass the tokens) ---------- */
+:root[data-theme="dark"] .generated-screen{background:var(--color-bg-primary)}
+
+/* home: skills cards + project cards keep translucent fill, darken borders */
+:root[data-theme="dark"] #viewport-2-a-skills-programming,
+:root[data-theme="dark"] #viewport-2-a-skills-web,
+:root[data-theme="dark"] #viewport-2-a-skills-ai,
+:root[data-theme="dark"] #viewport-2-a-skills-automation,
+:root[data-theme="dark"] #viewport-2-a-skills-databases,
+:root[data-theme="dark"] #viewport-2-a-skills-tools,
+:root[data-theme="dark"] #viewport-3-b-projects-task,
+:root[data-theme="dark"] #viewport-3-b-projects-assistant,
+:root[data-theme="dark"] #viewport-3-b-projects-service,
+:root[data-theme="dark"] #viewport-3-b-projects-toolkit{border-color:#2b3d34}
+
+/* home: journey icon tiles */
+:root[data-theme="dark"] #viewport-3-b-journey-foundations-surface-155,
+:root[data-theme="dark"] #viewport-3-b-journey-projects-surface-156,
+:root[data-theme="dark"] #viewport-3-b-journey-ai-surface-157,
+:root[data-theme="dark"] #viewport-3-b-journey-growing-surface-158{background:#15241d}
+
+/* jade buttons keep white text in dark mode for contrast */
+:root[data-theme="dark"] .primary-button.primary-button:not(:disabled):not([aria-disabled="true"]),
+:root[data-theme="dark"] #contact .contact-send:disabled{color:#fff !important}
+
+/* education: timeline rail */
+:root[data-theme="dark"] .timeline-wrap{--tl-line:#2b3d34}
+
+/* education: keep the animated icon tiles white (deliberate icon chips) */
+:root[data-theme="dark"] .timeline-media.has-icon{background:#fff}
