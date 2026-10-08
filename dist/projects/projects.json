@@ -259,7 +259,20 @@
       ],
       "dataStatus": "repository-documented",
       "image": "/assets/projects/drive-smart-java.svg",
-      "previewImages": []
+      "previewImages": [
+        {
+          "src": "/assets/projects/drive-smart-java/infographic-part-1.svg",
+          "alt": "Drive Smart: overview and core features"
+        },
+        {
+          "src": "/assets/projects/drive-smart-java/infographic-part-2.svg",
+          "alt": "Drive Smart: operations workflow and system modules"
+        },
+        {
+          "src": "/assets/projects/drive-smart-java/infographic-part-3.svg",
+          "alt": "Drive Smart: technology, OOP concepts and project structure"
+        }
+      ]
     },
     {
       "slug": "campusfind",
