@@ -128,7 +128,7 @@
       };
       // Hand-drawn sketch icons for each category card (charcoal strokes, jade accents).
       const CATEGORY_ICONS = {
-        python: `<div class="python-stage" style="width:120px"><svg class="python-icon" viewBox="0 0 200 200" role="img" aria-label="Python technology illustration">
+        python: `<div class="python-stage"><svg class="python-icon" viewBox="0 0 200 200" role="img" aria-label="Python technology illustration">
           <g class="python-float">
             <g class="python-tilt">
               <g class="python-breathe">
@@ -163,7 +163,7 @@
             </g>
           </g>
         </svg></div>`,
-        'machine-learning': `<div class="ml-stage" style="width:84px"><svg class="ml-icon" viewBox="0 0 200 200" role="img" aria-label="Machine Learning technology illustration">
+        'machine-learning': `<div class="ml-stage"><svg class="ml-icon" viewBox="0 0 200 200" role="img" aria-label="Machine Learning technology illustration">
           <g class="ml-float">
             <g class="px-brain">
               <g class="ml-breathe">
@@ -229,7 +229,7 @@
             </g>
           </g>
         </svg></div>`,
-        'artificial-intelligence': `<div class="ai-stage" style="width:84px"><svg class="ai-icon" viewBox="0 0 200 200" role="img" aria-label="Artificial Intelligence technology illustration">
+        'artificial-intelligence': `<div class="ai-stage"><svg class="ai-icon" viewBox="0 0 200 200" role="img" aria-label="Artificial Intelligence technology illustration">
           <g class="ai-float">
             <g class="ai-tilt">
               <g class="px-robot">
@@ -323,7 +323,7 @@
             </g>
           </g>
         </svg></div>`,
-        linux: `<div class="linux-stage" style="width:84px"><svg class="linux-icon" viewBox="0 0 200 200" role="img" aria-label="Linux technology illustration">
+        linux: `<div class="linux-stage"><svg class="linux-icon" viewBox="0 0 200 200" role="img" aria-label="Linux technology illustration">
           <g class="linux-float">
             <g class="linux-tilt">
               <g class="px-terminal">
@@ -381,7 +381,7 @@
             </g>
           </g>
         </svg></div>`,
-        'web-development': `<div class="web-stage" style="width:84px"><svg class="web-icon" viewBox="0 0 200 200" role="img" aria-label="Web development technology illustration">
+        'web-development': `<div class="web-stage"><svg class="web-icon" viewBox="0 0 200 200" role="img" aria-label="Web development technology illustration">
           <g class="web-float">
             <g class="web-tilt">
               <g class="px-browser">
@@ -707,7 +707,6 @@
           if (icon) {
             cell.innerHTML = icon;
             cell.classList.add('has-icon');
-            if (cell.dataset.category === 'python') cell.classList.add('is-python-media');
             return;
           }
           const certs = records.filter(record => record.category === cell.dataset.category);
@@ -749,7 +748,6 @@
           item.className = 'timeline-item';
           item.innerHTML = `<span class="timeline-dot" aria-hidden="true"></span><article class="timeline-card"><button class="timeline-media certificate-trigger" type="button" data-category="${cat.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" aria-label="Open certificates: ${label}" tabindex="-1" disabled><span class="timeline-placeholder">Certificate<br>image</span></button><div class="timeline-content"><p class="timeline-year">${years.length ? Math.max(...years) : ''}</p><h3 class="timeline-title"></h3><p class="timeline-desc"></p><p class="timeline-issuer"></p><button class="timeline-link certificate-trigger" type="button" data-category="${cat.id}" aria-haspopup="dialog" aria-controls="certificate-dialog" disabled>View certificate${plural ? 's' : ''} <span aria-hidden="true">→</span></button></div></article>`;
           const card = item.querySelector('.timeline-card');
-          if (cat.id === 'python') card.classList.add('is-python-card');
           card.querySelector('.timeline-title').textContent = label;
           card.querySelector('.timeline-issuer').textContent = `${certs.length} certificate${plural ? 's' : ''}`;
           card.querySelector('.timeline-desc').textContent = cat.description || '';

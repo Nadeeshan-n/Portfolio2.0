@@ -534,11 +534,16 @@ button.timeline-media:not(:disabled){cursor:pointer}
    }
 
 /* Test: white backdrop behind the Python card logo only. */
-.timeline-media.is-python-media{background:#fff}
 
 /* Python card test: description under the card name; no vertical divider. */
 .timeline-desc{font-size:13px;line-height:1.6;color:var(--color-text-secondary);margin-top:6px!important;max-width:44ch}
 .timeline-desc:empty{display:none}
-.timeline-media.is-python-media{border-right:0}
-.timeline-card.is-python-card .timeline-link{font-size:11px}
-.timeline-card.is-python-card:hover{border-color:var(--color-border-default)}
+
+/* Category cards: white logo backdrop, no divider, 120px animated logos.
+   Scoped to icon cells / non-degree cards so the degree card is untouched.
+   A new category only needs a `description` in education.json and an icon
+   in CATEGORY_ICONS (a `*-stage` div) to inherit all of this. */
+.timeline-media.has-icon{background:#fff;border-right:0}
+.timeline-media [class*="-stage"]{width:120px}
+.timeline-item:not(.timeline-item-degree) .timeline-link{font-size:11px}
+.timeline-item:not(.timeline-item-degree) .timeline-card:hover{border-color:var(--color-border-default)}

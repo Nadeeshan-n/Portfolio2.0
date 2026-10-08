@@ -173,19 +173,23 @@
     },
     {
       "id": "machine-learning",
-      "label": "Machine Learning"
+      "label": "Machine Learning",
+      "description": "Linear algebra for machine learning with DeepLearning.AI — the mathematical foundation behind the models I build."
     },
     {
       "id": "artificial-intelligence",
-      "label": "Artificial Intelligence"
+      "label": "Artificial Intelligence",
+      "description": "Two IBM specializations in building generative AI and RAG applications with large language models."
     },
     {
       "id": "linux",
-      "label": "Linux"
+      "label": "Linux",
+      "description": "Hands-on Linux command-line and shell scripting fluency — IBM certified."
     },
     {
       "id": "web-development",
-      "label": "Web Development"
+      "label": "Web Development",
+      "description": "Modern web development foundations — HTML, CSS, and JavaScript with Duke University."
     }
   ]
 }
