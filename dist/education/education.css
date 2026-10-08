@@ -535,3 +535,8 @@ button.timeline-media:not(:disabled){cursor:pointer}
 
 /* Test: white backdrop behind the Python card logo only. */
 .timeline-media.is-python-media{background:#fff}
+
+/* Python card test: description under the card name; no vertical divider. */
+.timeline-desc{font-size:13px;line-height:1.6;color:var(--color-text-secondary);margin-top:6px!important;max-width:44ch}
+.timeline-desc:empty{display:none}
+.timeline-media.is-python-media{border-right:0}

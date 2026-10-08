@@ -168,7 +168,8 @@
   "categories": [
     {
       "id": "python",
-      "label": "Python"
+      "label": "Python",
+      "description": "My everyday language for automation, data handling, and AI experiments — certified across three University of Michigan specializations."
     },
     {
       "id": "machine-learning",
