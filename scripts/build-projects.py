@@ -256,8 +256,6 @@ def detail(project):
     github_url = project.get("github") or GITHUB_PROFILE
     github_label = "GitHub" if project.get("github") else "GitHub profile"
     actions = external_button(github_url, "GitHub", github_label) if github_url else ""
-    if project.get("demo"):
-        actions += external_button(project["demo"], "Live Demo")
     if actions:
         actions = f'<div class="detail-actions">{actions}</div>'
     features = project.get("features") or []
@@ -331,8 +329,7 @@ def validate(project):
     flow = project.get("flow") or []
     if flow and len(flow) != 4:
         raise ValueError(f"{slug}: the compact architecture supports four flow steps.")
-    for field in ("github", "demo"):
-        _public_url(project.get(field), field, slug)
+    _public_url(project.get("github"), "github", slug)
     image = project.get("image")
     if image is not None:
         src = image.get("src") if isinstance(image, dict) else image

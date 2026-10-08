@@ -13,7 +13,6 @@
       "features": [],
       "learned": null,
       "github": null,
-      "demo": null,
       "sources": [],
       "dataStatus": "placeholder",
       "image": "/assets/blog/understanding-mcp/thumbnail.png",
@@ -54,7 +53,6 @@
       ],
       "learned": null,
       "github": "https://github.com/Nadeeshan-n/AI-powered-Web-Assistant-",
-      "demo": null,
       "sources": [
         "https://github.com/Nadeeshan-n/AI-powered-Web-Assistant-/blob/main/README.md"
       ],
@@ -95,7 +93,6 @@
       ],
       "learned": "I learned how MCP acts as a standard connection layer between AI applications and external tools, including tool discovery, invocation, resources, prompts and local stdio communication.",
       "github": "https://github.com/Nadeeshan-n/Personal-Task-MCP-Server",
-      "demo": null,
       "sources": [
         "https://github.com/Nadeeshan-n/Personal-Task-MCP-Server/blob/main/README.md",
         "https://github.com/Nadeeshan-n/My_Portfolio/blob/main/src/data/data.js"
@@ -139,7 +136,6 @@
       ],
       "learned": null,
       "github": "https://github.com/Nadeeshan-n/Drive-Smart-2.0-",
-      "demo": null,
       "sources": [
         "https://github.com/Nadeeshan-n/Drive-Smart-2.0-/blob/main/README.md",
         "https://github.com/Nadeeshan-n/My_Portfolio/blob/main/src/data/data.js"
@@ -179,7 +175,6 @@
       ],
       "learned": null,
       "github": "https://github.com/Nadeeshan-n/Person-Identifier",
-      "demo": null,
       "sources": [
         "https://github.com/Nadeeshan-n/Person-Identifier"
       ],
@@ -188,48 +183,46 @@
       "previewImages": []
     },
     {
-  "slug": "my-new-project",
-  "title": "My New Project",
-  "visual": "default",
-  "description": "A short description of my project.",
-  "cardStack": [],
-  "technologies": [
-    "Python",
-    "FastAPI",
-    "AI"
-  ],
-  "overview": "A longer description of the project.",
-  "flow": [],
-  "features": [],
-  "learned": null,
-  "github": "https://github.com/Nadeeshan-n/my-new-project",
-  "demo": null,
-  "sources": [],
-  "dataStatus": "complete",
-  "image": "/assets/projects/my-new-project.png",
-  "previewImages": []
-},
-{
-  "slug": "my-new-project_1",
-  "title": "My New Project",
-  "visual": "default",
-  "description": "A short description of my project.",
-  "cardStack": [],
-  "technologies": [
-    "Python",
-    "FastAPI",
-    "AI"
-  ],
-  "overview": "A longer description of the project.",
-  "flow": [],
-  "features": [],
-  "learned": null,
-  "github": "https://github.com/Nadeeshan-n/my-new-project",
-  "demo": null,
-  "sources": [],
-  "dataStatus": "complete",
-  "image": "/assets/projects/my-new-project.png",
-  "previewImages": []
-}
+      "slug": "my-new-project",
+      "title": "My New Project",
+      "visual": "default",
+      "description": "A short description of my project.",
+      "cardStack": [],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "AI"
+      ],
+      "overview": "A longer description of the project.",
+      "flow": [],
+      "features": [],
+      "learned": null,
+      "github": "https://github.com/Nadeeshan-n/my-new-project",
+      "sources": [],
+      "dataStatus": "complete",
+      "image": "/assets/projects/my-new-project.png",
+      "previewImages": []
+    },
+    {
+      "slug": "my-new-project_1",
+      "title": "My New Project",
+      "visual": "default",
+      "description": "A short description of my project.",
+      "cardStack": [],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "AI"
+      ],
+      "overview": "A longer description of the project.",
+      "flow": [],
+      "features": [],
+      "learned": null,
+      "github": "https://github.com/Nadeeshan-n/my-new-project",
+      "sources": [],
+      "dataStatus": "complete",
+      "image": "/assets/projects/my-new-project.png",
+      "previewImages": []
+    }
   ]
 }
