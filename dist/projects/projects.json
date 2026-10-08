@@ -223,6 +223,55 @@
       "dataStatus": "complete",
       "image": "/assets/projects/my-new-project.png",
       "previewImages": []
+    },
+    {
+      "slug": "ai-agent-memory-system",
+      "title": "AI Agent Memory System",
+      "visual": "memory",
+      "description": "A structured long-term memory subsystem for AI agents — persistent user memory, semantic retrieval, and full memory-lifecycle management.",
+      "cardStack": [
+        "Python",
+        "FastAPI",
+        "SQLite",
+        "Hugging Face"
+      ],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Pydantic",
+        "SQLite",
+        "Hugging Face",
+        "NumPy",
+        "n8n",
+        "Docker"
+      ],
+      "overview": "A standalone memory subsystem for conversational AI agents. It separates conversation history from structured long-term memory — every memory stored as a record with category, importance, confidence, embedding, and expiration — and exposes memory operations through a FastAPI service with semantic retrieval, duplicate detection, and lifecycle management from extraction to cleanup. An n8n workflow connects the agent, messaging, and memory API.",
+      "flow": [
+        "Extract",
+        "Validate",
+        "Store",
+        "Retrieve"
+      ],
+      "features": [
+        "Structured memory records with importance, confidence, and expiration.",
+        "Semantic retrieval with embeddings and relevance scoring.",
+        "Full memory lifecycle: extraction, validation, dedup, retrieval, expiration, cleanup.",
+        "FastAPI memory service with Pydantic-validated requests.",
+        "n8n workflow orchestration with a WhatsApp interface."
+      ],
+      "learned": "I learned how to give AI agents persistent memory as structured, queryable records instead of raw chat history — including embedding-based semantic retrieval, relevance scoring, and safe lifecycle management.",
+      "github": "https://github.com/Nadeeshan-n/ai-agent-memory-system",
+      "sources": [
+        "https://github.com/Nadeeshan-n/ai-agent-memory-system/blob/main/README.md"
+      ],
+      "dataStatus": "repository-documented",
+      "image": "/assets/projects/ai-agent-memory-system.svg",
+      "previewImages": [
+        {
+          "src": "/assets/projects/ai-agent-memory-system.svg",
+          "alt": "AI Agent Memory System — structured long-term memory for AI agents"
+        }
+      ]
     }
   ]
 }
