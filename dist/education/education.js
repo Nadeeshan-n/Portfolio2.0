@@ -229,7 +229,100 @@
             </g>
           </g>
         </svg></div>`,
-        'artificial-intelligence': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 18V11"/><circle cx="32" cy="8" r="3"/><rect x="15" y="18" width="34" height="26" rx="9"/><circle cx="25" cy="30" r="2.6" fill="#0E8F78" stroke="none"/><circle cx="39" cy="30" r="2.6" fill="#0E8F78" stroke="none"/><path d="M25 38h14"/><path d="M15 26v10M49 26v10"/></svg>`,
+        'artificial-intelligence': `<div class="ai-stage" style="width:84px"><svg class="ai-icon" viewBox="0 0 200 200" role="img" aria-label="Artificial Intelligence technology illustration">
+          <g class="ai-float">
+            <g class="ai-tilt">
+              <g class="px-robot">
+                <rect class="ai-draw" style="--d:0.1s" pathLength="1" x="84" y="120" width="32" height="30" rx="10" fill="#F2F8F5" stroke="#17211E" stroke-width="4"/>
+                <g class="ai-fadein" style="--d:0.8s" fill="#0E8F78">
+                  <circle cx="94" cy="136" r="2.5"/>
+                  <circle cx="106" cy="136" r="2.5"/>
+                </g>
+                <rect class="ai-draw" style="--d:0s" pathLength="1" x="70" y="80" width="60" height="42" rx="16" fill="#F2F8F5" stroke="#17211E" stroke-width="4"/>
+                <g class="ai-fadein" style="--d:0.4s">
+                  <rect x="82" y="88" width="36" height="24" rx="10" fill="#17211E"/>
+                </g>
+                <g class="ai-fadein" style="--d:0.55s">
+                  <g class="ai-eye"><rect x="90" y="96" width="7" height="12" rx="3.5" fill="#0E8F78"/></g>
+                  <g class="ai-eye" style="animation-delay:0.12s"><rect x="103" y="96" width="7" height="12" rx="3.5" fill="#0E8F78"/></g>
+                </g>
+                <g class="ai-pop" style="--d:0.6s" fill="#0E8F78" stroke="#17211E" stroke-width="3">
+                  <circle cx="66" cy="100" r="7"/>
+                  <circle cx="134" cy="100" r="7"/>
+                </g>
+                <path class="ai-draw" style="--d:0.5s" pathLength="1" d="M100 80 L100 64" fill="none" stroke="#17211E" stroke-width="3" stroke-linecap="round"/>
+                <g class="ai-pop" style="--d:0.7s">
+                  <circle class="ai-corepulse" cx="100" cy="56" r="6" fill="#0E8F78" stroke="#17211E" stroke-width="3"/>
+                </g>
+              </g>
+              <g class="px-core">
+                <g class="ai-crown" fill="none" stroke="#0E8F78" stroke-width="1.8" opacity="0.6" stroke-linecap="round">
+                  <path class="ai-draw" style="--d:0.8s" pathLength="1" d="M100 56 C90 50 78 44 66 40"/>
+                  <path class="ai-draw" style="--d:0.85s" pathLength="1" d="M100 56 C100 48 100 38 100 30"/>
+                  <path class="ai-draw" style="--d:0.9s" pathLength="1" d="M100 56 C110 50 122 44 134 40"/>
+                  <path class="ai-draw" style="--d:0.95s" pathLength="1" d="M66 40 C78 32 122 32 134 40"/>
+                </g>
+                <g stroke="#17211E" stroke-width="2">
+                  <g class="ai-pop" style="--d:0.9s"><g class="ai-node" style="--pd:0s"><circle cx="66" cy="40" r="4" fill="#0E8F78"/></g></g>
+                  <g class="ai-pop" style="--d:1s"><g class="ai-node" style="--pd:-1s"><circle cx="100" cy="30" r="4.5" fill="#E9F5EF"/></g></g>
+                  <g class="ai-pop" style="--d:1.1s"><g class="ai-node" style="--pd:-2s"><circle cx="134" cy="40" r="4" fill="#0E8F78"/></g></g>
+                  <g class="ai-pop" style="--d:1.05s"><g class="ai-node" style="--pd:-0.5s"><circle cx="83" cy="35" r="2.5" fill="#0E8F78"/></g></g>
+                  <g class="ai-pop" style="--d:1.05s"><g class="ai-node" style="--pd:-1.5s"><circle cx="117" cy="35" r="2.5" fill="#0E8F78"/></g></g>
+                </g>
+              </g>
+              <g class="px-tools">
+                <g>
+                  <rect class="ai-draw" style="--d:0.9s" pathLength="1" x="22" y="58" width="30" height="30" rx="7" fill="#17211E" stroke="#17211E" stroke-width="3"/>
+                  <g class="ai-fadein" style="--d:1.15s" fill="none" stroke="#0E8F78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M32 68 l-6 6 6 6"/>
+                    <path d="M40 66 l-5 16"/>
+                    <path d="M46 68 l6 6 -6 6"/>
+                  </g>
+                  <g class="ai-fadein" style="--d:1.3s"><rect class="ai-codecursor" x="28" y="81" width="10" height="3" rx="1.5" fill="#0E8F78"/></g>
+                </g>
+                <g class="ai-fadein" style="--d:1s">
+                  <g class="ai-dbbob" fill="#F2F8F5" stroke="#17211E" stroke-width="2.5">
+                    <ellipse cx="36" cy="124" rx="10" ry="4"/>
+                    <path d="M26 124 L26 140 C26 143 30 145 36 145 C42 145 46 143 46 140 L46 124"/>
+                    <path d="M26 132 C30 135 42 135 46 132" fill="none" stroke="#0E8F78" stroke-width="2"/>
+                  </g>
+                </g>
+                <g class="ai-cloudbob">
+                  <path class="ai-draw" style="--d:1.05s" pathLength="1" d="M146 72 C141 72 138 68 139 64 C140 61 143 60 146 60 C147 56 152 54 156 56 C158 53 162 53 164 55 C168 54 172 56 172 60 C175 61 176 64 175 67 C174 70 171 72 168 72 Z" fill="#E9F5EF" stroke="#17211E" stroke-width="2.5" stroke-linejoin="round"/>
+                </g>
+                <g class="ai-fadein" style="--d:1.1s">
+                  <g class="ai-gearspin">
+                    <circle cx="160" cy="128" r="9" fill="none" stroke="#0E8F78" stroke-width="7" stroke-dasharray="4.5 4.9"/>
+                    <circle cx="160" cy="128" r="4.5" fill="#E9F5EF" stroke="#17211E" stroke-width="2.5"/>
+                  </g>
+                </g>
+              </g>
+              <g class="px-conn">
+                <g class="ai-connlines" fill="none" stroke="#17211E" stroke-width="1.8" opacity="0.45" stroke-linecap="round">
+                  <path class="ai-draw ai-connline" style="--d:1.2s" pathLength="1" d="M70 100 C60 96 55 92 52 88"/>
+                  <path class="ai-draw ai-connline" style="--d:1.25s" pathLength="1" d="M80 132 C68 134 56 134 47 132"/>
+                  <path class="ai-draw ai-connline" style="--d:1.3s" pathLength="1" d="M130 94 C140 88 147 82 151 76"/>
+                  <path class="ai-draw ai-connline" style="--d:1.35s" pathLength="1" d="M126 130 C138 132 148 131 155 129"/>
+                </g>
+                <g class="ai-fadein" style="--d:1.6s">
+                  <circle class="ai-signal" style="--sd:0s; offset-path: path('M70 100 C60 96 55 92 52 88')" cx="70" cy="100" r="3" fill="#0E8F78"/>
+                  <circle class="ai-signal" style="--sd:-2.3s; offset-path: path('M130 94 C140 88 147 82 151 76')" cx="130" cy="94" r="3" fill="#0E8F78"/>
+                  <circle class="ai-signal" style="--sd:-4.6s; offset-path: path('M126 130 C138 132 148 131 155 129')" cx="126" cy="130" r="3" fill="#0E8F78"/>
+                </g>
+              </g>
+              <g class="px-decor">
+                <g class="ai-fadein" style="--d:1.5s">
+                  <circle class="ai-dot d1" cx="18" cy="104" r="2.5" fill="#0E8F78"/>
+                  <circle class="ai-dot d2" cx="182" cy="104" r="2.5" fill="#17211E"/>
+                  <circle class="ai-dot d3" cx="100" cy="172" r="2.5" fill="#0E8F78"/>
+                  <circle class="ai-dot d4" cx="60" cy="164" r="2" fill="#17211E"/>
+                </g>
+                <path class="ai-accent a1" pathLength="1" d="M14 56 C10 70 12 82 18 92" fill="none" stroke="#17211E" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="ai-accent a2" pathLength="1" d="M118 20 l10 -8" fill="none" stroke="#0E8F78" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </g>
+          </g>
+        </svg></div>`,
         linux: `<div class="linux-stage" style="width:84px"><svg class="linux-icon" viewBox="0 0 200 200" role="img" aria-label="Linux technology illustration">
           <g class="linux-float">
             <g class="linux-tilt">
@@ -556,6 +649,57 @@
           stage.addEventListener('pointerleave', () => { nx = 0; ny = 0; kick(); });
         });
       };
+      // Animated AI icon: reveal on scroll into view + layered parallax.
+      // Runs after the category icons are injected; each stage initializes once.
+      const initAIIcons = () => {
+        const stages = document.querySelectorAll('.ai-stage:not([data-ai-init])');
+        if (!stages.length) return;
+        stages.forEach(stage => stage.setAttribute('data-ai-init', '1'));
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if ('IntersectionObserver' in window) {
+          const io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) { entry.target.classList.add('is-inview'); io.unobserve(entry.target); }
+            });
+          }, { threshold: 0.3 });
+          stages.forEach(stage => io.observe(stage));
+        } else {
+          stages.forEach(stage => stage.classList.add('is-inview'));
+        }
+        if (reduceMotion) return;
+        stages.forEach(stage => {
+          const layers = [
+            [stage.querySelector('.px-robot'), 2],
+            [stage.querySelector('.px-core'), 3],
+            [stage.querySelector('.px-tools'), 4],
+            [stage.querySelector('.px-conn'), 5],
+            [stage.querySelector('.px-decor'), 6]
+          ].filter(pair => pair[0]);
+          if (!layers.length) return;
+          let raf = 0, nx = 0, ny = 0;
+          const cur = layers.map(() => ({ x: 0, y: 0 }));
+          const tick = () => {
+            let moving = false;
+            layers.forEach((pair, i) => {
+              const el = pair[0], max = pair[1], c = cur[i];
+              const tx = nx * max, ty = ny * max;
+              c.x += (tx - c.x) * 0.12;
+              c.y += (ty - c.y) * 0.12;
+              el.style.translate = c.x.toFixed(2) + 'px ' + c.y.toFixed(2) + 'px';
+              if (Math.abs(tx - c.x) > 0.05 || Math.abs(ty - c.y) > 0.05) moving = true;
+            });
+            raf = moving ? requestAnimationFrame(tick) : 0;
+          };
+          const kick = () => { if (!raf) raf = requestAnimationFrame(tick); };
+          stage.addEventListener('pointermove', e => {
+            const r = stage.getBoundingClientRect();
+            nx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+            ny = ((e.clientY - r.top) / r.height - 0.5) * 2;
+            kick();
+          });
+          stage.addEventListener('pointerleave', () => { nx = 0; ny = 0; kick(); });
+        });
+      };
       const wireTriggers = () => {
         document.querySelectorAll('.timeline-media[data-category]:not([data-wired])').forEach(cell => {
           cell.dataset.wired = '1';
@@ -586,6 +730,7 @@
         initLinuxIcons();
         initMLIcons();
         initWebIcons();
+        initAIIcons();
       };
       // One card per category: the card opens the popup slider at that category's certificates.
       const categories = Array.isArray(data.categories) && data.categories.length

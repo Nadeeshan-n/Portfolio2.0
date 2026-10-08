@@ -436,3 +436,99 @@ button.timeline-media:not(:disabled){cursor:pointer}
    @media (prefers-reduced-motion: reduce) {
      .web-stage, .web-stage * { animation: none !important; transition: none !important; }
    }
+
+/* Animated Artificial Intelligence category icon (reusable component, no dependencies). */
+   .ai-stage {
+     display: inline-block;
+     line-height: 0;
+     transition: transform 0.45s cubic-bezier(0.34, 1.4, 0.4, 1);
+   }
+   .ai-stage:hover { transform: translateY(-6px) scale(1.04); }
+   .ai-icon { display: block; width: 100%; height: auto; overflow: visible; }
+
+   /* All motion lives behind this media query so that
+      prefers-reduced-motion users always get the finished artwork. */
+   @media (prefers-reduced-motion: no-preference) {
+     .ai-float { animation: ai-float 6s ease-in-out infinite; }
+     .ai-tilt  { animation: ai-tilt 9s ease-in-out infinite;
+                 transform-box: fill-box; transform-origin: center; }
+
+     /* Entrance states (invisible until .is-inview triggers the reveal). */
+     .ai-draw   { stroke-dasharray: 1; stroke-dashoffset: 1; fill-opacity: 0; }
+     .ai-pop    { transform: scale(0); transform-box: fill-box; transform-origin: center; }
+     .ai-fadein { opacity: 0; }
+
+     .ai-stage.is-inview .ai-draw {
+       animation: ai-draw 1.2s ease-out var(--d, 0s) forwards,
+                  ai-fillin 0.6s ease-out calc(var(--d, 0s) + 0.5s) forwards;
+     }
+     .ai-stage.is-inview .ai-pop {
+       animation: ai-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d, 0s) forwards;
+     }
+     .ai-stage.is-inview .ai-fadein {
+       animation: ai-fade 0.5s ease var(--d, 0s) forwards;
+     }
+
+     /* Idle life. */
+     .ai-corepulse { transform-box: fill-box; transform-origin: center;
+                     animation: ai-pulse 4s ease-in-out infinite; }
+     .ai-node { transform-box: fill-box; transform-origin: center;
+                animation: ai-pulse 3s ease-in-out infinite;
+                animation-delay: var(--pd, 0s); }
+     .ai-eye { transform-box: fill-box; transform-origin: center;
+               animation: ai-blink 6s ease-in-out infinite; }
+     .ai-signal { offset-rotate: 0deg;
+                  animation: ai-flow 7s linear infinite;
+                  animation-delay: var(--sd, 0s); }
+     .ai-gearspin { transform-box: fill-box; transform-origin: center;
+                    animation: ai-spin 15s linear infinite; }
+     .ai-dbbob { animation: ai-bob 5s ease-in-out infinite; }
+     .ai-cloudbob { animation: ai-bob 5s ease-in-out -2.5s infinite; }
+     .ai-codecursor { animation: ai-cursor 1.4s ease-in-out infinite; }
+
+     /* Decorative dots drift outward and fade, each on its own rhythm. */
+     .ai-dot  { animation: ai-dot 4.5s ease-in-out infinite; }
+     .ai-dot.d2 { animation-delay: -1.2s; animation-duration: 5.2s; }
+     .ai-dot.d3 { animation-delay: -2.6s; }
+     .ai-dot.d4 { animation-delay: -3.4s; animation-duration: 3.8s; }
+
+     /* Curved sketch strokes slowly draw, hold, and release. */
+     .ai-accent { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; }
+     .ai-stage.is-inview .ai-accent { animation: ai-accent 7s ease-in-out infinite; }
+     .ai-stage.is-inview .ai-accent.a2 { animation-delay: 1.8s; }
+
+     /* Hover: subtle and professional. */
+     .ai-stage:hover .ai-float { animation-duration: 3.4s; }
+     .ai-stage:hover .ai-corepulse { animation-duration: 2s; }
+     .ai-stage:hover .ai-node { animation-duration: 1.2s; }
+     .ai-stage:hover .ai-connline { opacity: 0.8; }
+     .ai-stage:hover .ai-signal { animation-duration: 3.5s; }
+     .ai-stage:hover .ai-gearspin { animation-duration: 6s; }
+     .ai-stage:hover .ai-dot { animation-duration: 2.6s; opacity: 1; }
+   }
+
+   @keyframes ai-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+   @keyframes ai-tilt  { 0%, 100% { transform: rotate(-0.5deg); } 50% { transform: rotate(0.5deg); } }
+   @keyframes ai-draw   { to { stroke-dashoffset: 0; } }
+   @keyframes ai-fillin { to { fill-opacity: 1; } }
+   @keyframes ai-pop    { to { transform: scale(1); } }
+   @keyframes ai-fade   { to { opacity: 1; } }
+   @keyframes ai-pulse  { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+   @keyframes ai-blink  { 0%, 91%, 100% { transform: scaleY(1); } 94%, 96% { transform: scaleY(0.08); } }
+   @keyframes ai-flow   { 0% { offset-distance: 0%; opacity: 0; }
+                          15% { opacity: 0.85; } 85% { opacity: 0.85; }
+                          100% { offset-distance: 100%; opacity: 0; } }
+   @keyframes ai-spin   { to { transform: rotate(360deg); } }
+   @keyframes ai-bob    { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+   @keyframes ai-cursor { 0%, 100% { opacity: 1; } 50% { opacity: 0.15; } }
+   @keyframes ai-dot    { 0%, 100% { transform: translate(0, 0); opacity: 0.85; }
+                          50% { transform: translate(4px, -6px); opacity: 0.3; } }
+   @keyframes ai-accent { 0%   { stroke-dashoffset: 1; opacity: 0; }
+                          12%  { opacity: 0.9; }
+                          40%  { stroke-dashoffset: 0; opacity: 0.9; }
+                          75%  { stroke-dashoffset: 0; opacity: 0.9; }
+                          100% { stroke-dashoffset: 0; opacity: 0; } }
+
+   @media (prefers-reduced-motion: reduce) {
+     .ai-stage, .ai-stage * { animation: none !important; transition: none !important; }
+   }
