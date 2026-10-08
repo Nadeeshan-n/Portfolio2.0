@@ -288,7 +288,82 @@
             </g>
           </g>
         </svg></div>`,
-        'web-development': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 20L9 32l14 12"/><path d="M41 20l14 12-14 12"/><path d="M36 14l-8 36" stroke="#0E8F78"/></svg>`,
+        'web-development': `<div class="web-stage" style="width:84px"><svg class="web-icon" viewBox="0 0 200 200" role="img" aria-label="Web development technology illustration">
+          <g class="web-float">
+            <g class="web-tilt">
+              <g class="px-browser">
+                <rect class="web-draw" style="--d:0s" pathLength="1" x="30" y="62" width="108" height="78" rx="8" fill="#F2F8F5" stroke="#17211E" stroke-width="4"/>
+                <g class="web-fadein" style="--d:0.45s">
+                  <path d="M30 70 C30 65 33 62 38 62 L130 62 C135 62 138 65 138 70 L138 76 L30 76 Z" fill="#0E8F78"/>
+                  <path d="M30 76 H138" stroke="#17211E" stroke-width="2.5"/>
+                  <circle cx="40" cy="69" r="3" fill="#17211E"/>
+                  <circle cx="50" cy="69" r="3" fill="#E9F5EF"/>
+                  <circle cx="60" cy="69" r="3" fill="#E9F5EF"/>
+                  <rect x="72" y="65" width="54" height="8" rx="4" fill="#E9F5EF" opacity="0.8"/>
+                </g>
+              </g>
+              <g class="px-page">
+                <g class="web-pagesettle">
+                  <g class="web-fadein" style="--d:0.6s">
+                    <rect x="38" y="84" width="92" height="6" rx="3" fill="#0E8F78" opacity="0.75"/>
+                  </g>
+                  <g class="web-fadein" style="--d:0.7s" fill="#17211E" opacity="0.55">
+                    <rect x="38" y="96" width="44" height="4" rx="2"/>
+                    <rect x="38" y="103" width="32" height="4" rx="2"/>
+                  </g>
+                  <g class="web-fadein" style="--d:0.8s">
+                    <rect x="88" y="94" width="42" height="26" fill="#DCEBE3" stroke="#17211E" stroke-width="2"/>
+                    <path d="M88 94 L130 120 M130 94 L88 120" stroke="#17211E" stroke-width="1.5"/>
+                  </g>
+                  <g class="web-pop" style="--d:0.9s">
+                    <rect x="38" y="112" width="24" height="9" rx="4.5" fill="#0E8F78"/>
+                  </g>
+                  <g fill="#FFFFFF" stroke="#17211E" stroke-width="2">
+                    <g class="web-pop" style="--d:1s"><rect x="38" y="126" width="26" height="10" rx="2"/></g>
+                    <g class="web-pop" style="--d:1.05s"><rect x="68" y="126" width="26" height="10" rx="2"/></g>
+                    <g class="web-pop" style="--d:1.1s"><rect x="98" y="126" width="26" height="10" rx="2"/></g>
+                  </g>
+                </g>
+              </g>
+              <g class="px-code">
+                <rect class="web-draw" style="--d:0.8s" pathLength="1" x="140" y="86" width="48" height="58" rx="6" fill="#17211E" stroke="#17211E" stroke-width="4"/>
+                <g class="web-fadein" style="--d:1.1s" fill="#0E8F78">
+                  <rect x="148" y="96" width="24" height="3" rx="1.5"/>
+                  <rect x="148" y="102" width="16" height="3" rx="1.5" opacity="0.6"/>
+                </g>
+                <g class="web-fadein" style="--d:1.2s" fill="none" stroke="#0E8F78" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M156 116 l-9 9 9 9"/>
+                  <path d="M164 114 l-7 22"/>
+                  <path d="M172 116 l9 9 -9 9"/>
+                </g>
+                <g class="web-fadein" style="--d:1.3s">
+                  <rect class="web-cursor" x="180" y="128" width="5" height="10" fill="#0E8F78"/>
+                </g>
+              </g>
+              <g class="px-cloud">
+                <g class="web-cloudbob">
+                  <path class="web-draw" style="--d:1s" pathLength="1" d="M132 52 C126 52 122 47 124 42 C125 38 129 36 133 37 C135 31 142 28 148 31 C150 27 156 26 160 29 C165 27 171 30 172 35 C177 36 180 41 178 46 C177 50 173 52 169 52 Z" fill="#E9F5EF" stroke="#17211E" stroke-width="3" stroke-linejoin="round"/>
+                </g>
+                <path class="web-draw" style="--d:1.2s" pathLength="1" d="M165 86 C167 74 165 64 161 54" fill="none" stroke="#17211E" stroke-width="1.8" opacity="0.5"/>
+                <path class="web-draw" style="--d:1.25s" pathLength="1" d="M143 54 C145 66 147 76 149 86" fill="none" stroke="#17211E" stroke-width="1.8" opacity="0.5"/>
+                <g class="web-fadein" style="--d:1.6s">
+                  <circle class="web-signal" style="--sd:0s; offset-path: path('M165 86 C167 74 165 64 161 54')" cx="165" cy="86" r="3" fill="#0E8F78"/>
+                  <circle class="web-signal" style="--sd:-3.5s; offset-path: path('M143 54 C145 66 147 76 149 86')" cx="143" cy="54" r="3" fill="#0E8F78"/>
+                </g>
+              </g>
+              <g class="px-decor">
+                <g class="web-fadein" style="--d:1.5s">
+                  <circle class="web-dot d1" cx="20" cy="52" r="3" fill="#0E8F78"/>
+                  <circle class="web-dot d2" cx="184" cy="64" r="2.5" fill="#17211E"/>
+                  <circle class="web-dot d3" cx="24" cy="150" r="2" fill="#17211E"/>
+                  <circle class="web-dot d4" cx="120" cy="168" r="2.5" fill="#0E8F78"/>
+                </g>
+                <path class="web-accent a1" pathLength="1" d="M16 96 C10 112 12 130 22 142" fill="none" stroke="#17211E" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="web-accent a2" pathLength="1" d="M104 30 l10 -8" fill="none" stroke="#0E8F78" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </g>
+          </g>
+        </svg></div>`,
       };
       // Thumbnails + popup triggers are wired once after the category cards render.
       // Animated Python icon: reveal on scroll into view + subtle pointer parallax.
@@ -430,6 +505,57 @@
           stage.addEventListener('pointerleave', () => { nx = 0; ny = 0; kick(); });
         });
       };
+      // Animated Web Development icon: reveal on scroll into view + layered parallax.
+      // Runs after the category icons are injected; each stage initializes once.
+      const initWebIcons = () => {
+        const stages = document.querySelectorAll('.web-stage:not([data-web-init])');
+        if (!stages.length) return;
+        stages.forEach(stage => stage.setAttribute('data-web-init', '1'));
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if ('IntersectionObserver' in window) {
+          const io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) { entry.target.classList.add('is-inview'); io.unobserve(entry.target); }
+            });
+          }, { threshold: 0.3 });
+          stages.forEach(stage => io.observe(stage));
+        } else {
+          stages.forEach(stage => stage.classList.add('is-inview'));
+        }
+        if (reduceMotion) return;
+        stages.forEach(stage => {
+          const layers = [
+            [stage.querySelector('.px-browser'), 2],
+            [stage.querySelector('.px-page'), 3],
+            [stage.querySelector('.px-code'), 4],
+            [stage.querySelector('.px-cloud'), 5],
+            [stage.querySelector('.px-decor'), 6]
+          ].filter(pair => pair[0]);
+          if (!layers.length) return;
+          let raf = 0, nx = 0, ny = 0;
+          const cur = layers.map(() => ({ x: 0, y: 0 }));
+          const tick = () => {
+            let moving = false;
+            layers.forEach((pair, i) => {
+              const el = pair[0], max = pair[1], c = cur[i];
+              const tx = nx * max, ty = ny * max;
+              c.x += (tx - c.x) * 0.12;
+              c.y += (ty - c.y) * 0.12;
+              el.style.translate = c.x.toFixed(2) + 'px ' + c.y.toFixed(2) + 'px';
+              if (Math.abs(tx - c.x) > 0.05 || Math.abs(ty - c.y) > 0.05) moving = true;
+            });
+            raf = moving ? requestAnimationFrame(tick) : 0;
+          };
+          const kick = () => { if (!raf) raf = requestAnimationFrame(tick); };
+          stage.addEventListener('pointermove', e => {
+            const r = stage.getBoundingClientRect();
+            nx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+            ny = ((e.clientY - r.top) / r.height - 0.5) * 2;
+            kick();
+          });
+          stage.addEventListener('pointerleave', () => { nx = 0; ny = 0; kick(); });
+        });
+      };
       const wireTriggers = () => {
         document.querySelectorAll('.timeline-media[data-category]:not([data-wired])').forEach(cell => {
           cell.dataset.wired = '1';
@@ -459,6 +585,7 @@
         initPythonIcons();
         initLinuxIcons();
         initMLIcons();
+        initWebIcons();
       };
       // One card per category: the card opens the popup slider at that category's certificates.
       const categories = Array.isArray(data.categories) && data.categories.length
