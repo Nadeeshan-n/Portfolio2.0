@@ -119,3 +119,50 @@ button.timeline-media:not(:disabled){cursor:pointer}
  .timeline-card{border-color:CanvasText}
  .certificate-dialog{border-color:CanvasText}
 }
+
+/* Animated Python category icon (reusable component, no dependencies). */
+.python-stage{display:inline-block;line-height:0;transition:transform .45s cubic-bezier(.34,1.4,.4,1)}
+.python-stage:hover{transform:translateY(-6px) scale(1.04)}
+.python-icon{display:block;width:100%;height:auto;overflow:visible}
+@media (prefers-reduced-motion: no-preference){
+.python-float{animation:py-float 6s ease-in-out infinite}
+.python-tilt{animation:py-tilt 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.python-breathe{animation:py-breathe 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.python-upper{animation:py-float 4.6s ease-in-out -1.2s infinite}
+.python-lower{animation:py-float 5.4s ease-in-out -2.8s infinite}
+.python-draw{stroke-dasharray:1;stroke-dashoffset:1}
+.python-head{transform-box:fill-box;transform-origin:center;transform:scale(0)}
+.python-eye{opacity:0}
+.python-stage.is-inview .python-draw{animation:py-draw 1.5s cubic-bezier(.5,0,.3,1) forwards}
+.python-stage.is-inview .python-upper .python-draw{animation-delay:.15s}
+.python-stage.is-inview .python-lower .python-draw{animation-delay:.45s}
+.python-stage.is-inview .python-head{animation:py-pop .7s cubic-bezier(.34,1.56,.64,1) forwards}
+.python-stage.is-inview .python-upper .python-head{animation-delay:1s}
+.python-stage.is-inview .python-lower .python-head{animation-delay:1.25s}
+.python-stage.is-inview .python-eye{animation:py-fade .5s ease forwards}
+.python-stage.is-inview .python-upper .python-eye{animation-delay:1.45s}
+.python-stage.is-inview .python-lower .python-eye{animation-delay:1.65s}
+.python-dot{animation:py-dot 4.5s ease-in-out infinite}
+.python-dot.d2{animation-delay:-1.2s;animation-duration:5.2s}
+.python-dot.d3{animation-delay:-2.6s}
+.python-dot.d4{animation-delay:-3.4s;animation-duration:3.8s}
+.python-accent{stroke-dasharray:1;stroke-dashoffset:1;opacity:0}
+.python-stage.is-inview .python-accent{animation:py-accent 7s ease-in-out infinite}
+.python-stage.is-inview .python-accent.a2{animation-delay:1.8s}
+.python-stage.is-inview .python-accent.a3{animation-delay:3.6s}
+.python-stage.is-inview .python-accent.a4{animation-delay:5.2s}
+.python-stage:hover .python-breathe{animation-duration:3s}
+.python-stage:hover .python-float{animation-duration:3.4s}
+.python-stage:hover .python-dot{animation-duration:2.6s;opacity:1}
+}
+@keyframes py-float{0%,100%{transform:translateY(-4px)}50%{transform:translateY(0)}}
+@keyframes py-tilt{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1deg)}}
+@keyframes py-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+@keyframes py-draw{to{stroke-dashoffset:0}}
+@keyframes py-pop{to{transform:scale(1)}}
+@keyframes py-fade{to{opacity:1}}
+@keyframes py-dot{0%,100%{transform:translate(0,0);opacity:.85}50%{transform:translate(4px,-6px);opacity:.3}}
+@keyframes py-accent{0%{stroke-dashoffset:1;opacity:0}12%{opacity:.9}40%{stroke-dashoffset:0;opacity:.9}75%{stroke-dashoffset:0;opacity:.9}100%{stroke-dashoffset:0;opacity:0}}
+@media (prefers-reduced-motion: reduce){
+.python-stage,.python-stage *{animation:none!important;transition:none!important}
+}

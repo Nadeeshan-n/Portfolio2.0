@@ -128,13 +128,86 @@
       };
       // Hand-drawn sketch icons for each category card (charcoal strokes, jade accents).
       const CATEGORY_ICONS = {
-        python: `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 6c-7 0-11 1.6-12.6 5.2C16 15.4 19.5 18 23.5 18H33v5.5H19c-7.5 0-12.5 4.3-12.5 11.5"/><path d="M34 58c7 0 11-1.6 12.6-5.2 1.4-4.2-2.1-6.8-6.1-6.8H31v-5.5h14c7.5 0 12.5-4.3 12.5-11.5"/><circle cx="24" cy="13.5" r="1.8" fill="currentColor" stroke="none"/><circle cx="40" cy="50.5" r="1.8" fill="currentColor" stroke="none"/></svg>`,
+        python: `<div class="python-stage" style="width:84px"><svg class="python-icon" viewBox="0 0 200 200" role="img" aria-label="Python technology illustration">
+          <g class="python-float">
+            <g class="python-tilt">
+              <g class="python-breathe">
+                <g class="python-upper">
+                  <path class="python-outline python-draw" pathLength="1" d="M72 44 C90 30 112 30 122 42 C130 52 128 64 127 78 L124 104 C123 114 115 118 107 116" fill="none" stroke="#17211E" stroke-width="46" stroke-linecap="round"/>
+                  <path class="python-outline python-draw" pathLength="1" d="M72 44 C90 30 112 30 122 42 C130 52 128 64 127 78 L124 104 C123 114 115 118 107 116" fill="none" stroke="#0E8F78" stroke-width="36" stroke-linecap="round"/>
+                  <circle class="python-head" cx="72" cy="44" r="24" fill="#17211E"/>
+                  <circle class="python-head" cx="72" cy="44" r="19" fill="#0E8F78"/>
+                  <circle class="python-eye" cx="65" cy="37" r="4.5" fill="#17211E"/>
+                </g>
+                <g class="python-lower">
+                  <path class="python-outline python-draw" pathLength="1" d="M128 156 C110 170 88 170 78 156 C70 146 72 134 73 122 L76 96 C77 86 85 82 93 84" fill="none" stroke="#17211E" stroke-width="46" stroke-linecap="round"/>
+                  <path class="python-outline python-draw" pathLength="1" d="M128 156 C110 170 88 170 78 156 C70 146 72 134 73 122 L76 96 C77 86 85 82 93 84" fill="none" stroke="#E9F5EF" stroke-width="36" stroke-linecap="round"/>
+                  <g class="python-hatch" stroke="#17211E" stroke-width="2" stroke-linecap="round" opacity="0.45">
+                    <path d="M68 98 l12 -6"/><path d="M68 108 l12 -6"/><path d="M68 118 l12 -6"/>
+                  </g>
+                  <circle class="python-head" cx="128" cy="156" r="24" fill="#17211E"/>
+                  <circle class="python-head" cx="128" cy="156" r="19" fill="#E9F5EF"/>
+                  <circle class="python-eye" cx="135" cy="163" r="4.5" fill="#17211E"/>
+                </g>
+              </g>
+            </g>
+            <g class="python-decor">
+              <circle class="python-dot d1" cx="28" cy="78" r="3.2" fill="#0E8F78"/>
+              <circle class="python-dot d2" cx="172" cy="62" r="2.6" fill="#17211E"/>
+              <circle class="python-dot d3" cx="164" cy="148" r="3.2" fill="#0E8F78"/>
+              <circle class="python-dot d4" cx="34" cy="132" r="2.2" fill="#17211E"/>
+              <path class="python-accent a1" pathLength="1" d="M22 92 C16 110 18 130 28 142" fill="none" stroke="#17211E" stroke-width="2.5" stroke-linecap="round"/>
+              <path class="python-accent a2" pathLength="1" d="M178 96 C184 114 182 134 172 146" fill="none" stroke="#17211E" stroke-width="2.5" stroke-linecap="round"/>
+              <path class="python-accent a3" pathLength="1" d="M148 26 l10 -8" fill="none" stroke="#0E8F78" stroke-width="2.5" stroke-linecap="round"/>
+              <path class="python-accent a4" pathLength="1" d="M40 106 v12 M34 112 h12" fill="none" stroke="#0E8F78" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+          </g>
+        </svg></div>`,
         'machine-learning': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 19l9-6M18 22l9 8M18 42l9-8M18 45l9 5M37 13l9 6M37 30l9-8M37 34l9 8M37 51l9-6"/><circle cx="13" cy="20" r="4.5"/><circle cx="13" cy="44" r="4.5"/><circle cx="32" cy="12" r="4.5"/><circle cx="32" cy="32" r="4.5" stroke="#0E8F78"/><circle cx="32" cy="52" r="4.5"/><circle cx="51" cy="20" r="4.5"/><circle cx="51" cy="44" r="4.5" stroke="#0E8F78"/></svg>`,
         'artificial-intelligence': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 18V11"/><circle cx="32" cy="8" r="3"/><rect x="15" y="18" width="34" height="26" rx="9"/><circle cx="25" cy="30" r="2.6" fill="#0E8F78" stroke="none"/><circle cx="39" cy="30" r="2.6" fill="#0E8F78" stroke="none"/><path d="M25 38h14"/><path d="M15 26v10M49 26v10"/></svg>`,
         linux: `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="32" cy="38" rx="13" ry="16"/><circle cx="32" cy="17" r="9"/><path d="M28.5 17.5L32 20l3.5-2.5" stroke="#0E8F78"/><circle cx="29" cy="15" r="1.3" fill="currentColor" stroke="none"/><circle cx="35" cy="15" r="1.3" fill="currentColor" stroke="none"/><ellipse cx="32" cy="40" rx="7" ry="10"/><path d="M19 36l-6 4M45 36l6 4"/><path d="M24 54l-3 4M40 54l3 4"/></svg>`,
         'web-development': `<svg class="category-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 20L9 32l14 12"/><path d="M41 20l14 12-14 12"/><path d="M36 14l-8 36" stroke="#0E8F78"/></svg>`,
       };
       // Thumbnails + popup triggers are wired once after the category cards render.
+      // Animated Python icon: reveal on scroll into view + subtle pointer parallax.
+      // Runs after the category icons are injected; each stage initializes once.
+      const initPythonIcons = () => {
+        const stages = document.querySelectorAll('.python-stage:not([data-py-init])');
+        if (!stages.length) return;
+        stages.forEach(stage => stage.setAttribute('data-py-init', '1'));
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if ('IntersectionObserver' in window) {
+          const io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) { entry.target.classList.add('is-inview'); io.unobserve(entry.target); }
+            });
+          }, { threshold: 0.3 });
+          stages.forEach(stage => io.observe(stage));
+        } else {
+          stages.forEach(stage => stage.classList.add('is-inview'));
+        }
+        if (reduceMotion) return;
+        stages.forEach(stage => {
+          const layer = stage.querySelector('.python-float');
+          if (!layer) return;
+          let raf = 0, tx = 0, ty = 0, cx = 0, cy = 0;
+          const tick = () => {
+            cx += (tx - cx) * 0.12;
+            cy += (ty - cy) * 0.12;
+            layer.style.translate = cx.toFixed(2) + 'px ' + cy.toFixed(2) + 'px';
+            if (Math.abs(tx - cx) > 0.05 || Math.abs(ty - cy) > 0.05) raf = requestAnimationFrame(tick);
+            else raf = 0;
+          };
+          const kick = () => { if (!raf) raf = requestAnimationFrame(tick); };
+          stage.addEventListener('pointermove', e => {
+            const r = stage.getBoundingClientRect();
+            tx = ((e.clientX - r.left) / r.width - 0.5) * 10;
+            ty = ((e.clientY - r.top) / r.height - 0.5) * 10;
+            kick();
+          });
+          stage.addEventListener('pointerleave', () => { tx = 0; ty = 0; kick(); });
+        });
+      };
       const wireTriggers = () => {
         document.querySelectorAll('.timeline-media[data-category]:not([data-wired])').forEach(cell => {
           cell.dataset.wired = '1';
@@ -161,6 +234,7 @@
           trigger.dataset.wired = '1';
           trigger.addEventListener('click', () => openCategory(trigger));
         });
+        initPythonIcons();
       };
       // One card per category: the card opens the popup slider at that category's certificates.
       const categories = Array.isArray(data.categories) && data.categories.length
