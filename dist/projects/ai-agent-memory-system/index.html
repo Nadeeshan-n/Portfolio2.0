@@ -32,12 +32,12 @@
       <a class="project-back" href="../"><span aria-hidden="true">←</span> Back to Projects</a>
       <h1>AI Agent Memory System</h1>
       <p class="projects-lead">A structured long-term memory subsystem for AI agents — persistent user memory, semantic retrieval, and full memory-lifecycle management.</p>
-      <ul class="technology-list" aria-label="Technology stack"><li>Python</li><li>FastAPI</li><li>Pydantic</li><li>SQLite</li><li>Hugging Face</li><li>NumPy</li><li>n8n</li><li>Docker</li></ul>
+      <ul class="technology-list" aria-label="Technology stack"><li>Python</li><li>FastAPI</li><li>Pydantic</li><li>SQLite</li><li>Hugging Face</li><li>NumPy</li><li>n8n</li><li>Docker</li><li>ngrok</li><li>WhatsApp</li></ul>
     </div>
     <div class="detail-sections">
       <section class="detail-section" aria-labelledby="overview-heading">
         <h2 id="overview-heading">Project overview</h2>
-        <p class="detail-text">A standalone memory subsystem for conversational AI agents. It separates conversation history from structured long-term memory — every memory stored as a record with category, importance, confidence, embedding, and expiration — and exposes memory operations through a FastAPI service with semantic retrieval, duplicate detection, and lifecycle management from extraction to cleanup. An n8n workflow connects the agent, messaging, and memory API.</p>
+        <p class="detail-text">AI Agent Memory System is a structured, long-term memory architecture built for conversational AI agents, designed so an agent can retain and recall meaningful information about a user across multiple conversations instead of starting fresh every time. Rather than treating memory as raw conversation text, the system models each memory as a structured record — with fields like category, key, value, importance, confidence, and embedding — enabling reliable creation, updating, deletion, semantic retrieval, and expiration of memories.</p>
       </section>
       <section class="detail-section" aria-labelledby="architecture-heading">
         <h2 id="architecture-heading">Preview</h2>
@@ -52,11 +52,11 @@
       </section>
       <section class="detail-section" aria-labelledby="features-heading">
         <h2 id="features-heading">Key features</h2>
-        <ul class="feature-list"><li>Structured memory records with importance, confidence, and expiration.</li><li>Semantic retrieval with embeddings and relevance scoring.</li><li>Full memory lifecycle: extraction, validation, dedup, retrieval, expiration, cleanup.</li><li>FastAPI memory service with Pydantic-validated requests.</li><li>n8n workflow orchestration with a WhatsApp interface.</li></ul>
+        <ul class="feature-list"><li>RESTful FastAPI backend with SQLite persistence.</li><li>Structured memory records with confidence and importance scoring.</li><li>Embedding-based semantic retrieval.</li><li>Short-term vs long-term memory separation.</li><li>n8n workflow with WhatsApp interface and ngrok tunneling.</li><li>Dockerized deployment.</li></ul>
       </section>
       <section class="detail-section" aria-labelledby="technologies-heading">
         <h2 id="technologies-heading">Technologies</h2>
-        <div><ul class="technology-list" aria-label="Technology stack"><li>Python</li><li>FastAPI</li><li>Pydantic</li><li>SQLite</li><li>Hugging Face</li><li>NumPy</li><li>n8n</li><li>Docker</li></ul></div>
+        <div><ul class="technology-list" aria-label="Technology stack"><li>Python</li><li>FastAPI</li><li>Pydantic</li><li>SQLite</li><li>Hugging Face</li><li>NumPy</li><li>n8n</li><li>Docker</li><li>ngrok</li><li>WhatsApp</li></ul></div>
       </section>
       <section class="detail-section" aria-labelledby="learning-heading">
         <h2 id="learning-heading">What I learned</h2>

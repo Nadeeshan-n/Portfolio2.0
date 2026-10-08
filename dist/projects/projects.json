@@ -76,20 +76,24 @@
         "MCP",
         "Gemini",
         "Google ADK",
+        "McpToolset",
         "JSON",
         "stdio"
       ],
-      "overview": "A hands-on learning project built around a small Python task manager. Custom MCP clients, Gemini and a Google ADK agent use the server's tools, resources and prompts. Local communication uses stdio, with task data stored in JSON.",
+      "overview": "This project was built as a hands-on learning project to understand the Model Context Protocol (MCP) from the ground up. I developed a local Python-based MCP server that provides task-management capabilities and connected it with custom MCP clients, Gemini, and a Google ADK agent. The project demonstrates the complete flow from a natural-language user request to an AI model, MCP client, MCP server, MCP tool, local task data, and the returned result. Local communication is handled using stdio, while tasks are stored in a simple JSON file to keep the focus on learning MCP rather than database engineering.",
       "flow": [
-        "Request",
+        "User request",
         "AI + MCP client",
         "MCP tools",
         "JSON tasks"
       ],
       "features": [
-        "Add, list, complete, delete and search tasks.",
-        "MCP tool discovery, resources and prompts.",
-        "Gemini and Google ADK client integrations."
+        "Local Python-based MCP server for task management.",
+        "Task tools: add, list, complete, delete and search.",
+        "MCP resources (tasks://all) and prompts (daily_task_review).",
+        "Custom MCP client with tool discovery and invocation.",
+        "Gemini and Google ADK (McpToolset) integrations.",
+        "stdio-based local communication with JSON storage."
       ],
       "learned": "I learned how MCP acts as a standard connection layer between AI applications and external tools, including tool discovery, invocation, resources, prompts and local stdio communication.",
       "github": "https://github.com/Nadeeshan-n/Personal-Task-MCP-Server",
@@ -105,7 +109,7 @@
       "slug": "drive-smart",
       "title": "Drive Smart 2.0",
       "visual": "drive",
-      "description": "A Windows desktop system for vehicle rentals, fleet maintenance, customers, payments and reports.",
+      "description": "A Windows desktop vehicle rental and fleet management system — vehicles, customers, payments, maintenance, and reports in one place.",
       "cardStack": [
         "C#",
         ".NET 8",
@@ -119,22 +123,30 @@
         "XAML",
         "SQLite",
         "Entity Framework Core",
+        "BCrypt.Net",
         "QuestPDF",
-        "ClosedXML"
+        "ClosedXML",
+        "LiveChartsCore",
+        "Visual Studio 2022"
       ],
-      "overview": "A modular Windows desktop application that brings day-to-day vehicle rental and fleet operations into one system. Employee roles control access to vehicle, customer, payment and maintenance modules, with SQLite persistence and operational reporting.",
+      "overview": "Drive Smart 2.0 is a Windows desktop vehicle rental and fleet management application designed to centralize day-to-day rental operations into a single system. The application provides secure employee authentication with session handling and role-based permissions for Admin, Manager, and Staff users. It includes dedicated modules for vehicle registration and browsing, customer management, payments and billing, vehicle maintenance, dashboards, and operational reporting. The system uses SQLite databases for its major modules and Entity Framework Core for data access and migrations, with PDF reporting and export capabilities for professional operational reports.",
       "flow": [
-        "Employee",
-        "Rental modules",
-        "SQLite",
-        "Reports"
+        "Authenticate",
+        "Manage fleet",
+        "Process payments",
+        "Generate reports"
       ],
       "features": [
-        "Employee authentication and Admin, Manager and Staff roles.",
-        "Vehicle, customer, payment and maintenance management.",
-        "Billing, PDF reports and Excel exports."
+        "Secure employee authentication with role-based permissions (Admin/Manager/Staff).",
+        "Vehicle registration, browsing, and fleet availability overview.",
+        "Customer management and rental history tracking.",
+        "Payments, billing, and maintenance scheduling.",
+        "Operational dashboards with data visualization.",
+        "PDF report generation and Excel export.",
+        "SQLite per module with Entity Framework Core migrations.",
+        "Password hashing with BCrypt."
       ],
-      "learned": null,
+      "learned": "I learned how to ship a complete desktop business application with C# and WPF — secure authentication with role-based permissions, SQLite with Entity Framework migrations, and professional PDF and Excel reporting.",
       "github": "https://github.com/Nadeeshan-n/Drive-Smart-2.0-",
       "sources": [
         "https://github.com/Nadeeshan-n/Drive-Smart-2.0-/blob/main/README.md",
@@ -233,7 +245,7 @@
         "Python",
         "FastAPI",
         "SQLite",
-        "Hugging Face"
+        "n8n"
       ],
       "technologies": [
         "Python",
@@ -243,9 +255,11 @@
         "Hugging Face",
         "NumPy",
         "n8n",
-        "Docker"
+        "Docker",
+        "ngrok",
+        "WhatsApp"
       ],
-      "overview": "A standalone memory subsystem for conversational AI agents. It separates conversation history from structured long-term memory — every memory stored as a record with category, importance, confidence, embedding, and expiration — and exposes memory operations through a FastAPI service with semantic retrieval, duplicate detection, and lifecycle management from extraction to cleanup. An n8n workflow connects the agent, messaging, and memory API.",
+      "overview": "AI Agent Memory System is a structured, long-term memory architecture built for conversational AI agents, designed so an agent can retain and recall meaningful information about a user across multiple conversations instead of starting fresh every time. Rather than treating memory as raw conversation text, the system models each memory as a structured record — with fields like category, key, value, importance, confidence, and embedding — enabling reliable creation, updating, deletion, semantic retrieval, and expiration of memories.",
       "flow": [
         "Extract",
         "Validate",
@@ -253,11 +267,12 @@
         "Retrieve"
       ],
       "features": [
-        "Structured memory records with importance, confidence, and expiration.",
-        "Semantic retrieval with embeddings and relevance scoring.",
-        "Full memory lifecycle: extraction, validation, dedup, retrieval, expiration, cleanup.",
-        "FastAPI memory service with Pydantic-validated requests.",
-        "n8n workflow orchestration with a WhatsApp interface."
+        "RESTful FastAPI backend with SQLite persistence.",
+        "Structured memory records with confidence and importance scoring.",
+        "Embedding-based semantic retrieval.",
+        "Short-term vs long-term memory separation.",
+        "n8n workflow with WhatsApp interface and ngrok tunneling.",
+        "Dockerized deployment."
       ],
       "learned": "I learned how to give AI agents persistent memory as structured, queryable records instead of raw chat history — including embedding-based semantic retrieval, relevance scoring, and safe lifecycle management.",
       "github": "https://github.com/Nadeeshan-n/ai-agent-memory-system",
@@ -272,6 +287,135 @@
           "alt": "AI Agent Memory System — structured long-term memory for AI agents"
         }
       ]
+    },
+    {
+      "slug": "weather-forecast-accuracy",
+      "title": "Weather Forecast Accuracy",
+      "visual": "weather",
+      "description": "A system that evaluates weather forecast accuracy by comparing predicted data with actual conditions — built with Linux and Bash scripting.",
+      "cardStack": [
+        "Bash",
+        "Linux",
+        "curl",
+        "awk"
+      ],
+      "technologies": [
+        "Bash",
+        "Linux",
+        "curl",
+        "grep",
+        "awk",
+        "cut"
+      ],
+      "overview": "This project involved building a system to evaluate the accuracy of weather forecasts by comparing predicted data with actual weather conditions. I utilized Linux command-line tools and Bash scripting to automate the data collection, processing, and analysis. The system collected real-time weather data from APIs, logged historical temperature data, calculated forecast accuracy automatically, and generated weekly statistics for analysis.",
+      "flow": [
+        "Collect API data",
+        "Log temperatures",
+        "Calculate accuracy",
+        "Weekly statistics"
+      ],
+      "features": [
+        "Collected real-time weather data using APIs.",
+        "Logged historical temperature data.",
+        "Calculated forecast accuracy automatically.",
+        "Generated weekly statistics for analysis."
+      ],
+      "learned": "I learned how to automate real-world data work with Linux and Bash — pulling API data with curl, processing it with grep, awk and cut, and turning raw logs into weekly accuracy statistics.",
+      "github": "https://github.com/Nadeeshan-n/weather-forecast-project",
+      "sources": [
+        "https://github.com/Nadeeshan-n/weather-forecast-project"
+      ],
+      "dataStatus": "repository-documented",
+      "image": null,
+      "previewImages": []
+    },
+    {
+      "slug": "drive-smart-java",
+      "title": "Drive Smart — Car Rental Management System",
+      "visual": "drive",
+      "description": "A Java car rental management system for company-side operations — vehicle rentals, customer records, and fleet management through a local interface.",
+      "cardStack": [
+        "Java",
+        "File Handling",
+        "Collections",
+        "Generics"
+      ],
+      "technologies": [
+        "Java",
+        "File Handling",
+        "Java Collections",
+        "Generics"
+      ],
+      "overview": "Drive Smart is a car rental management system built with Java and CSV file systems, designed to streamline the rental process for both customers and staff. The system allows customers to browse available vehicles, make reservations, and manage their bookings through a user friendly interface. On the company side, staff members can efficiently handle vehicle rentals, customer information, and rental records through a local interface.",
+      "flow": [
+        "Browse vehicles",
+        "Make reservation",
+        "Manage booking",
+        "Return vehicle"
+      ],
+      "features": [
+        "Vehicle registration and management.",
+        "Customer registration and management.",
+        "Rental booking and return handling.",
+        "Vehicle availability tracking.",
+        "Rental record management.",
+        "Exception handling for safer operations."
+      ],
+      "learned": "I learned how to model a real business domain in Java — vehicle fleets, customers, and rental records — using collections, file-based persistence, and exception handling for safer operations.",
+      "github": "https://github.com/Nadeeshan-n/Drive-Smart-System",
+      "sources": [
+        "https://github.com/Nadeeshan-n/Drive-Smart-System"
+      ],
+      "dataStatus": "repository-documented",
+      "image": null,
+      "previewImages": []
+    },
+    {
+      "slug": "campusfind",
+      "title": "CampusFind",
+      "visual": "campus",
+      "description": "A university Lost & Found web application that helps students report, discover, and recover lost items through smart matching and community collaboration.",
+      "cardStack": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS"
+      ],
+      "technologies": [
+        "React 19",
+        "TypeScript",
+        "Vite 6",
+        "React Router 7",
+        "Tailwind CSS 4",
+        "Lucide React",
+        "Motion",
+        "Browser localStorage"
+      ],
+      "overview": "CampusFind is a modern university Lost & Found web application designed to make reporting and recovering lost items easier for students. Users can submit lost or found item reports with details such as category, description, color, brand, location, date, time, and an optional photo. The application includes a searchable and filterable marketplace of active lost and found reports. Its automated matching engine compares reports using a weighted scoring algorithm based on category, location proximity, description keywords, and additional item attributes to identify potential matches. Users can manage their submitted reports through a dedicated My Reports section, track report statuses, and communicate with other users through in-thread messaging. An administrative dashboard provides tools for managing reports, updating statuses, searching, filtering, sorting, and removing inappropriate or outdated listings.",
+      "flow": [
+        "Submit report",
+        "Smart matching",
+        "Connect & chat",
+        "Recover item"
+      ],
+      "features": [
+        "Lost & found report submission with optional photos.",
+        "Searchable, filterable report marketplace.",
+        "Automated matching engine with weighted scoring.",
+        "My Reports dashboard with status tracking.",
+        "In-thread messaging between users.",
+        "Admin dashboard for report moderation.",
+        "Responsive design with smooth animations.",
+        "localStorage persistence with mock seed data."
+      ],
+      "learned": "I learned how to build a full community web app with React and TypeScript — including a weighted matching engine, client-side persistence, and an admin moderation workflow.",
+      "github": "https://github.com/Nadeeshan-n/Find-and-report-web-app",
+      "sources": [
+        "https://github.com/Nadeeshan-n/Find-and-report-web-app"
+      ],
+      "dataStatus": "repository-documented",
+      "image": null,
+      "previewImages": []
     }
   ]
 }
