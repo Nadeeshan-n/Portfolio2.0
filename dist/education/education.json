@@ -53,7 +53,12 @@
         "HTML",
         "CSS"
       ],
-      "images": [],
+      "images": [
+        {
+          "src": "/assets/certificates/web-foundations.svg",
+          "alt": "Programming Foundations with JavaScript, HTML and CSS — Duke University course certificate"
+        }
+      ],
       "credentialUrl": "https://www.coursera.org/account/accomplishments/records/5SJ9UFLEKLCP"
     },
     {
@@ -97,7 +102,12 @@
         "Web Data",
         "APIs"
       ],
-      "images": [],
+      "images": [
+        {
+          "src": "/assets/certificates/python-web-data.svg",
+          "alt": "Using Python to Access Web Data — University of Michigan course certificate"
+        }
+      ],
       "credentialUrl": "https://www.coursera.org/account/accomplishments/records/7HIOJ9AK4CIZ"
     },
     {
@@ -123,7 +133,12 @@
         "Shell Scripting",
         "Command Line"
       ],
-      "images": [],
+      "images": [
+        {
+          "src": "/assets/certificates/linux-shell.svg",
+          "alt": "Hands-on Introduction to Linux Commands and Shell Scripting — IBM course certificate"
+        }
+      ],
       "credentialUrl": "https://www.coursera.org/account/accomplishments/records/Y4M0EXWL5LZS"
     }
   ]
