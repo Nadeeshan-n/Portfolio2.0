@@ -79,7 +79,12 @@
         "Data Structures",
         "Problem Solving"
       ],
-      "images": [],
+      "images": [
+        {
+          "src": "/assets/certificates/python-data-structures.svg",
+          "alt": "Python Data Structures — University of Michigan course certificate"
+        }
+      ],
       "credentialUrl": "https://www.coursera.org/account/accomplishments/records/2KI28ZW26UEN"
     },
     {
