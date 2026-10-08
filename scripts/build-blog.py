@@ -29,10 +29,27 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "dist" / "blog"
 POSTS = json.loads((OUT / "blog.json").read_text())
+SIGNATURE_SVG = (ROOT / "dist" / "assets" / "signature" / "nadeeshan-signature.svg").read_text().strip()
 
 
 def e(value):
     return escape(str(value), quote=True)
+
+
+def foot():
+    # Same footer insides as the main blog page (dist/blog/index.html),
+    # with paths adjusted for the posts/<slug>/ depth.
+    return (
+        '<footer class="site-footer" data-signature-footer>'
+        f'<a href="../../../" aria-label="Nadeeshan Nadeera, home" class="brand footer-signoff">{SIGNATURE_SVG}</a>'
+        "<p>© 2026 Nadeeshan</p>"
+        '<nav aria-label="Footer navigation" class="footer-links">'
+        '<a href="../../../">Home</a>'
+        '<a href="../../../education/">Education</a>'
+        '<a href="../../../projects/">Projects</a>'
+        "</nav></footer>"
+        '<script src="../../../footer-signature.js" defer></script></body></html>\n'
+    )
 
 
 def page(post):
@@ -69,12 +86,7 @@ def page(post):
         f'<figure class="article-hero"><img src="{e(hero_src)}" alt="{hero_alt}"></figure>'
         f'<article class="article-content">{post["content"]}'
         '<a class="article-back" href="../../">← Back to Blog</a></article></main>'
-        '<footer class="site-footer"><a href="../../../" class="brand" aria-label="Nadeeshan Nadeera, home">'
-        "<span>Nadeeshan Nadeera</span></a>"
-        "<p>© 2026 Nadeeshan</p>"
-        '<p class="footer-contact"><span>nadeeshannadeera14@gmail.com</span>'
-        '<span aria-hidden="true">|</span><span>+94 70 348 1683</span></p>'
-        "</footer></body></html>\n"
+        + foot()
     )
 
 
