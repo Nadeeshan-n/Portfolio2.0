@@ -22,47 +22,66 @@
   if (hero) {
     const originalImage = hero.querySelector('img');
     if (originalImage) {
-      const section = document.createElement('section');
-      section.className = 'article-slider-section';
-      section.setAttribute('aria-label', 'Article images');
-      const slider = document.createElement('div');
-      slider.className = 'article-slider';
-      const track = document.createElement('div');
-      track.className = 'article-slider-track';
-      const sources = [
-        originalImage.getAttribute('src'),
-        '../../../assets/blog/practical-rag-system/thumbnail.svg',
-        '../../../assets/blog/ai-application-lessons/thumbnail.svg'
-      ];
-      sources.forEach((src, index) => {
-        const slide = document.createElement('figure');
-        slide.className = 'article-slide' + (index === 0 ? ' is-active' : '');
-        slide.setAttribute('aria-hidden', index === 0 ? 'false' : 'true');
-        const image = document.createElement('img');
-        image.src = src;
-        image.alt = index === 0 ? (originalImage.alt || 'Article image') : 'Related article visual';
-        image.loading = index === 0 ? 'eager' : 'lazy';
-        slide.append(image);
-        track.append(slide);
-      });
-      const controls = document.createElement('div');
-      controls.className = 'article-slider-controls';
-      controls.innerHTML = '<button type="button" class="article-slider-prev" aria-label="Previous image">←</button><span class="article-slider-position" aria-live="polite">1 / 3</span><button type="button" class="article-slider-next" aria-label="Next image">→</button>';
-      slider.append(track, controls);
-      section.append(slider);
-      hero.replaceWith(section);
-      const slides = [...track.children];
-      let current = 0;
-      const show = next => {
-        slides[current].classList.remove('is-active');
-        slides[current].setAttribute('aria-hidden', 'true');
-        current = (next + slides.length) % slides.length;
-        slides[current].classList.add('is-active');
-        slides[current].setAttribute('aria-hidden', 'false');
-        controls.querySelector('.article-slider-position').textContent = (current + 1) + ' / ' + slides.length;
+      const buildSlider = related => {
+        const section = document.createElement('section');
+        section.className = 'article-slider-section';
+        section.setAttribute('aria-label', 'Article images');
+        const slider = document.createElement('div');
+        slider.className = 'article-slider';
+        const track = document.createElement('div');
+        track.className = 'article-slider-track';
+        const slidesData = [{ src: originalImage.getAttribute('src'), alt: originalImage.alt || 'Article image' }]
+          .concat(related);
+        slidesData.forEach((data, index) => {
+          const slide = document.createElement('figure');
+          slide.className = 'article-slide' + (index === 0 ? ' is-active' : '');
+          slide.setAttribute('aria-hidden', index === 0 ? 'false' : 'true');
+          const image = document.createElement('img');
+          image.src = data.src;
+          image.alt = data.alt;
+          image.loading = index === 0 ? 'eager' : 'lazy';
+          slide.append(image);
+          track.append(slide);
+        });
+        slider.append(track);
+        if (slidesData.length > 1) {
+          const controls = document.createElement('div');
+          controls.className = 'article-slider-controls';
+          controls.innerHTML = '<button type="button" class="article-slider-prev" aria-label="Previous image">←</button><span class="article-slider-position" aria-live="polite">1 / ' + slidesData.length + '</span><button type="button" class="article-slider-next" aria-label="Next image">→</button>';
+          slider.append(controls);
+          const slides = [...track.children];
+          let current = 0;
+          const show = next => {
+            slides[current].classList.remove('is-active');
+            slides[current].setAttribute('aria-hidden', 'true');
+            current = (next + slides.length) % slides.length;
+            slides[current].classList.add('is-active');
+            slides[current].setAttribute('aria-hidden', 'false');
+            controls.querySelector('.article-slider-position').textContent = (current + 1) + ' / ' + slides.length;
+          };
+          controls.querySelector('.article-slider-prev').addEventListener('click', () => show(current - 1));
+          controls.querySelector('.article-slider-next').addEventListener('click', () => show(current + 1));
+        }
+        section.append(slider);
+        hero.replaceWith(section);
       };
-      controls.querySelector('.article-slider-prev').addEventListener('click', () => show(current - 1));
-      controls.querySelector('.article-slider-next').addEventListener('click', () => show(current + 1));
+      const slug = location.pathname.split('/').filter(Boolean).pop();
+      fetch('../../blog.json')
+        .then(response => { if (!response.ok) throw new Error('blog.json unavailable'); return response.json(); })
+        .then(posts => {
+          const related = posts
+            .filter(post => post.slug !== slug)
+            .slice(0, 2)
+            .map(post => {
+              const src = post.hero || post.image;
+              return {
+                src: src.charAt(0) === '/' ? '../../../' + src.slice(1) : src,
+                alt: post.heroAlt || ((post.title || 'Related article') + ' article visual')
+              };
+            });
+          if (related.length) buildSlider(related);
+        })
+        .catch(() => {});
     }
   }
 
