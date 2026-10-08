@@ -22,7 +22,12 @@
         "LLMs",
         "AI Applications"
       ],
-      "images": []
+      "images": [
+        {
+          "src": "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~BR9DWHKGK9FG/CERTIFICATE_LANDING_PAGE~BR9DWHKGK9FG.jpeg",
+          "alt": "Build RAG Applications: Get Started — IBM course certificate"
+        }
+      ]
     },
     {
       "id": "genai-applications",
