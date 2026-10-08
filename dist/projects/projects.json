@@ -306,7 +306,20 @@
       ],
       "dataStatus": "repository-documented",
       "image": "/assets/projects/campusfind.svg",
-      "previewImages": []
+      "previewImages": [
+        {
+          "src": "/assets/projects/campusfind/infographic-part-1.svg",
+          "alt": "CampusFind: university lost and found overview"
+        },
+        {
+          "src": "/assets/projects/campusfind/infographic-part-2.svg",
+          "alt": "CampusFind: smart matching and recovery workflow"
+        },
+        {
+          "src": "/assets/projects/campusfind/infographic-part-3.svg",
+          "alt": "CampusFind: technology, architecture and administration"
+        }
+      ]
     }
   ]
 }
