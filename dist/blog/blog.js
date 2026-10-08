@@ -91,7 +91,7 @@
     posts.forEach((post, index) => {
       const card = document.createElement('article');
       card.className = 'blog-card';
-      card.innerHTML = '<a class="blog-media" href="posts/' + post.slug + '/" aria-label="Read article: ' + post.title + '"><img src="' + post.image + '" alt="" loading="' + (index ? 'lazy' : 'eager') + '" onerror="this.style.display=\'none\'"></a><div class="blog-copy"><p class="blog-category">' + post.category + '</p><h2 class="blog-title"><a href="posts/' + post.slug + '/">' + post.title + '</a></h2><p class="blog-excerpt">' + post.excerpt + '</p><p class="blog-meta"><time datetime="' + post.date + '">' + new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }) + '</time> · ' + post.readTime + '</p><a class="primary-button blog-read" href="posts/' + post.slug + '/">Read article <span aria-hidden="true">→</span></a></div>';
+      card.innerHTML = '<a class="blog-media" href="posts/' + post.slug + '/" aria-label="Read article: ' + post.title + '"><img src="' + post.image + '" alt="" loading="' + (index ? 'lazy' : 'eager') + '" onerror="this.style.display=\'none\'"></a><div class="blog-copy"><p class="blog-category">' + post.category + '</p><h2 class="blog-title"><a href="posts/' + post.slug + '/">' + post.title + '</a></h2><p class="blog-excerpt">' + post.excerpt + '</p><p class="blog-meta"><time datetime="' + post.date + '">' + new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }) + '</time> · ' + post.readTime + '</p><a class="primary-button blog-read" href="posts/' + post.slug + '/">Read</a></div>';
       grid.append(card);
     });
     const cards = [...grid.children];
