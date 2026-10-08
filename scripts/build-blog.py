@@ -68,6 +68,7 @@ def page(post):
         '<link rel="stylesheet" href="../../../footer-signature.css">'
         '<link rel="stylesheet" href="../../../theme.css">'
         '<script src="../../../theme.js" defer></script>'
+        '<script src="../../../protect.js" defer></script>'
         '<script src="../../../scroll-progress.js" defer></script>'
         '<script src="../../blog.js" defer></script></head>'
         '<body class="blog-page"><a class="skip-link" href="#article-main">Skip to content</a>'
