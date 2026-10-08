@@ -28,7 +28,8 @@
           "alt": "Build RAG Applications: Get Started — IBM course certificate"
         }
       ],
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/BR9DWHKGK9FG"
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/BR9DWHKGK9FG",
+      "category": "artificial-intelligence"
     },
     {
       "id": "genai-applications",
@@ -46,7 +47,8 @@
           "alt": "Develop Generative AI Applications: Get Started — IBM course certificate"
         }
       ],
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/0086ZDXQ8VBK"
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/0086ZDXQ8VBK",
+      "category": "artificial-intelligence"
     },
     {
       "id": "web-foundations",
@@ -64,7 +66,8 @@
           "alt": "Programming Foundations with JavaScript, HTML and CSS — Duke University course certificate"
         }
       ],
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/5SJ9UFLEKLCP"
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/5SJ9UFLEKLCP",
+      "category": "web-development"
     },
     {
       "id": "python-basics",
@@ -82,7 +85,8 @@
           "alt": "Python Basics — University of Michigan course certificate"
         }
       ],
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/O5JB4V6QFV7F"
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/O5JB4V6QFV7F",
+      "category": "python"
     },
     {
       "id": "python-data-structures",
@@ -100,7 +104,8 @@
           "alt": "Python Data Structures — University of Michigan course certificate"
         }
       ],
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/2KI28ZW26UEN"
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/2KI28ZW26UEN",
+      "category": "python"
     },
     {
       "id": "python-web-data",
@@ -118,7 +123,8 @@
           "alt": "Using Python to Access Web Data — University of Michigan course certificate"
         }
       ],
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/7HIOJ9AK4CIZ"
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/7HIOJ9AK4CIZ",
+      "category": "python"
     },
     {
       "id": "linear-algebra",
@@ -136,7 +142,8 @@
           "alt": "Linear Algebra for Machine Learning and Data Science — DeepLearning.AI course certificate"
         }
       ],
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/XWE5UCP1UWBI"
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/XWE5UCP1UWBI",
+      "category": "machine-learning"
     },
     {
       "id": "linux-shell",
@@ -154,7 +161,30 @@
           "alt": "Hands-on Introduction to Linux Commands and Shell Scripting — IBM course certificate"
         }
       ],
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/Y4M0EXWL5LZS"
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/Y4M0EXWL5LZS",
+      "category": "linux"
+    }
+  ],
+  "categories": [
+    {
+      "id": "python",
+      "label": "Python"
+    },
+    {
+      "id": "machine-learning",
+      "label": "Machine Learning"
+    },
+    {
+      "id": "artificial-intelligence",
+      "label": "Artificial Intelligence"
+    },
+    {
+      "id": "linux",
+      "label": "Linux"
+    },
+    {
+      "id": "web-development",
+      "label": "Web Development"
     }
   ]
 }
