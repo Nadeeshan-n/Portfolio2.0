@@ -65,9 +65,11 @@ def page(post):
         '<link rel="stylesheet" href="../../../portfolio.css">'
         '<link rel="stylesheet" href="../../blog.css">'
         '<link rel="stylesheet" href="../../../footer-signature.css">'
+        '<link rel="stylesheet" href="../../../cookies.css">'
         '<script src="../../../protect.js" defer></script>'
         '<script src="../../../scroll-progress.js" defer></script>'
-        '<script src="../../blog.js" defer></script></head>'
+        '<script src="../../blog.js" defer></script>'
+        '<script src="../../../cookies.js" defer></script></head>'
         '<body class="blog-page"><a class="skip-link" href="#article-main">Skip to content</a>'
         '<header class="site-header"><a href="../../../" class="brand" aria-label="Nadeeshan Nadeera, home">'
         "<span>Nadeeshan Nadeera</span></a>"
