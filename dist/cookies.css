@@ -41,13 +41,6 @@
 /* Banner buttons reuse the site's own primary-button / secondary-button classes,
    so they match the main page exactly (sharp corners, jade primary, hover lift,
    sketch decorations). .nn-btn is only a hook for banner layout. */
-/* footer "Cookie settings" link injected by cookies.js */
-.nn-cookie-footer-link{
-  background:none;border:0;padding:0;cursor:pointer;
-  font:inherit;font-size:12px;color:inherit;opacity:.65;text-decoration:underline;
-  text-underline-offset:3px;
-}
-.nn-cookie-footer-link:hover{opacity:1;color:#0e8f78}
 @media (max-width:560px){
   .nn-cookie-inner{padding:18px 16px 14px}
   .nn-cookie-actions .nn-btn{flex:1 1 auto}
@@ -55,3 +48,86 @@
 @media (prefers-reduced-motion:reduce){
   .nn-cookie-banner{transition:none}
 }
+
+/* ---------- Floating cookie settings button (bottom-left, all pages) ---------- */
+.nn-cookie-fab{
+  position:fixed;left:16px;bottom:16px;z-index:1190;
+  width:48px;height:48px;padding:4px;
+  background:transparent;border:0;cursor:pointer;
+  filter:drop-shadow(0 4px 10px rgba(23,33,30,.28));
+  transition:transform .25s ease;
+}
+.nn-cookie-fab:hover{transform:translateY(-2px)}
+.nn-cookie-fab:focus-visible{outline:2px solid #0e8f78;outline-offset:3px;border-radius:50%}
+.nn-cookie-fab .cookie-wrap{--size:40px}
+
+/* ---------- Animated cookie icon (reused as the fab graphic) ---------- */
+================================================================ */
+  .cookie-wrap{
+    --size:120px;
+    width:var(--size);height:var(--size);
+    cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;
+  }
+  .cookie-svg{display:block;width:100%;height:100%;overflow:visible}
+
+  /* ---- entrance (runs once) ---- */
+  .cookie-draw{
+    stroke-dasharray:var(--len);stroke-dashoffset:0;
+    animation:ck-draw .8s ease-out var(--ed,.1s) backwards;
+  }
+  .cookie-fade{opacity:var(--fo,1);animation:ck-fade .55s ease var(--ed,.35s) backwards}
+  .cookie-pop{
+    opacity:1;transform:scale(1);transform-box:fill-box;transform-origin:center;
+    animation:ck-pop .38s cubic-bezier(.34,1.56,.64,1) var(--ed,.7s) backwards;
+  }
+  /* crumbs need entrance pop AND idle drift on one element */
+  .cookie-crumb.cookie-pop{
+    animation:ck-pop .38s cubic-bezier(.34,1.56,.64,1) var(--ed,1.25s) backwards,
+               ck-crumb-drift 5.5s ease-in-out var(--cd,2s) infinite;
+  }
+  @keyframes ck-draw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+  @keyframes ck-fade{from{opacity:0}}
+  @keyframes ck-pop{
+    0%{opacity:0;transform:scale(0)}
+    60%{opacity:1;transform:scale(1.15)}
+    100%{opacity:1;transform:scale(1)}
+  }
+
+  /* ---- idle (infinite, slow) — one transform per nested group ---- */
+  .cookie-float{animation:ck-float 5s ease-in-out 1.6s infinite}
+  .cookie-rock{transform-box:fill-box;transform-origin:center;animation:ck-rock 6.5s ease-in-out 1.6s infinite}
+  .cookie-breathe{transform-box:fill-box;transform-origin:center;animation:ck-breathe 4.2s ease-in-out 1.6s infinite}
+  @keyframes ck-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+  @keyframes ck-rock{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+  @keyframes ck-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.015)}}
+
+  /* crumbs drift idly */
+  .cookie-crumb{
+    transform-box:fill-box;transform-origin:center;
+    animation:ck-crumb-drift 5.5s ease-in-out var(--cd,2s) infinite;
+  }
+  @keyframes ck-crumb-drift{
+    0%,100%{transform:translate(0,0);opacity:.55}
+    50%{transform:translate(2px,-3px);opacity:1}
+  }
+
+  /* ---- hover ---- */
+  .cookie-hover{transition:transform .35s ease}
+  .cookie-wrap:hover .cookie-hover{transform:translateY(-4px) scale(1.05)}
+  .cookie-wrap:hover .cookie-rock{animation:ck-wobble .7s ease}
+  .cookie-wrap:hover .cookie-crumb{animation:ck-crumb-pop .55s ease}
+  @keyframes ck-wobble{
+    0%{transform:rotate(0)}25%{transform:rotate(-7deg)}50%{transform:rotate(5deg)}
+    75%{transform:rotate(-2.5deg)}100%{transform:rotate(0)}
+  }
+  @keyframes ck-crumb-pop{
+    0%{transform:translate(0,0) scale(1)}
+    45%{transform:translate(var(--px,0px),var(--py,-6px)) scale(1.4)}
+    100%{transform:translate(0,0) scale(1)}
+  }
+
+  
+  /* ---- reduced motion: show final state, no animation ---- */
+  @media (prefers-reduced-motion:reduce){
+    .cookie-wrap *,.cookie-wrap{animation:none!important;transition:none!important}
+  }
