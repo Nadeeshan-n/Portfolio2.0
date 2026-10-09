@@ -8,7 +8,7 @@
   transition:transform .35s ease;
 }
 .nn-cookie-banner.nn-open{transform:none}
-.nn-cookie-inner{max-width:940px;margin:0 auto;padding:22px 24px 18px}
+.nn-cookie-inner{max-width:1200px;margin:0 auto;padding:22px 24px 18px}
 .nn-cookie-head{display:flex;align-items:center;gap:10px;margin:0 0 8px}
 .nn-cookie-head svg{flex:none;display:block}
 .nn-cookie-title{font-size:17px;font-weight:600;margin:0}
