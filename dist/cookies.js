@@ -217,7 +217,8 @@
     var wrap = document.createElement('div');
     wrap.className = 'nn-cookie-fab-wrap';
     wrap.innerHTML = '<button type="button" class="nn-cookie-fab" aria-label="Cookie settings">' +
-      '<span class="cookie-wrap" aria-hidden="true">' + COOKIE_SVG + '</span></button>';
+      '<span class="cookie-wrap" aria-hidden="true">' + COOKIE_SVG + '</span>' +
+      '<span class="nn-cookie-fab-label" aria-hidden="true">Cookies</span></button>';
     wrap.querySelector('button').addEventListener('click', openBanner);
     if (footer && footer.parentNode) footer.parentNode.insertBefore(wrap, footer);
     else document.body.appendChild(wrap);
