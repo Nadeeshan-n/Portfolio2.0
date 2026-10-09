@@ -62,7 +62,7 @@
 }
 .nn-cookie-fab:hover{transform:translateY(-2px)}
 .nn-cookie-fab:focus-visible{outline:2px solid #0e8f78;outline-offset:3px;border-radius:8px}
-.nn-cookie-fab .cookie-wrap{--size:25px;filter:drop-shadow(0 3px 8px rgba(23,33,30,.28))}
+.nn-cookie-fab .cookie-wrap{--size:48px;filter:drop-shadow(0 3px 8px rgba(23,33,30,.28))}
 .nn-cookie-fab-label{font-size:9px;font-weight:600;letter-spacing:.3px;line-height:1;color:var(--color-text-secondary,#5c6f68)}
 
 /* ---------- Animated cookie icon (reused as the fab graphic) ---------- */
