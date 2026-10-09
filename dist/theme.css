@@ -4,26 +4,6 @@
    design tokens, so every variable-driven surface follows.
    ============================================================ */
 
-/* ---------- Theme toggle button (lives in .site-header) ---------- */
-.theme-toggle{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:40px;height:40px;flex:none;
-  border-radius:50%;
-  border:1px solid var(--color-border-default);
-  background:var(--color-bg-surface);
-  color:var(--color-text-secondary);
-  cursor:pointer;
-  transition:border-color .2s ease,color .2s ease,background-color .2s ease,transform .15s ease;
-  padding:0;
-}
-.theme-toggle:hover{color:var(--jade-500);border-color:var(--jade-500)}
-.theme-toggle:active{transform:scale(.94)}
-.theme-toggle:focus-visible{outline:2px solid var(--jade-500);outline-offset:2px}
-/* show moon in light mode, sun in dark mode */
-.theme-toggle .tt-sun{display:none}
-:root[data-theme="dark"] .theme-toggle .tt-sun{display:block}
-:root[data-theme="dark"] .theme-toggle .tt-moon{display:none}
-
 /* ---------- Dark theme: remap the design tokens ---------- */
 :root[data-theme="dark"]{
   color-scheme:dark;
@@ -77,3 +57,6 @@
 
 /* education: keep the animated icon tiles white (deliberate icon chips) */
 :root[data-theme="dark"] .timeline-media.has-icon{background:#fff}
+
+/* education: certificate scans are white documents — frame them as paper cards */
+:root[data-theme="dark"] .certificate-image{border:1px solid var(--color-border-default);background:#fff}
