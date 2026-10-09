@@ -66,8 +66,7 @@
 .nn-cookie-fab-label{font-size:9px;font-weight:600;letter-spacing:.3px;line-height:1;color:var(--color-text-secondary,#5c6f68)}
 
 /* ---------- Animated cookie icon (reused as the fab graphic) ---------- */
-================================================================ */
-  .cookie-wrap{
+.cookie-wrap{
     --size:120px;
     width:var(--size);height:var(--size);
     cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;
