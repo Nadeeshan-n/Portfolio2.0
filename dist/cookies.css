@@ -14,6 +14,7 @@
 .nn-cookie-title{font-size:17px;font-weight:600;margin:0}
 .nn-cookie-text{font-size:14px;line-height:1.55;margin:0;color:rgba(245,245,245,.82);max-width:72ch}
 .nn-cookie-rows{margin:10px 0 2px}
+.nn-cookie-rows[hidden]{display:none}
 .nn-cookie-row{
   display:flex;align-items:center;justify-content:space-between;gap:16px;
   padding:13px 0;border-top:1px solid rgba(255,255,255,.13);

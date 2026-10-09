@@ -136,10 +136,10 @@
         '<div class="nn-cookie-head">' + COOKIE_ICON + '<h3 class="nn-cookie-title">Cookies on this site</h3></div>' +
         '<p class="nn-cookie-text">This portfolio uses essential storage to remember your choices and optional ' +
         'technologies to improve your experience. You can change your preferences anytime.</p>' +
-        '<div class="nn-cookie-rows">' + rows + '</div>' +
+        '<div class="nn-cookie-rows" hidden>' + rows + '</div>' +
         '<div class="nn-cookie-actions">' +
           '<button type="button" class="nn-btn nn-btn-primary" data-act="accept">Accept all</button>' +
-          '<button type="button" class="nn-btn nn-btn-ghost" data-act="save">Save choices</button>' +
+          '<button type="button" class="nn-btn nn-btn-ghost" data-act="customize" aria-expanded="false">Customize</button>' +
           '<button type="button" class="nn-btn nn-btn-ghost" data-act="reject">Reject non-essential</button>' +
         '</div>' +
       '</div>';
@@ -155,6 +155,7 @@
       if (act === 'accept') choose({ necessary: true, preferences: true, analytics: true, marketing: true });
       else if (act === 'reject') choose({ necessary: true, preferences: false, analytics: false, marketing: false });
       else if (act === 'save') choose(readToggles());
+      else if (act === 'customize') toggleCustomize();
     });
   }
 
@@ -172,9 +173,29 @@
     Object.keys(toggles).forEach(function (k) { toggles[k].checked = !!c[k]; });
   }
 
-  function openBanner() {
+  function toggleCustomize(force) {
+    var panel = banner.querySelector('.nn-cookie-rows');
+    var actions = banner.querySelector('.nn-cookie-actions');
+    var willOpen = typeof force === 'boolean' ? force : panel.hasAttribute('hidden');
+    if (willOpen) {
+      panel.removeAttribute('hidden');
+      syncToggles();
+      actions.innerHTML =
+        '<button type="button" class="nn-btn nn-btn-primary" data-act="save">Save choices</button>' +
+        '<button type="button" class="nn-btn nn-btn-ghost" data-act="customize" aria-expanded="true">Customize</button>' +
+        '<button type="button" class="nn-btn nn-btn-ghost" data-act="reject">Reject non-essential</button>';
+    } else {
+      panel.setAttribute('hidden', '');
+      actions.innerHTML =
+        '<button type="button" class="nn-btn nn-btn-primary" data-act="accept">Accept all</button>' +
+        '<button type="button" class="nn-btn nn-btn-ghost" data-act="customize" aria-expanded="false">Customize</button>' +
+        '<button type="button" class="nn-btn nn-btn-ghost" data-act="reject">Reject non-essential</button>';
+    }
+  }
+
+  function openBanner(expand) {
     if (!banner) buildBanner();
-    syncToggles();
+    toggleCustomize(!!expand);
     banner.classList.add('nn-open');
     var h = banner.querySelector('.nn-cookie-title');
     if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
@@ -197,7 +218,7 @@
     btn.className = 'nn-cookie-footer-link';
     btn.textContent = 'Cookie settings';
     btn.setAttribute('aria-label', 'Open cookie settings');
-    btn.addEventListener('click', openBanner);
+    btn.addEventListener('click', function () { openBanner(true); });
     var sep = document.createElement('span');
     sep.setAttribute('aria-hidden', 'true');
     sep.textContent = ' · ';
@@ -205,7 +226,7 @@
     footer.appendChild(sep);
     footer.appendChild(btn);
   }
-  window.NNCookies = { openSettings: openBanner };
+  window.NNCookies = { openSettings: function () { openBanner(true); } };
 
   /* ---------- init ---------- */
   function init() {
