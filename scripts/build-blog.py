@@ -60,14 +60,11 @@ def page(post):
     hero_alt = e(post.get("heroAlt") or "")
     return (
         '<!doctype html><html lang="en"><head><meta charset="utf-8">'
-        '<script>(function(){var t="light";try{var s=localStorage.getItem("nn-theme");t=(s==="dark"||s==="light")?s:(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");}catch(e){}document.documentElement.setAttribute("data-theme",t);})();</script>'
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
         f"<title>{title} - Nadeeshan</title>"
         '<link rel="stylesheet" href="../../../portfolio.css">'
         '<link rel="stylesheet" href="../../blog.css">'
         '<link rel="stylesheet" href="../../../footer-signature.css">'
-        '<link rel="stylesheet" href="../../../theme.css">'
-        '<script src="../../../theme.js" defer></script>'
         '<script src="../../../protect.js" defer></script>'
         '<script src="../../../scroll-progress.js" defer></script>'
         '<script src="../../blog.js" defer></script></head>'
