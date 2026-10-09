@@ -51,7 +51,7 @@
 
 /* ---------- Floating cookie settings button (bottom-left, all pages) ---------- */
 .nn-cookie-fab-wrap{
-  max-width:1536px;margin:0 auto 14px;padding:0 var(--page-padding,24px);
+  margin:0 0 14px;padding:0 var(--page-padding,24px);
   display:flex;justify-content:flex-start;
 }
 .nn-cookie-fab{
