@@ -38,14 +38,9 @@
 .nn-switch input:focus-visible + .nn-track{outline:2px solid #2fbf82;outline-offset:2px}
 /* actions */
 .nn-cookie-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.nn-btn{
-  font:inherit;font-size:14px;font-weight:600;cursor:pointer;
-  border-radius:9px;padding:10px 20px;border:1px solid transparent;
-}
-.nn-btn-primary{background:#0e8f78;color:#fff}
-.nn-btn-primary:hover{background:#12a585}
-.nn-btn-ghost{background:transparent;color:#f5f5f5;border-color:rgba(255,255,255,.38)}
-.nn-btn-ghost:hover{border-color:#2fbf82;color:#2fbf82}
+/* Banner buttons reuse the site's own primary-button / secondary-button classes,
+   so they match the main page exactly (sharp corners, jade primary, hover lift,
+   sketch decorations). .nn-btn is only a hook for banner layout. */
 /* footer "Cookie settings" link injected by cookies.js */
 .nn-cookie-footer-link{
   background:none;border:0;padding:0;cursor:pointer;

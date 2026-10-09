@@ -138,9 +138,9 @@
         'technologies to improve your experience. You can change your preferences anytime.</p>' +
         '<div class="nn-cookie-rows" hidden>' + rows + '</div>' +
         '<div class="nn-cookie-actions">' +
-          '<button type="button" class="nn-btn nn-btn-primary" data-act="accept">Accept all</button>' +
-          '<button type="button" class="nn-btn nn-btn-ghost" data-act="customize" aria-expanded="false">Customize</button>' +
-          '<button type="button" class="nn-btn nn-btn-ghost" data-act="reject">Reject non-essential</button>' +
+          '<button type="button" class="nn-btn primary-button" data-act="accept">Accept all</button>' +
+          '<button type="button" class="nn-btn secondary-button" data-act="customize" aria-expanded="false">Customize</button>' +
+          '<button type="button" class="nn-btn secondary-button" data-act="reject">Reject non-essential</button>' +
         '</div>' +
       '</div>';
     document.body.appendChild(banner);
@@ -181,15 +181,15 @@
       panel.removeAttribute('hidden');
       syncToggles();
       actions.innerHTML =
-        '<button type="button" class="nn-btn nn-btn-primary" data-act="save">Save choices</button>' +
-        '<button type="button" class="nn-btn nn-btn-ghost" data-act="customize" aria-expanded="true">Customize</button>' +
-        '<button type="button" class="nn-btn nn-btn-ghost" data-act="reject">Reject non-essential</button>';
+        '<button type="button" class="nn-btn primary-button" data-act="save">Save choices</button>' +
+        '<button type="button" class="nn-btn secondary-button" data-act="customize" aria-expanded="true">Customize</button>' +
+        '<button type="button" class="nn-btn secondary-button" data-act="reject">Reject non-essential</button>';
     } else {
       panel.setAttribute('hidden', '');
       actions.innerHTML =
-        '<button type="button" class="nn-btn nn-btn-primary" data-act="accept">Accept all</button>' +
-        '<button type="button" class="nn-btn nn-btn-ghost" data-act="customize" aria-expanded="false">Customize</button>' +
-        '<button type="button" class="nn-btn nn-btn-ghost" data-act="reject">Reject non-essential</button>';
+        '<button type="button" class="nn-btn primary-button" data-act="accept">Accept all</button>' +
+        '<button type="button" class="nn-btn secondary-button" data-act="customize" aria-expanded="false">Customize</button>' +
+        '<button type="button" class="nn-btn secondary-button" data-act="reject">Reject non-essential</button>';
     }
   }
 
