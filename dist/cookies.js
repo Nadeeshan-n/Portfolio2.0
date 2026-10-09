@@ -103,11 +103,16 @@
   }
 
   /* ---------- banner UI ---------- */
+  var COOKIE_ICON = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
+    '<circle cx="12" cy="12" r="9" stroke="#f5f5f5" stroke-width="1.8"/>' +
+    '<circle cx="9" cy="10" r="1.3" fill="#f5f5f5"/><circle cx="14.5" cy="9" r="1.3" fill="#f5f5f5"/>' +
+    '<circle cx="10.5" cy="14.5" r="1.3" fill="#f5f5f5"/><circle cx="15" cy="14" r="1.3" fill="#f5f5f5"/></svg>';
+
   var CATEGORIES = [
-    { key: 'necessary', title: 'Strictly necessary', desc: 'Required for the site to work and to remember this choice. Always on.', locked: true },
-    { key: 'preferences', title: 'Preferences', desc: 'Remembers conveniences like your name and email in the contact form.', locked: false },
-    { key: 'analytics', title: 'Analytics', desc: 'Helps Nadeeshan understand which pages and projects visitors enjoy (Google Analytics).', locked: false },
-    { key: 'marketing', title: 'Marketing', desc: 'Used for advertising and retargeting. This site currently sets none.', locked: false }
+    { key: 'necessary', title: 'Strictly necessary', desc: 'Essential for site functionality and saving consent.', locked: true },
+    { key: 'preferences', title: 'Preferences', desc: 'Remember optional contact form preferences.', locked: false },
+    { key: 'analytics', title: 'Analytics', desc: 'Help improve the website through Google Analytics.', locked: false },
+    { key: 'marketing', title: 'Marketing', desc: 'Used for advertising and related measurement.', locked: false }
   ];
 
   var banner = null, toggles = {};
@@ -116,28 +121,28 @@
     banner.className = 'nn-cookie-banner';
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-label', 'Cookie consent');
-    banner.setAttribute('aria-live', 'polite');
 
-    var html = '<h3 class="nn-cookie-title">Cookies on this site</h3>' +
-      '<p class="nn-cookie-text">This portfolio uses cookies to remember your choices and, with your permission, ' +
-      'to understand how visitors use the site. Choose what you are comfortable with.</p>' +
-      '<div class="nn-cookie-customize" hidden>';
+    var rows = '';
     CATEGORIES.forEach(function (cat) {
-      html += '<div class="nn-cookie-row"><div><h4>' + cat.title + '</h4><p>' + cat.desc + '</p></div>';
-      if (cat.locked) {
-        html += '<span class="nn-cookie-lock">Always on</span>';
-      } else {
-        html += '<label class="nn-switch"><input type="checkbox" data-cat="' + cat.key + '" aria-label="' + cat.title + ' cookies">' +
-          '<span class="nn-track"></span></label>';
-      }
-      html += '</div>';
+      rows += '<div class="nn-cookie-row"><div><h4>' + cat.title + '</h4><p>' + cat.desc + '</p></div>';
+      rows += cat.locked
+        ? '<span class="nn-cookie-always">Always on</span>'
+        : '<label class="nn-switch"><input type="checkbox" data-cat="' + cat.key + '" aria-label="' + cat.title + ' cookies"><span class="nn-track"></span></label>';
+      rows += '</div>';
     });
-    html += '</div><div class="nn-cookie-actions">' +
-      '<button type="button" class="nn-btn nn-btn-primary" data-act="accept">Accept all</button>' +
-      '<button type="button" class="nn-btn nn-btn-ghost" data-act="reject">Reject non-essential</button>' +
-      '<button type="button" class="nn-btn nn-btn-ghost" data-act="customize">Customize</button>' +
+
+    banner.innerHTML =
+      '<div class="nn-cookie-inner">' +
+        '<div class="nn-cookie-head">' + COOKIE_ICON + '<h3 class="nn-cookie-title">Cookies on this site</h3></div>' +
+        '<p class="nn-cookie-text">This portfolio uses essential storage to remember your choices and optional ' +
+        'technologies to improve your experience. You can change your preferences anytime.</p>' +
+        '<div class="nn-cookie-rows">' + rows + '</div>' +
+        '<div class="nn-cookie-actions">' +
+          '<button type="button" class="nn-btn nn-btn-primary" data-act="accept">Accept all</button>' +
+          '<button type="button" class="nn-btn nn-btn-ghost" data-act="save">Save choices</button>' +
+          '<button type="button" class="nn-btn nn-btn-ghost" data-act="reject">Reject non-essential</button>' +
+        '</div>' +
       '</div>';
-    banner.innerHTML = html;
     document.body.appendChild(banner);
 
     banner.querySelectorAll('input[data-cat]').forEach(function (input) {
@@ -149,27 +154,8 @@
       var act = btn.getAttribute('data-act');
       if (act === 'accept') choose({ necessary: true, preferences: true, analytics: true, marketing: true });
       else if (act === 'reject') choose({ necessary: true, preferences: false, analytics: false, marketing: false });
-      else if (act === 'customize') toggleCustomize();
       else if (act === 'save') choose(readToggles());
     });
-  }
-
-  function toggleCustomize() {
-    var panel = banner.querySelector('.nn-cookie-customize');
-    var actions = banner.querySelector('.nn-cookie-actions');
-    var open = panel.hasAttribute('hidden');
-    if (open) {
-      panel.removeAttribute('hidden');
-      var c = getConsent() || { necessary: true, preferences: false, analytics: false, marketing: false };
-      Object.keys(toggles).forEach(function (k) { toggles[k].checked = !!c[k]; });
-      actions.innerHTML = '<button type="button" class="nn-btn nn-btn-primary" data-act="save">Save choices</button>' +
-        '<button type="button" class="nn-btn nn-btn-ghost" data-act="reject">Reject non-essential</button>';
-    } else {
-      panel.setAttribute('hidden', '');
-      actions.innerHTML = '<button type="button" class="nn-btn nn-btn-primary" data-act="accept">Accept all</button>' +
-        '<button type="button" class="nn-btn nn-btn-ghost" data-act="reject">Reject non-essential</button>' +
-        '<button type="button" class="nn-btn nn-btn-ghost" data-act="customize">Customize</button>';
-    }
   }
 
   function readToggles() {
@@ -181,8 +167,14 @@
     };
   }
 
+  function syncToggles() {
+    var c = getConsent() || { necessary: true, preferences: true, analytics: false, marketing: false };
+    Object.keys(toggles).forEach(function (k) { toggles[k].checked = !!c[k]; });
+  }
+
   function openBanner() {
     if (!banner) buildBanner();
+    syncToggles();
     banner.classList.add('nn-open');
     var h = banner.querySelector('.nn-cookie-title');
     if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
