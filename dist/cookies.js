@@ -212,14 +212,15 @@
 
   /* floating cookie settings button (bottom-left, every page) */
   function buildFab() {
-    if (document.querySelector('.nn-cookie-fab')) return;
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'nn-cookie-fab';
-    btn.setAttribute('aria-label', 'Cookie settings');
-    btn.innerHTML = '<span class="cookie-wrap" aria-hidden="true">' + COOKIE_SVG + '</span>';
-    btn.addEventListener('click', openBanner);
-    document.body.appendChild(btn);
+    if (document.querySelector('.nn-cookie-fab-wrap')) return;
+    var footer = document.querySelector('.site-footer');
+    var wrap = document.createElement('div');
+    wrap.className = 'nn-cookie-fab-wrap';
+    wrap.innerHTML = '<button type="button" class="nn-cookie-fab" aria-label="Cookie settings">' +
+      '<span class="cookie-wrap" aria-hidden="true">' + COOKIE_SVG + '</span></button>';
+    wrap.querySelector('button').addEventListener('click', openBanner);
+    if (footer && footer.parentNode) footer.parentNode.insertBefore(wrap, footer);
+    else document.body.appendChild(wrap);
   }
   window.NNCookies = { openSettings: openBanner };
 
