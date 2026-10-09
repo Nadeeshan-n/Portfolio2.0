@@ -9,10 +9,7 @@
 }
 .nn-cookie-banner.nn-open{transform:none}
 .nn-cookie-inner{max-width:1200px;margin:0 auto;padding:22px 24px 18px}
-.nn-cookie-head{display:flex;align-items:center;gap:10px;margin:0 0 8px}
-.nn-cookie-head svg{flex:none;display:block}
-.nn-cookie-title{font-size:17px;font-weight:600;margin:0}
-.nn-cookie-text{font-size:14px;line-height:1.55;margin:0;color:rgba(245,245,245,.82);max-width:72ch}
+.nn-cookie-text{font-size:14px;line-height:1.55;margin:0 0 4px;color:rgba(245,245,245,.82);max-width:72ch}
 .nn-cookie-rows{margin:10px 0 2px}
 .nn-cookie-rows[hidden]{display:none}
 .nn-cookie-row{

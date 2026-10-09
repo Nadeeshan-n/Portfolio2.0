@@ -103,11 +103,6 @@
   }
 
   /* ---------- banner UI ---------- */
-  var COOKIE_ICON = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
-    '<circle cx="12" cy="12" r="9" stroke="#f5f5f5" stroke-width="1.8"/>' +
-    '<circle cx="9" cy="10" r="1.3" fill="#f5f5f5"/><circle cx="14.5" cy="9" r="1.3" fill="#f5f5f5"/>' +
-    '<circle cx="10.5" cy="14.5" r="1.3" fill="#f5f5f5"/><circle cx="15" cy="14" r="1.3" fill="#f5f5f5"/></svg>';
-
   var CATEGORIES = [
     { key: 'necessary', title: 'Strictly necessary', desc: 'Essential for site functionality and saving consent.', locked: true },
     { key: 'preferences', title: 'Preferences', desc: 'Remember optional contact form preferences.', locked: false },
@@ -133,7 +128,6 @@
 
     banner.innerHTML =
       '<div class="nn-cookie-inner">' +
-        '<div class="nn-cookie-head">' + COOKIE_ICON + '<h3 class="nn-cookie-title">Cookies on this site</h3></div>' +
         '<p class="nn-cookie-text">This portfolio uses essential storage to remember your choices and optional ' +
         'technologies to improve your experience. You can change your preferences anytime.</p>' +
         '<div class="nn-cookie-rows" hidden>' + rows + '</div>' +
@@ -197,8 +191,8 @@
     if (!banner) buildBanner();
     toggleCustomize(!!expand);
     banner.classList.add('nn-open');
-    var h = banner.querySelector('.nn-cookie-title');
-    if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+    banner.setAttribute('tabindex', '-1');
+    banner.focus({ preventScroll: true });
   }
   function closeBanner() {
     if (banner) banner.classList.remove('nn-open');
