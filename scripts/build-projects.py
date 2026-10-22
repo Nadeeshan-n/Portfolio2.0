@@ -42,7 +42,7 @@ def stack(items):
     ) + "</ul>"
 
 
-def head(title, description, preview_gallery=False):
+def head(title, description, preview_gallery=False, slug=None):
     preview_script = '\n  <script src="../project-preview.js" defer></script>' if preview_gallery else ""
     return f"""<!doctype html>
 <html lang="en">
@@ -51,6 +51,14 @@ def head(title, description, preview_gallery=False):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{e(title)} — Nadeeshan Nadeera</title>
   <meta name="description" content="{e(description)}">
+  <link rel="canonical" href="https://nadeeshan.cc/projects/{slug}/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nadeeshan Nadeera">
+  <meta property="og:title" content="{e(title)} — Nadeeshan Nadeera">
+  <meta property="og:description" content="{e(description)}">
+  <meta property="og:url" content="https://nadeeshan.cc/projects/{slug}/">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/136482913?s=1200&v=4">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#F7F9F7">
   <link rel="preload" href="../../assets/fonts/sora-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
@@ -266,7 +274,7 @@ def detail(project):
     )
     learned = project.get("learned") or "Learning notes to be added."
     return (
-        head(project["title"], project["description"], preview_gallery=has_preview)
+        head(project["title"], project["description"], preview_gallery=has_preview, slug=project["slug"])
         + f"""
   <main id="projects-main" class="projects-shell">
     <div class="detail-intro">
