@@ -7,7 +7,7 @@
  */
 (function () {
   'use strict';
-  var GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; /* <-- paste your GA4 Measurement ID here */
+  var GA_MEASUREMENT_ID = 'G-PNDL14JWNM'; /* <-- paste your GA4 Measurement ID here */
   var CONSENT_COOKIE = 'nn-cookie-consent';
   var MEMORY_COOKIE = 'nn-contact-memory';
   var GA_CONFIGURED = /^G-[A-Z0-9]{6,}$/.test(GA_MEASUREMENT_ID);
