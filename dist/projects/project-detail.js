@@ -25,7 +25,7 @@
   }
 
   function notFound() {
-    document.title = 'Project not found — Nadeeshan';
+    document.title = 'Project not found — Nadeeshan Nadeera';
     if (titleEl) titleEl.textContent = 'Project not found';
     if (descriptionEl) {
       descriptionEl.textContent = 'The project you are looking for does not exist. Return to the projects page to browse all work.';
@@ -220,7 +220,7 @@
       return;
     }
 
-    document.title = `${project.title} — Nadeeshan`;
+    document.title = `${project.title} — Nadeeshan Nadeera`;
     if (titleEl) titleEl.textContent = project.title;
     if (descriptionEl) descriptionEl.textContent = project.description || '';
     setList(stackEl, project.cardStack);
