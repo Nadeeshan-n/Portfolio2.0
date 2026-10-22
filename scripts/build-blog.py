@@ -61,7 +61,7 @@ def page(post):
     return (
         '<!doctype html><html lang="en"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
-        f"<title>{title} - Nadeeshan</title>"
+        f"<title>{title} - Nadeeshan Nadeera</title>"
         '<link rel="stylesheet" href="../../../portfolio.css">'
         '<link rel="stylesheet" href="../../blog.css">'
         '<link rel="stylesheet" href="../../../footer-signature.css">'

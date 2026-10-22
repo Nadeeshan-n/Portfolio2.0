@@ -49,7 +49,7 @@ def head(title, description, preview_gallery=False):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{e(title)} — Nadeeshan</title>
+  <title>{e(title)} — Nadeeshan Nadeera</title>
   <meta name="description" content="{e(description)}">
   <meta name="theme-color" content="#F7F9F7">
   <link rel="preload" href="../../assets/fonts/sora-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
