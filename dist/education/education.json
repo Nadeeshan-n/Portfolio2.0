@@ -13,6 +13,25 @@
   },
   "certificates": [
     {
+      "id": "vector-databases",
+      "title": "Vector Databases for RAG: An Introduction",
+      "institution": "IBM",
+      "year": 2026,
+      "skills": [
+        "Vector Databases",
+        "RAG",
+        "Embeddings"
+      ],
+      "images": [
+        {
+          "src": "/assets/certificates/vector-databases.svg",
+          "alt": "Vector Databases for RAG: An Introduction — IBM course certificate"
+        }
+      ],
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/QA76XR9GTAMG",
+      "category": "artificial-intelligence"
+    },
+    {
       "id": "rag-applications",
       "title": "Build RAG Applications: Get Started",
       "institution": "IBM",
@@ -127,6 +146,25 @@
       "category": "python"
     },
     {
+      "id": "supervised-ml",
+      "title": "Supervised Machine Learning: Regression and Classification",
+      "institution": "DeepLearning.AI",
+      "year": 2026,
+      "skills": [
+        "Machine Learning",
+        "Regression",
+        "Classification"
+      ],
+      "images": [
+        {
+          "src": "/assets/certificates/supervised-ml.svg",
+          "alt": "Supervised Machine Learning: Regression and Classification — DeepLearning.AI course certificate"
+        }
+      ],
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/3FZ5CZUK0GAX",
+      "category": "machine-learning"
+    },
+    {
       "id": "linear-algebra",
       "title": "Linear Algebra for Machine Learning and Data Science",
       "institution": "DeepLearning.AI",
@@ -174,12 +212,12 @@
     {
       "id": "machine-learning",
       "label": "Machine Learning",
-      "description": "Linear algebra for machine learning with DeepLearning.AI — the mathematical foundation behind the models I build."
+      "description": "Two DeepLearning.AI certifications — supervised machine learning (regression and classification) and the linear algebra foundations behind the models I build."
     },
     {
       "id": "artificial-intelligence",
       "label": "Artificial Intelligence",
-      "description": "Two IBM specializations in building generative AI and RAG applications with large language models."
+      "description": "Three IBM certifications in generative AI and RAG — building LLM applications and the vector databases that power retrieval."
     },
     {
       "id": "linux",
