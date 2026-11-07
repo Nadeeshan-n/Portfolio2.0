@@ -14,6 +14,7 @@ and relative proportions are retained. No decorative outlines or effects are add
 | React | Meta Platforms, Inc. and affiliates; [React documentation brand SVG](https://github.com/reactjs/react.dev/blob/main/public/images/brand/logo_dark.svg) | Original vector contours, jade fill |
 | Python | Tim Parkin; Python Software Foundation; [official logo assets](https://www.python.org/community/logos/) | Exact two-snake contours; jade monochrome, decorative shadow omitted |
 | NumPy | NumPy Developers; [official 2020 logo via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:NumPy_logo_2020.svg) | Original cube contours, wordmark omitted; dark facets solid jade, light facets the same jade at 45% |
+| LangChain | LangChain, Inc.; [langchain.com](https://www.langchain.com) logo lockup | Pill mark only, wordmark omitted; jade field with white parrot-and-chain glyphs (glyph geometry traced from the publisher lockup image) |
 | Docker | Docker, Inc.; [official brand kit](https://www.docker.com/company/newsroom/media-resources/) | Original ocean-blue mark served byte-for-byte |
 | Git | Git Logo by Jason Long; [Git logo downloads](https://git-scm.com/community/logos); [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | Original black logomark geometry, jade fill |
 | Linux | Original Tux by Larry Ewing, made with GIMP; [kernel.org credit](https://www.kernel.org/faq.html). Published monochrome vector from [Devicon](https://github.com/devicons/devicon/blob/master/icons/linux/linux-plain.svg), MIT | Unchanged Tux vector, jade fill |
